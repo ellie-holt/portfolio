@@ -12,7 +12,7 @@
   <Nav />
   <Sidebar />
 </nav>
-<main>
+<main class="mt-14 ml-14">
   <Hero />
   <Work />
   <About />
@@ -23,4 +23,7 @@
 </footer>
 
 <style>
+  nav {
+    background-color: aqua;
+  }
 </style>
