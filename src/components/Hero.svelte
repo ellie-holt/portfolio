@@ -1,17 +1,22 @@
 <script lang="js">
   import me from "../assets/me.jpeg";
+  import { isScrolled, scrollProgress } from "../lib/ScrollState.svelte.js";
 </script>
 
-<section id="hero" class="hero flex h-80 text-right border-b-4">
-  <img src={me} alt="Ellie Holt" class="hero-image" />
-  <section class="hero-text p-3 flex flex-col justify-center">
-    <h1 class="hero-title">Ellie Holt:</h1>
-    <h2 class="hero-subtitle">&lcub;front-end web developer&rcub;</h2>
-  </section>
+<section id="hero" class="text-center py-4 border-black hero relative">
+  <!-- <img src={me} alt="Ellie Holt" class="hero-image" /> -->
+
+  <h1 class="hero-title text-center {isScrolled ? 'scrolled' : ''}">
+    Ellie Holt: &lcub;front-end web developer&rcub;
+  </h1>
 </section>
 
 <style>
   .hero {
-    background-color: #e5e0ed;
+    z-index: 1;
+    background: transparent;
+  }
+
+  .hero-title.scrolled {
   }
 </style>

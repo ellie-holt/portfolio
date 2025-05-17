@@ -1,7 +1,7 @@
 <script lang="js">
-  export let subheading = "";
+  let { subheading } = $props();
 </script>
 
-<div class="subheading py-2 pl-8 border-b-4">
+<div class="w-full py-4 pl-12 z-10 subheading text-on-primary-dark">
   <h3>// {subheading}:</h3>
 </div>

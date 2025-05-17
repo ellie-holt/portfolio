@@ -1,30 +1,34 @@
 <script lang="js">
-  export let project = {
-    title: "",
-    description: "",
-    link: "",
-  };
-  export let image = {
-    src: "",
-    alt: "",
-  };
+  let {
+    project = {
+      title: "",
+      description: "",
+      link: "",
+    },
+    image = {
+      src: "",
+      alt: "",
+    },
+  } = $props();
 </script>
 
-<article class="project flex flex-col self-stretch w-1/3">
-  <section class="project-header flex flex-col items-center border-b-4">
-    <h3 class="project-title p-2">
+<article class="flex flex-col w-1/3 project">
+  <section
+    class="flex flex-col items-center border-black text-on-secondary-light project-header"
+  >
+    <h4 class="p-2 border-black project-title">
       <a href={project.link} target="_blank">{project.title}</a>
-    </h3>
+    </h4>
     <div class="image-container">
       <img
         src={image.src}
         alt={image.alt}
-        class="project-image"
+        class="border-t-4 border-black project-image"
         loading="lazy"
       />
     </div>
   </section>
-  <section class="project-description p-4">
+  <section class="p-4 project-description text-on-primary-light">
     <p>{project.description}</p>
   </section>
 </article>
