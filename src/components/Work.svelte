@@ -6,9 +6,9 @@
   import aiPoetImage from "../assets/ai-poet.png";
 </script>
 
-<section id="work" class="flex flex-col items-center">
+<section id="work" class="flex flex-col items-center mb-4">
   <Subheading subheading="my work" />
-  <section class="flex justify-around projects gap-15 w-2/3">
+  <section class="grid grid-cols-2 mx-6 gap-6">
     <Project
       project={{
         title: "Weather App",
@@ -20,6 +20,7 @@
         src: weatherAppImage,
         alt: "Weather App",
       }}
+      featured={true}
     />
     <Project
       project={{

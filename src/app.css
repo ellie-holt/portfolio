@@ -1,66 +1,59 @@
-@import url("https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Chivo:ital,wght@0,100..900;1,100..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inconsolata:wght@200..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Chivo:ital,wght@0,100..900;1,100..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fira+Mono:wght@400;500;700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #fcbf49;
-  --color-primary-light: #f9f8f8;
-  --color-primary-dark: #f77f00;
-  --color-on-primary: #000000;
-  --color-on-primary-light: #000000;
-  --color-on-primary-dark: #000000;
-  --color-secondary: #d62828;
-  --color-secondary-light: #eaeaea;
-  --color-secondary-dark: #003049;
-  --color-on-secondary: #ffffff;
-  --color-on-secondary-light: #000000;
-  --color-on-secondary-dark: #ead7d7;
-  --color-accent: #f2f2f2;
-  --color-on-accent: #f2f2f2;
+  --color-*: initial;
 
-  --color-cream: #fcf1ef;
-  --color-powder-pink: #e4babe;
-  --color-orange-peach: hsl(0, 0%, 0%);
-  --color-peachy-peach: #f8d0af;
-  --color-sunburnt-peach: #f2b2a1;
-  --color-sunset-peach: #f8d0af;
-  --color-true-blue: #00549e;
-  --color-muted-true-blue: #194a7a;
-  --color-light-blue: #a4c8e1;
-  --color-royal-blue: #003049;
-  --color-sunset-orange: #f77f00;
-  --color-sunset-yellow: #fcbf49;
-  --color-sunset-red: #d62828;
-  --color-sunset-pink: #fcbf49;
-  --color-sunset-purple: #003049;
-  --color-painted-rose: #d62828;
-  --color-rose: #d62828;
-  --color-paint-green: #003049;
-  --color-paint-blue: #00549e;
-  --color-paint-yellow: #fcbf49;
-  --color-paint-red: #d62828;
-  --color-paint-orange: #f77f00;
-  --color-paint-purple: #003049;
-  --color-paint-pink: #fcbf49;
-  --color-parchment: #f9f8f8;
-  --color-cream-light: #f9f8f8;
-  --color-paper: #f9f8f8;
-  --color-butter-yellow: #f1f3be;
-  --color-sunset-rose: #fe4365;
-  --color-sunset-rose-light: #fc9d9a;
-  --color-sunset-cream: #f9cdad;
+  --color-azure-wash: #f0f4ff;
+  --color-azure-100: #e7eefd;
+  --color-azure-200: #c9d8fb;
+  --color-azure-300: #9fbbfc;
+  --color-azure-400: #7ea5ff;
+  --color-azure-500: #5f85de;
+  --color-azure-600: #1f49ad;
+  --color-azure-ink: #010b21;
+
+  --color-aquamarine-wash: #f2fffb;
+  --color-aquamarine-100: #e1fdf4;
+  --color-aquamarine-200: #bcfbe6;
+  --color-aquamarine-300: #86f7d1;
+  --color-aquamarine-400: #52ebb7;
+  --color-aquamarine-500: #2bd69d;
+  --color-aquamarine-600: #079d6b;
+  --color-aquamarine-ink: #011c13;
+
+  --color-tangerine-wash: #fff6f2;
+  --color-tangerine-100: #ffefe8;
+  --color-tangerine-200: #ffd3bf;
+  --color-tangerine-300: #ffab85;
+  --color-tangerine-400: #ff935f;
+  --color-tangerine-500: #f27941;
+  --color-tangerine-600: #a63a08;
+  --color-tangerine-ink: #1a0901;
+
+  --breakpoint-3xs: 28rem;
+  --breakpoint-2xs: 34rem;
+  --breakpoint-xs: 36rem;
 
   --font-mono: "Chivo Mono", monospace;
+  --font-mono-2: "Fira Mono", monospace;
+  --font-mono-3: "IBM Plex Mono", monospace;
+  --font-mono-4: "Inconsolata", monospace;
   --font-serif: "EB Garamond", serif;
   --font-serif-2: "IBM Plex Serif", serif;
   --font-serif-3: "Lora", serif;
   --font-serif-4: "Spectral", serif;
   --font-sans: "Chivo", sans-serif;
-  --font-sans-2: "Inconsolata", sans-serif;
+  --font-sans-2: "Fira Sans", sans-serif;
+  --font-sans-3: "Inter", sans-serif;
+  --font-sans-4: "Archivo", sans-serif;
+  --font-sans-5: "Figtree", sans-serif;
+  --font-sans-6: "IBM Plex Sans", sans-serif;
 }
 
 @layer base {
   body {
-    font-family: sans-serif;
+    font-family: var(--font-sans-6);
     border-color: black;
     scroll-behavior: smooth;
   }
@@ -69,17 +62,23 @@
     scroll-behavior: smooth;
   }
 
+  h1,
+  h2,
+  h3 h4 {
+    color: var(--color-aquamarine-ink);
+  }
+
   h1 {
-    font-size: 2.4rem;
+    font-size: 4rem;
     font-family: var(--font-mono);
   }
   h2 {
     font-size: 3rem;
-    font-family: var(--font-mono);
+    font-family: var(--font-mono-3);
   }
   h3 {
     font-size: 2rem;
-    font-family: var(--font-mono);
+    font-family: var(--font-mono-3);
   }
   h4 {
     font-size: 2rem;
@@ -95,10 +94,27 @@
   }
   p {
     font-size: 1.2rem;
-    font-family: var(--font-serif-3);
+    font-family: var(--font-serif-2);
   }
-  li {
-    font-size: 1.6rem;
-    font-family: var(--font-sans);
+}
+
+@layer components {
+  .card {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid black;
+  }
+}
+
+@layer utilities {
+  .box-shadow {
+    box-shadow: -10px 10px 0px 0px rgba(0, 0, 0, 0.3);
+  }
+  .box-title {
+    font-size: 2rem;
+    font-family: var(--font-mono);
+    background-color: var(--color-primary);
+    border-bottom: 1px solid black;
+    padding: 0.5rem 1rem;
   }
 }

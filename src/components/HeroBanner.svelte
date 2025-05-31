@@ -1,10 +1,15 @@
 <script lang="js">
-  // import me from "../assets/me.jpeg";
   import {
     isScrolled,
     scrollProgress,
     initScrollTracking,
   } from "../lib/ScrollState.svelte.js";
+
+  const options = {
+    root: null,
+    rootMargin: "0px 0px -100% 0px",
+    threshold: 0.1,
+  };
 
   // $effect(() => {
   //   initScrollTracking();
@@ -14,15 +19,13 @@
   });
 </script>
 
-<div class="flex flex-col items-center justify-center text-center px-2">
-  <h1
-    class="text-[12vw] 3xs:text-[14vw] 2xs:text-[13.5vw] xs:text-[13vw] xl:text-[10rem] font-semibold hero-title font-mono-3"
-  >
-    Ellie Holt<span class="tracking-[-1.5rem]">:</span>
+<div
+  class={`${$isScrolled ? "visible" : "invisible"} flex flex-row justify-center items-baseline gap-1 px-2 pt-2 pb-4 bg-aquamarine-300 outline-4 outline-aquamarine-300`}
+>
+  <h1 class="text-2xl font-extrabold hero-title font-mono-3">
+    Ellie Holt<span>:</span>
   </h1>
-  <h2
-    class="text-[4vw] 3xs:text-[5vw] 2xs:text-[5vw] xs:text-[5vw] sm:text-[5vw] xl:text-[4rem] font-mono-3 leading-none font-medium"
-  >
+  <h2 class="text-2xl font-mono-3 leading-none font-medium">
     <span
       class="brackets text-tangerine-500 font-semibold relative top-[0.06em] text-[1.5em] pr-[0.2em]"
       >&lcub;</span
@@ -31,9 +34,6 @@
       >&rcub;</span
     >
   </h2>
-  <!-- <div class={`${$isScrolled ? "hidden" : ""} image-container`}>
-    <div class=" bg-azure-100 w-20 h-20"></div>
-  </div> -->
 </div>
 
 <style>

@@ -9,32 +9,37 @@
       src: "",
       alt: "",
     },
+    featured = false,
   } = $props();
 </script>
 
-<article class="flex flex-col w-1/3 project">
+<article
+  class={`grid ${featured ? "grid-cols-[1fr_2fr] col-span-full" : "grid-cols-[1fr_1fr]"} grid-rows-[1fr_3fr] gap-x-6 p-6 border-2 border-solid box-shadow project`}
+>
   <section
-    class="flex flex-col items-center border-black text-on-secondary-light project-header"
+    class="image-container relative w-full aspect-square overflow-hidden flex items-center justify-center row-span-2"
   >
-    <h4 class="p-2 border-black project-title">
+    <img
+      src={image.src}
+      alt={image.alt}
+      class="project-image w-full h-full object-cover object-top border-2 border-dotted"
+      loading="lazy"
+    />
+  </section>
+  <section class="project-header">
+    <h4
+      class={`project-title leading-none ${featured ? "text-4xl" : "text-2xl"}`}
+    >
       <a href={project.link} target="_blank">{project.title}</a>
     </h4>
-    <div class="image-container">
-      <img
-        src={image.src}
-        alt={image.alt}
-        class="border-t-4 border-black project-image"
-        loading="lazy"
-      />
-    </div>
   </section>
-  <section class="p-4 project-description text-on-primary-light">
-    <p>{project.description}</p>
+  <section class="project-description">
+    <p class={`${featured ? "text-xl" : "text-lg"}`}>{project.description}</p>
   </section>
 </article>
 
 <style>
-  .image-container {
+  /* .image-container {
     width: 100%;
     padding-top: 100%;
     position: relative;
@@ -49,5 +54,6 @@
     height: 100%;
     object-fit: cover;
     object-position: top;
-  }
+    overflow-x: visible;
+  } */
 </style>
