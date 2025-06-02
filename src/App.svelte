@@ -14,6 +14,7 @@
     scrollProgress,
     initScrollTracking,
   } from "./lib/ScrollState.svelte.js";
+  import { fade } from "svelte/transition";
 
   // let heroHeight = $state(0);
   // let navHeight = $state(0);
@@ -50,11 +51,10 @@
 
 <!-- IDEA: scroll stuff can be handled by outer containers here -->
 
-<!-- HEADER: HERO AND NAVBAR-->
+<!-- HEADER: BIG HERO-->
 <header class="relative z-10">
   <section id="hero" class="hero top-0 w-full pb-4 border-black hero pt-8">
     <Hero />
-    <!-- Debugging -->
   </section>
 </header>
 
@@ -64,15 +64,17 @@
     bind:this={heroTrigger}
     class="hero-trigger absolute top-0 left-0 h-0 pointer-events-none z-20"
   ></div>
-  <div class="navbar relative -top-[1px]">
-    {#if showHeroBanner}
-      <HeroBanner />
-    {/if}
-
-    <nav>
-      <Navbar />
-    </nav>
+  <div
+    class="relative -top-[1px] {showHeroBanner
+      ? 'opacity-100'
+      : 'opacity-0'} transition-opacity duration-300"
+  >
+    <HeroBanner {showHeroBanner} />
   </div>
+
+  <nav class="navbar">
+    <Navbar />
+  </nav>
 </section>
 
 <!-- MAIN CONTENT -->

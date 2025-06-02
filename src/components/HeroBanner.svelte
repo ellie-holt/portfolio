@@ -1,26 +1,20 @@
 <script lang="js">
+  import { slide, fly } from "svelte/transition";
   import {
     isScrolled,
     scrollProgress,
     initScrollTracking,
   } from "../lib/ScrollState.svelte.js";
+  /** @type {{ showHeroBanner: boolean }} */
+  let showHeroBanner = $props();
 
-  const options = {
-    root: null,
-    rootMargin: "0px 0px -100% 0px",
-    threshold: 0.1,
-  };
-
-  // $effect(() => {
-  //   initScrollTracking();
-  // });
   isScrolled.subscribe(($isScrolled) => {
     console.log("isScrolled:", $isScrolled); // Debugging
   });
 </script>
 
 <div
-  class={`${$isScrolled ? "visible" : "invisible"} flex flex-row justify-center items-baseline gap-1 px-2 pt-2 pb-4 bg-aquamarine-300 outline-4 outline-aquamarine-300`}
+  class={`${showHeroBanner ? "visible" : "invisible"} flex flex-row justify-center items-baseline gap-1 px-2 pt-2 pb-4 bg-aquamarine-300 outline-4 outline-aquamarine-300 `}
 >
   <h1 class="text-2xl font-extrabold hero-title font-mono-3">
     Ellie Holt<span>:</span>

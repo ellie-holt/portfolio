@@ -10,7 +10,7 @@
 </script>
 
 <div
-  class="py-0 pr-0 2xs:pr-6 border-b-2 border-t-2 flex justify-center 2xs:justify-end border-black border-dashed navbar"
+  class="bg-aquamarine-100 py-0 pr-0 2xs:pr-6 border-b-2 border-t-2 flex justify-center 2xs:justify-end border-black border-dashed navbar"
 >
   <ul
     class="flex items-center justify-between w-full 2xs:w-6/9 xs:w-5/9 max-w-96 text-2xl leading-none font-sans-6"
