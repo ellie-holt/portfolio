@@ -1,33 +1,38 @@
 <script lang="js">
-  import { slide, fly } from "svelte/transition";
-  import {
-    isScrolled,
-    scrollProgress,
-    initScrollTracking,
-  } from "../lib/ScrollState.svelte.js";
-  /** @type {{ showHeroBanner: boolean }} */
-  let showHeroBanner = $props();
-
-  isScrolled.subscribe(($isScrolled) => {
-    console.log("isScrolled:", $isScrolled); // Debugging
+  import { slide, fly, fade } from "svelte/transition";
+  // import {
+  //   isScrolled,
+  //   scrollProgress,
+  //   initScrollTracking,
+  // } from "../lib/ScrollState.svelte.js";
+  /** @type {{ bannerIsVisible: boolean }} */
+  let { bannerIsVisible = false } = $props();
+  $inspect(() => {
+    console.log("showHeroBanner:", bannerIsVisible); // Debugging
   });
+
+  // isScrolled.subscribe(($isScrolled) => {
+  //   console.log("isScrolled:", $isScrolled); // Debugging
+  // });
 </script>
 
 <div
-  class={`${showHeroBanner ? "visible" : "invisible"} flex flex-row justify-center items-baseline gap-1 px-2 pt-2 pb-4 bg-aquamarine-300 outline-4 outline-aquamarine-300 `}
+  class={`${bannerIsVisible ? "visible" : "invisible"} flex flex-col items-center justify-center px-2 bg-aquamarine-100/70`}
+  transition:fade|global
 >
-  <h1 class="text-2xl font-extrabold hero-title font-mono-3">
+  <h1 class="text-2xl font-extrabold hero-title font-mono-3 leading-[-0.5em]">
     Ellie Holt<span>:</span>
+
+    <span class="text-2xl font-mono-3 font-medium leading-none">
+      <span
+        class="brackets text-tangerine-500 font-semibold relative top-[0.06em] text-[1.5em] pr-[0.2em]"
+        >&lcub;</span
+      >front-end web developer<span
+        class="brackets text-tangerine-500 font-semibold relative top-[0.06em] text-[1.5em] pl-[0.2em]"
+        >&rcub;</span
+      >
+    </span>
   </h1>
-  <h2 class="text-2xl font-mono-3 leading-none font-medium">
-    <span
-      class="brackets text-tangerine-500 font-semibold relative top-[0.06em] text-[1.5em] pr-[0.2em]"
-      >&lcub;</span
-    >front-end web developer<span
-      class="brackets text-tangerine-500 font-semibold relative top-[0.06em] text-[1.5em] pl-[0.2em]"
-      >&rcub;</span
-    >
-  </h2>
 </div>
 
 <style>

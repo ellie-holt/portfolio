@@ -16,12 +16,15 @@
 
 <div class="flex flex-col items-center justify-center text-center px-2">
   <h1
-    class="text-[12vw] 3xs:text-[14vw] 2xs:text-[13.5vw] xs:text-[13vw] xl:text-[10rem] font-semibold hero-title font-mono-3"
+    class="text-[14vw] 2xs:text-[13.5vw] xs:text-[13vw] xl:text-[10rem] font-semibold hero-title font-mono-3"
   >
-    Ellie Holt<span class="tracking-[-1.5rem]">:</span>
+    Ellie Holt<span
+      class="tracking-[-0.75rem] 3xs:tracking-[-1rem] 2xs:tracking-[-1.5rem]"
+      >:</span
+    >
   </h1>
   <h2
-    class="text-[4vw] 3xs:text-[5vw] 2xs:text-[5vw] xs:text-[5vw] sm:text-[5vw] xl:text-[4rem] font-mono-3 leading-none font-medium"
+    class="text-[5.5vw] xs:text-[5vw] xl:text-[4rem] font-mono-3 leading-none font-medium"
   >
     <span
       class="brackets text-tangerine-500 font-semibold relative top-[0.06em] text-[1.5em] pr-[0.2em]"
