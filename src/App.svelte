@@ -50,8 +50,8 @@
   });
 </script>
 
-<div class="relative inset-0 min-h-screen z-[-1]">
-  <GrainyGradient classes="absolute inset-0 w-full min-h-full" />
+<div class="relative inset-0 min-h-screen w-full min-w-screen -z-10">
+  <GrainyGradient classes="absolute inset-0 w-max min-w-screen  min-h-full" />
   <!-- HEADER: BIG HERO-->
   <header class="relative z-10">
     <section id="hero" class="hero top-0 w-full pb-4 border-black hero pt-8">
@@ -61,7 +61,7 @@
 
   <!-- sticky hero banner and navbar -->
   <section
-    class="sticky left-0 right-0 top-0 z-20 grid grid-cols-1 grid-rows-[1fr_1fr]"
+    class="sticky left-0 right-0 top-0 z-20 grid grid-cols-1 grid-rows-[auto_1fr]"
   >
     <div
       bind:this={heroTrigger}

@@ -5,7 +5,7 @@
 
 <section id="about">
   <Subheading subheading="about me" />
-  <section class="flex about-content px-6">
+  <section class="flex flex-col sm:flex-row about-content px-6">
     <Card>
       <p class="bg-white py-6 px-8">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente magnam

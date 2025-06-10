@@ -5,7 +5,7 @@
 
 <!-- Background container -->
 <div
-  class={`${classes} bg-linear-to-t/oklch from-azure-300 to-tangerine-200 overflow-hidden pointer-events-none grainy-bg`}
+  class={`${classes} bg-linear-to-t/oklch from-azure-300 to-tangerine-200 overflow-hidden pointer-events-none bg-size-[100%] grainy-bg`}
 >
   <svg
     class="absolute w-0 h-0 overflow-hidden"
@@ -15,8 +15,8 @@
     <filter id="grainy-noise">
       <feTurbulence
         type="fractalNoise"
-        baseFrequency="19.5"
-        numOctaves="10"
+        baseFrequency="0.5"
+        numOctaves="4"
         stitchTiles="stitch"
       />
       <!-- <feColorMatrix type="saturate" values="0" /> -->
