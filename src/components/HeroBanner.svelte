@@ -17,18 +17,28 @@
 </script>
 
 <div
-  class={`${bannerIsVisible ? "visible" : "invisible"} flex flex-col items-center justify-center px-2 bg-aquamarine-100/70`}
+  class={`${bannerIsVisible ? "visible" : "invisible"} flex flex-col items-center justify-center px-1 pt-2 pb-3 bg-aquamarine-100/70`}
   transition:fade|global
 >
-  <h1 class="text-2xl font-extrabold hero-title font-mono-3 leading-[-0.5em]">
-    Ellie Holt<span>:</span>
+  <h1
+    class="text-xl 3xs:text-2xl font-extrabold hero-title font-mono-3 leading-[-0.5em]"
+  >
+    Ellie Holt<span class="-mr-1 3xs:-mr-3 sm:mr-0">:</span>
 
-    <span class="text-2xl font-mono-3 font-medium leading-none">
+    <span
+      class="text-xl 3xs:text-2xl font-mono-3 font-medium leading-none 2xs:full"
+    >
       <span
-        class="brackets text-tangerine-500 font-semibold relative top-[0.06em] text-[1.5em] pr-[0.2em]"
+        class="brackets text-tangerine-500 font-semibold relative top-[0.06em] text-[1.5em]"
         >&lcub;</span
-      >front-end web developer<span
-        class="brackets text-tangerine-500 font-semibold relative top-[0.06em] text-[1.5em] pl-[0.2em]"
+      >
+
+      <span
+        class="tagline tracking-tight sm:tracking-normal -mx-1 3xs:-mx-2 sm:mx-0"
+      ></span>
+
+      <span
+        class="brackets text-tangerine-500 font-semibold relative top-[0.06em] text-[1.5em]"
         >&rcub;</span
       >
     </span>
@@ -38,5 +48,15 @@
 <style>
   .brackets {
     top: 0.06em;
+  }
+
+  .tagline::after {
+    content: "front-end web developer";
+  }
+
+  @media (max-width: 544px) {
+    .tagline::after {
+      content: "web developer";
+    }
   }
 </style>
