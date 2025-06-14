@@ -39,6 +39,7 @@
           backgroundAlpha: 0,
           autoStart: true,
           antialias: false,
+          powerPreference: "low-power",
         });
 
         container.appendChild(app.canvas);
