@@ -7,6 +7,8 @@
   import Contact from "./components/Contact.svelte";
   import Footer from "./components/Footer.svelte";
   import GrainyGradient from "./components/GrainyGradient.svelte";
+  import GrainCanvas from "./components/GrainCanvas.svelte";
+  import GrainWebGl from "./components/GrainWebGL.svelte";
   import { onMount } from "svelte";
   import {
     scrollY,
@@ -40,10 +42,6 @@
     return () => observer.disconnect();
   });
 
-  isScrolled.subscribe(($heroHeight) => {
-    console.log("hero height:", $heroHeight); // Debugging
-  });
-
   onMount(() => {
     const cleanup = initScrollTracking();
     return cleanup;
@@ -51,11 +49,13 @@
 </script>
 
 <div class="relative inset-0 min-h-screen w-full min-w-screen -z-10">
-  <GrainyGradient classes="absolute inset-0 w-max min-w-screen min-h-full" />
+  <div class="background-gradient"></div>
+  <GrainWebGl />
+  <!-- <GrainyGradient classes="absolute inset-0 w-max min-w-screen min-h-full" /> -->
 
   <!-- HEADER: BIG HERO-->
   <header class="relative z-10">
-    <section id="hero" class="hero top-0 w-full pb-4 border-black hero pt-8">
+    <section id="hero" class="hero top-0 w-full pb-4 border-black pt-8">
       <Hero />
     </section>
   </header>
@@ -117,5 +117,18 @@
     overflow: hidden;
     /* background-attachment: fixed; */
     background-size: 100% 100%;
+  }
+
+  .background-gradient {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: linear-gradient(
+      in oklch to top,
+      var(--color-azure-300),
+      var(--color-tangerine-200)
+    );
+    background-size: cover;
+    pointer-events: none;
   }
 </style>

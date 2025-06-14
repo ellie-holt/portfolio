@@ -48,5 +48,7 @@
     pointer-events: none;
     z-index: 0;
     transform: translate3d(0, 0, 0);
+    will-change: transform;
+    backface-visibility: hidden;
   }
 </style>
