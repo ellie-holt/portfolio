@@ -1,8 +1,18 @@
 <script>
   import { Application, Texture, TilingSprite } from "pixi.js";
+  import GrainSVG from "./GrainSVG.svelte";
 
+  let { mode = "auto" } = $props();
   let container;
   let app;
+
+  const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+  const prefersSmooth = window.matchMedia(
+    "(prefers-reduced-motion: no-preference)"
+  ).matches;
+
+  const effectiveMode =
+    mode === "auto" ? (isMobile || !prefersSmooth ? "pixi" : "svg") : mode;
 
   function createNoiseCanvas(size = 64) {
     const canvas = document.createElement("canvas");
@@ -25,7 +35,7 @@
   }
 
   $effect(() => {
-    if (!container) return;
+    if (!container || effectiveMode !== "pixi") return;
 
     // Avoid double-initialisation
     if (container.querySelector("canvas")) return;
@@ -76,10 +86,14 @@
   });
 </script>
 
-<div bind:this={container} class="grain"></div>
+{#if effectiveMode === "svg"}
+  <GrainSVG classes="absolute inset-0 z-[-1]" />
+{:else if effectiveMode === "pixi"}
+  <div bind:this={container} class="grain-pixi"></div>
+{/if}
 
 <style>
-  .grain {
+  .grain-pixi {
     position: absolute;
     inset: 0;
     z-index: -1;

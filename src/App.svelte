@@ -6,9 +6,9 @@
   import About from "./components/About.svelte";
   import Contact from "./components/Contact.svelte";
   import Footer from "./components/Footer.svelte";
-  import GrainyGradient from "./components/GrainyGradient.svelte";
+  import GrainSVG from "./components/GrainSVG.svelte";
   import GrainCanvas from "./components/GrainCanvas.svelte";
-  import GrainWebGl from "./components/GrainWebGL.svelte";
+  import BackgroundGrain from "./components/BackgroundGrain.svelte";
   import { onMount } from "svelte";
   import {
     scrollY,
@@ -50,7 +50,7 @@
 
 <div class="relative inset-0 min-h-screen w-full min-w-screen -z-10">
   <div class="background-gradient"></div>
-  <GrainWebGl />
+  <BackgroundGrain mode="auto" />
   <!-- <GrainyGradient classes="absolute inset-0 w-max min-w-screen min-h-full" /> -->
 
   <!-- HEADER: BIG HERO-->

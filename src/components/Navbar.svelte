@@ -6,7 +6,7 @@
     scrollProgress,
     initScrollTracking,
   } from "../lib/ScrollState.svelte";
-  import GrainyGradient from "./GrainyGradient.svelte";
+  import GrainSVG from "./GrainSVG.svelte";
   // let gradientClass = $state("from-sky-400 to-blue-600");
 </script>
 
