@@ -38,6 +38,7 @@
           resizeTo: document.body,
           backgroundAlpha: 0,
           autoStart: true,
+          antialias: false,
         });
 
         container.appendChild(app.canvas);
@@ -61,12 +62,6 @@
         });
 
         app.stage.addChild(tilingSprite);
-
-        //     app.ticker.add(() => {
-        //       tilingSprite.tilePosition.x += 0.1;
-        //       tilingSprite.tilePosition.y += 0.1;
-        //     }
-        // );
       } catch (error) {
         console.error("Error initializing PixiJS Application:", error);
       }

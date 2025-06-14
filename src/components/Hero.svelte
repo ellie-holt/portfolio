@@ -16,7 +16,7 @@
 
 <div class="flex flex-col items-center justify-center text-center px-2">
   <h1
-    class="heading-noise text-shadow text-aquamarine-500 text-[14vw] 2xs:text-[13.5vw] xs:text-[13vw] xl:text-[10rem] font-semibold hero-title font-mono-3"
+    class="text-shadow text-aquamarine-500 text-[14vw] 2xs:text-[13.5vw] xs:text-[13vw] xl:text-[10rem] font-semibold hero-title font-mono-3"
   >
     Ellie Holt<span
       class="tracking-[-0.75rem] 3xs:tracking-[-1rem] 2xs:tracking-[-1.5rem]"
@@ -44,7 +44,7 @@
     top: 0.06em;
   }
 
-  .heading-noise {
+  /* .heading-noise {
     filter: url(#heading-noise);
-  }
+  } */
 </style>
