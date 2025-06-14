@@ -16,10 +16,9 @@
       <feTurbulence
         type="fractalNoise"
         baseFrequency="0.5"
-        numOctaves="4"
+        numOctaves="1"
         stitchTiles="stitch"
       />
-      <!-- <feColorMatrix type="saturate" values="0" /> -->
       <feComponentTransfer>
         <feFuncA type="discrete" tableValues="0 1" />
       </feComponentTransfer>
@@ -48,5 +47,6 @@
     opacity: 0.25;
     pointer-events: none;
     z-index: 0;
+    transform: translate3d(0, 0, 0);
   }
 </style>

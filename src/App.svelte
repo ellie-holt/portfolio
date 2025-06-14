@@ -51,7 +51,8 @@
 </script>
 
 <div class="relative inset-0 min-h-screen w-full min-w-screen -z-10">
-  <GrainyGradient classes="absolute inset-0 w-max min-w-screen  min-h-full" />
+  <GrainyGradient classes="absolute inset-0 w-max min-w-screen min-h-full" />
+
   <!-- HEADER: BIG HERO-->
   <header class="relative z-10">
     <section id="hero" class="hero top-0 w-full pb-4 border-black hero pt-8">
@@ -83,6 +84,28 @@
     <Footer />
   </div>
 </div>
+
+<svg class="absolute inset-0" aria-hidden="true" focusable="false">
+  <filter id="heading-noise">
+    <feTurbulence
+      type="turbulence"
+      baseFrequency="0.7"
+      numOctaves="2"
+      stitchTiles="stitch"
+      result="turbulence"
+    />
+
+    <feComposite
+      operator="in"
+      in="turbulence"
+      in2="SourceAlpha"
+      result="composite"
+    />
+
+    <feColorMatrix in="composite" type="luminanceToAlpha" />
+    <feBlend in="SourceGraphic" in2="composite" mode="screen" />
+  </filter>
+</svg>
 
 <style>
   /* :global(:root) {

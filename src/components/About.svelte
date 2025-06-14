@@ -5,9 +5,9 @@
 
 <section id="about">
   <Subheading subheading="about me" />
-  <section class="flex flex-col sm:flex-row about-content px-6">
+  <section class="flex flex-col gap-6 sm:flex-row about-content px-6">
     <Card>
-      <p class="bg-white py-6 px-8">
+      <p class="py-6 px-8">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente magnam
         incidunt eaque, a mollitia recusandae dolorem fugiat! Non, repellat
         dolorem ratione officia qui odio nemo, iste amet optio, dolore corporis.
