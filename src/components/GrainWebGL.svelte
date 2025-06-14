@@ -63,6 +63,8 @@
         });
 
         app.stage.addChild(tilingSprite);
+        app.render();
+        app.stop();
       } catch (error) {
         console.error("Error initializing PixiJS Application:", error);
       }
