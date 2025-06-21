@@ -2,7 +2,7 @@
   import Subheading from "./Subheading.svelte";
 </script>
 
-<section id="contact">
+<section id="contact" class="mb-4 mx-8">
   <Subheading subheading="contact me" />
   <section
     class="flex flex-col items-center px-4 py-8 leading-loose text-on-primary-light contact-info"

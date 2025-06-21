@@ -11,25 +11,67 @@
 </script>
 
 <nav
-  class=" py-0 px-4 2xs:pl-0 2xs:pr-6 border-t-2 flex justify-center 2xs:justify-end border-black border-dashed navbar bg-transparent"
+  class="relative p-0 2xs:pl-0 flex justify-center 2xs:justify-end navbar z-20 h-14"
 >
   <ul
-    class="flex items-center justify-between w-full 2xs:w-6/9 xs:w-5/9 max-w-96 text-xl xs:text-2xl leading-none font-sans-6"
+    class="flex items-stretch relative justify-between w-full 2xs:w-5/9 sm:w-6/12 md:w-4-12 text-lg sm:text-xl leading-none font-sans-6 border border-black divide-x divide-black"
   >
-    <li><a href="#work" class="link">work</a></li>
-    <span class="text-[3em] relative top-[0.06em] text-tangerine-500">•</span>
-    <li><a href="#about" class="link">about</a></li>
-    <span class="text-[3em] relative top-[0.06em] text-tangerine-500">•</span>
-    <li><a href="#contact" class="link">contact</a></li>
+    <li class="flex-1 flex relative justify-center">
+      <a href="#work" class="px-2 py-4 block text-center w-full">work</a>
+    </li>
+    <!-- <span class="text-[3em] relative top-[0.06em] text-tangerine-500">•</span> -->
+    <li class="flex-1 flex relative justify-center">
+      <a href="#about" class="px-2 py-4 block text-center w-full">about</a>
+    </li>
+    <!-- <span class="text-[3em] relative top-[0.06em] text-tangerine-500">•</span> -->
+    <li class="flex-1 flex relative justify-center">
+      <a href="#contact" class="px-2 py-4 block text-center w-full">contact</a>
+    </li>
   </ul>
 </nav>
 
 <style>
+  /* .navbar::before {
+    content: "";
+    border-top: 1px dashed var(--color-black);
+    position: absolute;
+    inset: 0;
+  }
+
   .navbar::after {
     content: "";
-    border-bottom: 2px solid var(--color-tangerine-500);
+    border-bottom: 1px dashed var(--color-black);
     filter: url(#noise);
     inset: 0;
     position: absolute;
+  } */
+
+  ul::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-color: white;
+  }
+
+  li::before {
+    content: "";
+    background-color: var(--color-azure-300);
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 10px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  li:hover {
+    color: white;
+  }
+
+  li:hover::before {
+    bottom: 0;
+    height: 100%;
   }
 </style>

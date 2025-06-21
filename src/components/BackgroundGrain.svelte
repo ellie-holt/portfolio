@@ -3,7 +3,7 @@
   import GrainSVG from "./GrainSVG.svelte";
 
   let { mode = "auto" } = $props();
-  let container;
+  let container = $state(null);
   let app;
 
   const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
@@ -57,10 +57,8 @@
         Object.assign(app.canvas.style, {
           position: "absolute",
           inset: "0",
-          pointerEvents: "none",
           mixBlendMode: "overlay",
           opacity: "0.2",
-          zIndex: "-1",
         });
 
         const noiseCanvas = createNoiseCanvas();
@@ -76,7 +74,7 @@
         app.render();
         app.stop();
       } catch (error) {
-        console.error("Error initializing PixiJS Application:", error);
+        console.error("Error initialising Pixi background", error);
       }
     })();
 
@@ -87,7 +85,7 @@
 </script>
 
 {#if effectiveMode === "svg"}
-  <GrainSVG classes="absolute inset-0 z-[-1]" />
+  <GrainSVG classes="absolute inset-0 w-max min-w-screen min-h-full" />
 {:else if effectiveMode === "pixi"}
   <div bind:this={container} class="grain-pixi"></div>
 {/if}
@@ -95,9 +93,9 @@
 <style>
   .grain-pixi {
     position: absolute;
-    inset: 0;
-    z-index: -1;
     pointer-events: none;
+    inset: 0;
+    z-index: -20;
     width: 100%;
     height: 100%;
   }

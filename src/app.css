@@ -56,9 +56,13 @@
 }
 
 @layer base {
+  a {
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+  }
+
   body {
     font-family: var(--font-sans-6);
-    border-color: black;
   }
 
   .content {
@@ -135,6 +139,12 @@
 
   .box-shadow {
     box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.3);
+  }
+
+  .blocky-box {
+    border: 2px solid black;
+    background-color: white;
+    box-shadow: 4px 4px 0px #000;
   }
 
   .text-shadow {

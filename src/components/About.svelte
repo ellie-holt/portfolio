@@ -3,9 +3,9 @@
   import Card from "./Card.svelte";
 </script>
 
-<section id="about">
+<section id="about" class="mb-4 mx-8">
   <Subheading subheading="about me" />
-  <section class="flex flex-col gap-6 sm:flex-row about-content px-6">
+  <section class="flex flex-col gap-6 p-2 sm:flex-row about-content">
     <Card>
       <p class="py-6 px-8">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente magnam

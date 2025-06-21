@@ -31,7 +31,7 @@
 <canvas bind:this={canvasEl} class="grain-canvas"> </canvas>
 
 <style>
-  .grain-canvas {
+  /* .grain-canvas {
     position: absolute;
     background: transparent;
     mix-blend-mode: color-dodge;
@@ -42,5 +42,5 @@
     width: 100%;
     height: 100%;
     image-rendering: pixelated;
-  }
+  } */
 </style>

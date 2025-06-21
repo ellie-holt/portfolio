@@ -14,25 +14,37 @@
 </script>
 
 <article
-  class={`grid ${featured ? "grid-cols-[1fr_2fr] col-span-full" : "grid-cols-[1fr_1fr]"} grid-rows-[1fr_3fr] gap-x-6 border-2 border-solid  box-shadow project`}
+  class={`grid border-2 border-black bg-white shadow-[4px_4px_0_#000] ${featured ? " grid-cols-[1fr_1fr] md:grid-cols-1 col-span-2 md:col-span-1 row-span-1 md:row-span-2" : "grid-rows-1 grid-cols-1 md:grid-cols-[1fr_1fr] col-span-1 row-span-1"}`}
 >
+  <!-- image -->
   <section
-    class="image-container relative w-full aspect-square overflow-hidden flex items-center justify-center row-span-2"
+    class={`${featured ? "border-r-2 md:border-b-2 md:border-r-0" : "border-b-2 md:border-r-2 md:border-b-0"}  border-black`}
   >
     <img
       src={image.src}
       alt={image.alt}
-      class="project-image w-full h-full object-cover object-top"
+      class={`${featured ? "w-full h-full" : "w-full h-full"} object-cover`}
       loading="lazy"
     />
   </section>
-  <section class="project-header">
-    <h4 class={`project-title ${featured ? "text-4xl" : "text-2xl"}`}>
+
+  <!-- title -->
+  <section class={`${featured ? "" : ""} px-6 pt-6 pb-10 relative`}>
+    <h3
+      class={`uppercase text-lg font-bold mb-2 ${featured ? "text-4xl" : "text-2xl"}`}
+    >
       <a href={project.link} target="_blank">{project.title}</a>
-    </h4>
-  </section>
-  <section class="project-description">
-    <p class={`${featured ? "text-xl" : "text-lg"}`}>{project.description}</p>
+    </h3>
+
+    <!-- description and link -->
+    <p
+      class={`${featured ? "text-base" : "text-sm"} leading-snug tracking-tight`}
+    >
+      {project.description}
+    </p>
+    <div class="absolute bottom-4 right-4 text-right text-base">
+      <a href={project.link} class="underline">Open →</a>
+    </div>
   </section>
 </article>
 

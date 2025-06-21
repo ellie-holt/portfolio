@@ -48,8 +48,10 @@
   });
 </script>
 
-<div class="relative inset-0 min-h-screen w-full min-w-screen -z-10">
-  <div class="background-gradient"></div>
+<div
+  class="relative inset-0 min-h-screen w-full min-w-screen z-0 pointer-events-auto"
+>
+  <div class="background-gradient -z-10"></div>
   <BackgroundGrain mode="auto" />
   <!-- <GrainyGradient classes="absolute inset-0 w-max min-w-screen min-h-full" /> -->
 
@@ -108,27 +110,14 @@
 </svg>
 
 <style>
-  /* :global(:root) {
-    background-color: var(--color-aquamarine-100);
-  } */
-
-  .navbar {
-    pointer-events: auto;
-    overflow: hidden;
-    /* background-attachment: fixed; */
-    background-size: 100% 100%;
-  }
-
   .background-gradient {
     position: absolute;
     inset: 0;
-    z-index: -2;
     background: linear-gradient(
       in oklch to top,
       var(--color-azure-300),
       var(--color-tangerine-200)
     );
     background-size: cover;
-    pointer-events: none;
   }
 </style>
