@@ -1,15 +1,14 @@
 <script lang="js">
-  import Subheading from "./Subheading.svelte";
   import Project from "./Project.svelte";
   import weatherAppImage from "../assets/weather-app.png";
   import worldClockImage from "../assets/world-clock.png";
   import aiPoetImage from "../assets/ai-poet.png";
 </script>
 
-<section id="work" class="mb-4 mx-8 scroll-m-14">
-  <Subheading subheading="my work" />
+<section id="work" class="pb-4 px-5 scroll-m-14 flex flex-col">
+  <h3 class=" text-2xl pb-4 pl-4 pt-4 h-15">// work</h3>
   <section
-    class="grid grid-cols-2 grid-rows-[1fr_auto] md:grid-rows-2 md:grid-cols-2 gap-8 border-black"
+    class="grid grid-cols-2 grid-rows-[1fr_auto] md:grid-rows-2 md:grid-cols-2 gap-5 border-black"
   >
     <Project
       project={{

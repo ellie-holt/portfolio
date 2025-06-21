@@ -17,11 +17,11 @@
 </script>
 
 <div
-  class={`${bannerIsVisible ? "visible" : "invisible"} flex flex-col items-center justify-center px-1 pt-2 pb-3 bg-aquamarine-100`}
+  class={`${bannerIsVisible ? "visible" : "invisible"} flex flex-col items-center justify-center border-b border-black px-1 pt-2 pb-3 bg-aquamarine-100`}
   transition:fade|global
 >
   <h1
-    class="text-xl 3xs:text-2xl font-extrabold hero-title font-mono-3 leading-[-0.5em]"
+    class="text-xl 3xs:text-2xl font-extrabold hero-title font-mono leading-[-0.5em]"
   >
     Ellie Holt<span class="-mr-1 3xs:-mr-3 sm:mr-0">:</span>
 

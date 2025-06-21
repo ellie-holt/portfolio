@@ -49,7 +49,7 @@
 </script>
 
 <div
-  class="relative inset-0 min-h-screen w-full min-w-screen z-0 pointer-events-auto"
+  class="wrapper relative inset-0 min-h-screen w-full min-w-screen z-0 pointer-events-auto"
 >
   <div class="background-gradient -z-10"></div>
   <BackgroundGrain mode="auto" />
@@ -119,5 +119,32 @@
       var(--color-tangerine-200)
     );
     background-size: cover;
+  }
+
+  .wrapper::before,
+  .wrapper::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+  }
+
+  .wrapper::before {
+    z-index: 20;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border-left: 1px solid #666;
+    border-right: 1px solid #666;
+  }
+
+  .wrapper::after {
+    z-index: 0;
+    top: 20px;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
   }
 </style>

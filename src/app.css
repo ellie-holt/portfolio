@@ -34,25 +34,22 @@
   --color-tangerine-600: #a63a08;
   --color-tangerine-ink: #1a0901;
 
+  --shadow-blocky-sm: 4px 4px 0 0;
+  --shadow-blocky-md: 6px 6px 0 0;
+  --shadow-blocky-lg: 8px 8px 0 0;
+  --shadow-blocky-xl: 12px 12px 0 0;
+  --shadow-blocky: var(--shadow-blocky-md);
+
   --breakpoint-4xs: 22rem;
   --breakpoint-3xs: 28rem;
   --breakpoint-2xs: 34rem;
   --breakpoint-xs: 36rem;
 
-  --font-mono: "Chivo Mono", monospace;
-  --font-mono-2: "Fira Mono", monospace;
-  --font-mono-3: "IBM Plex Mono", monospace;
-  --font-mono-4: "Inconsolata", monospace;
-  --font-serif: "EB Garamond", serif;
-  --font-serif-2: "IBM Plex Serif", serif;
-  --font-serif-3: "Lora", serif;
-  --font-serif-4: "Spectral", serif;
-  --font-sans: "Chivo", sans-serif;
-  --font-sans-2: "Fira Sans", sans-serif;
-  --font-sans-3: "Inter", sans-serif;
-  --font-sans-4: "Archivo", sans-serif;
-  --font-sans-5: "Figtree", sans-serif;
-  --font-sans-6: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+
+  --font-serif: "IBM Plex Serif", serif;
+
+  --font-sans: "IBM Plex Sans", sans-serif;
 }
 
 @layer base {
@@ -62,7 +59,7 @@
   }
 
   body {
-    font-family: var(--font-sans-6);
+    font-family: var(--font-sans);
   }
 
   .content {
@@ -81,11 +78,11 @@
   }
   h2 {
     font-size: 3rem;
-    font-family: var(--font-mono-3);
+    font-family: var(--font-mono);
   }
   h3 {
     font-size: 2rem;
-    font-family: var(--font-mono-3);
+    font-family: var(--font-mono);
   }
   h4 {
     font-size: 2rem;
@@ -101,7 +98,7 @@
   }
   p {
     font-size: 1.2rem;
-    font-family: var(--font-serif-2);
+    font-family: var(--font-serif);
   }
 }
 
@@ -114,6 +111,23 @@
 }
 
 @layer utilities {
+  .shadow-blocky-sm {
+    box-shadow: var(--shadow-blocky-sm)
+      var(--tw-shadow-color, theme(colors.black));
+  }
+  .shadow-blocky-md {
+    box-shadow: var(--shadow-blocky-md)
+      var(--tw-shadow-color, theme(colors.black));
+  }
+  .shadow-blocky-lg {
+    box-shadow: var(--shadow-blocky-lg)
+      var(--tw-shadow-color, theme(colors.black));
+  }
+  .shadow-blocky-xl {
+    box-shadow: var(--shadow-blocky-xl)
+      var(--tw-shadow-color, theme(colors.black));
+  }
+
   .mesh-noise::before {
     content: "";
     position: absolute;
@@ -141,10 +155,14 @@
     box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.3);
   }
 
+  .faint-border {
+    border: 1px solid #666;
+  }
+
   .blocky-box {
     border: 2px solid black;
     background-color: white;
-    box-shadow: 4px 4px 0px #000;
+    box-shadow: 4px 4px 0px var(--color-azure-500);
   }
 
   .text-shadow {
