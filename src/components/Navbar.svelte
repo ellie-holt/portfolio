@@ -11,21 +11,21 @@
 </script>
 
 <nav
-  class="relative p-0 px-5 2xs:pl-0 flex justify-center 2xs:justify-end navbar z-20 h-14"
+  class="relative z-20 flex justify-center p-0 px-5 2xs:pl-0 2xs:justify-end navbar h-14"
 >
   <ul
-    class="flex items-stretch relative justify-between w-full 2xs:w-5/9 sm:w-6/12 md:w-4-12 text-lg sm:text-xl leading-none font-sans border border-black divide-x divide-black"
+    class="relative flex items-stretch justify-between w-full font-sans text-lg leading-none border border-black rounded-xl divide-x divide-black 2xs:w-5/9 sm:w-6/12 md:w-4-12 sm:text-xl"
   >
-    <li class="flex-1 flex relative justify-center">
-      <a href="#work" class="px-2 py-4 block text-center w-full">work</a>
+    <li class="relative flex justify-center flex-1">
+      <a href="#work" class="block w-full px-2 py-4 text-center">work</a>
     </li>
     <!-- <span class="text-[3em] relative top-[0.06em] text-tangerine-500">•</span> -->
-    <li class="flex-1 flex relative justify-center">
-      <a href="#about" class="px-2 py-4 block text-center w-full">about</a>
+    <li class="relative flex justify-center flex-1">
+      <a href="#about" class="block w-full px-2 py-4 text-center">about</a>
     </li>
     <!-- <span class="text-[3em] relative top-[0.06em] text-tangerine-500">•</span> -->
-    <li class="flex-1 flex relative justify-center">
-      <a href="#contact" class="px-2 py-4 block text-center w-full">contact</a>
+    <li class="relative flex justify-center flex-1">
+      <a href="#contact" class="block w-full px-2 py-4 text-center">contact</a>
     </li>
   </ul>
 </nav>
@@ -41,7 +41,6 @@
   .navbar::after {
     content: "";
     border-bottom: 1px solid #666;
-    filter: url(#noise);
     inset: 0;
     position: absolute;
   }
@@ -49,6 +48,7 @@
   ul::before {
     content: "";
     position: absolute;
+    border-radius: 0.75rem;
     inset: 0;
     z-index: -1;
     background-color: var(--color-aquamarine-100);
@@ -75,7 +75,7 @@
     height: 100%;
   }
 
-  a {
+  /* a {
     --size: 10px;
     --thickness: 2px;
     --gap: 5px;
@@ -92,5 +92,5 @@
 
   a:hover {
     outline-offset: calc(-1 * var(--gap));
-  }
+  } */
 </style>

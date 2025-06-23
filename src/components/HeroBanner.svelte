@@ -17,7 +17,7 @@
 </script>
 
 <div
-  class={`${bannerIsVisible ? "visible" : "invisible"} flex flex-col items-center justify-center border-b border-black px-1 pt-2 pb-3 bg-aquamarine-100`}
+  class={`${bannerIsVisible ? "visible" : "invisible"} flex flex-col items-center justify-center px-1 pt-2 pb-3 bg-aquamarine-100`}
   transition:fade|global
 >
   <h1
@@ -26,7 +26,7 @@
     Ellie Holt<span class="-mr-1 3xs:-mr-3 sm:mr-0">:</span>
 
     <span
-      class="text-xl 3xs:text-2xl font-mono-3 font-medium leading-none 2xs:full"
+      class="text-xl font-medium leading-none 3xs:text-2xl font-mono-3 2xs:full"
     >
       <span
         class="brackets text-tangerine-500 font-semibold relative top-[0.06em] text-[1.5em]"
@@ -34,7 +34,7 @@
       >
 
       <span
-        class="tagline tracking-tight sm:tracking-normal -mx-1 3xs:-mx-2 sm:mx-0"
+        class="-mx-1 tracking-tight tagline sm:tracking-normal 3xs:-mx-2 sm:mx-0"
       ></span>
 
       <span

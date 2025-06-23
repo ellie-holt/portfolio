@@ -1,4 +1,5 @@
 {
   "editor.wordWrap": "on",
-  "svelte.defaultReactivity": "runes"
+  "svelte.defaultReactivity": "runes",
+  "workbench.editorAssociations": { "*.svg": "default" }
 }

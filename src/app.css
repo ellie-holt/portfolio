@@ -53,6 +53,9 @@
 }
 
 @layer base {
+  :root {
+    scroll-behavior: smooth;
+  }
   a {
     z-index: 9999 !important;
     pointer-events: auto !important;
@@ -60,9 +63,6 @@
 
   body {
     font-family: var(--font-sans);
-  }
-
-  .content {
     scroll-behavior: smooth;
   }
 
@@ -85,8 +85,10 @@
     font-family: var(--font-mono);
   }
   h4 {
-    font-size: 2rem;
+    font-size: var(--text-lg);
     font-family: var(--font-mono);
+    font-weight: bold;
+    text-transform: uppercase;
   }
   h5 {
     font-size: 1.5rem;
@@ -97,7 +99,7 @@
     font-family: var(--font-mono);
   }
   p {
-    font-size: 1.2rem;
+    font-size: var(--text-base);
     font-family: var(--font-serif);
   }
 }

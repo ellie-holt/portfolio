@@ -49,7 +49,7 @@
 </script>
 
 <div
-  class="wrapper relative inset-0 min-h-screen w-full min-w-screen z-0 pointer-events-auto"
+  class="relative inset-0 z-0 w-full min-h-screen pointer-events-auto wrapper min-w-screen"
 >
   <div class="background-gradient -z-10"></div>
   <BackgroundGrain mode="auto" />
@@ -57,7 +57,7 @@
 
   <!-- HEADER: BIG HERO-->
   <header class="relative z-10">
-    <section id="hero" class="hero top-0 w-full pb-4 border-black pt-8">
+    <section id="hero" class="top-0 w-full pt-5 pb-4 border-black hero">
       <Hero />
     </section>
   </header>
@@ -68,7 +68,7 @@
   >
     <div
       bind:this={heroTrigger}
-      class="hero-trigger absolute top-0 left-0 h-0 pointer-events-none z-20"
+      class="absolute top-0 left-0 z-20 h-0 pointer-events-none hero-trigger"
     ></div>
 
     <HeroBanner bannerIsVisible={showHeroBanner} />
@@ -109,15 +109,47 @@
   </filter>
 </svg>
 
+<svg
+  class="absolute inset-0"
+  aria-hidden="true"
+  focusable="false"
+  width="200"
+  height="200"
+  viewBox="0 0 220 220"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <filter id="noise">
+    <feTurbulence
+      type="turbulence"
+      baseFrequency="0.05"
+      numOctaves="3"
+      result="turbulence"
+    />
+    <feDisplacementMap
+      in2="turbulence"
+      in="SourceGraphic"
+      scale="6.3"
+      xChannelSelector="R"
+      yChannelSelector="G"
+    />
+  </filter>
+</svg>
+
 <style>
   .background-gradient {
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      in oklch to top,
-      var(--color-azure-300),
-      var(--color-tangerine-200)
-    );
+    background-color: hsla(18, 100%, 97%, 1);
+    background-image: radial-gradient(
+        at 28% 25%,
+        hsla(221, 86%, 88%, 1) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 95% 98%, hsla(18, 100%, 76%, 1) 0px, transparent 50%),
+      radial-gradient(at 51% 37%, hsla(159, 87%, 74%, 1) 0px, transparent 50%),
+      radial-gradient(at 43% 84%, hsla(160, 88%, 86%, 1) 0px, transparent 50%),
+      radial-gradient(at 82% 28%, hsla(221, 93%, 80%, 1) 0px, transparent 50%),
+      radial-gradient(at 19% 59%, hsla(18, 100%, 87%, 1) 0px, transparent 50%);
     background-size: cover;
   }
 

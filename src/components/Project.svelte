@@ -14,35 +14,29 @@
 </script>
 
 <article
-  class={`grid border-2 border-black shadow-blocky-md shadow-tangerine-200 ${featured ? " grid-cols-[1fr_1fr] md:grid-cols-1 col-span-2 md:col-span-1 row-span-1 md:row-span-2" : "grid-rows-1 grid-cols-1 md:grid-cols-[1fr_1fr] col-span-1 row-span-1"}`}
+  class={`grid bg-white border-black border rounded-xl  ${featured ? " grid-cols-[1fr_1fr] md:grid-cols-1 col-span-2 md:col-span-1 row-span-1 md:row-span-2" : "grid-rows-1 grid-cols-1 md:grid-cols-[1fr_1fr] col-span-1 row-span-1"}`}
 >
   <!-- image -->
-  <section
-    class={`${featured ? "border-r-2 md:border-b-2 md:border-r-0" : "border-b-2 md:border-r-2 md:border-b-0"}  border-black`}
-  >
+  <section class={`${featured ? "" : ""}  `}>
     <img
       src={image.src}
       alt={image.alt}
-      class={`${featured ? "w-full h-full" : "w-full h-full"} object-cover`}
+      class={`rounded-tl-xl ${featured ? "rounded-bl-xl md:rounded-tr-xl md:rounded-bl-none w-full h-full" : "rounded-tr-xl md:rounded-tr-none  md:rounded-bl-xl w-full h-full"}  object-cover`}
       loading="lazy"
     />
   </section>
 
-  <!-- title -->
-  <section class={`${featured ? "" : ""} px-6 pt-6 pb-10 relative`}>
-    <h3
-      class={`uppercase text-lg font-bold mb-2 ${featured ? "text-4xl" : "text-2xl"}`}
-    >
+  <section class="relative px-6 pt-6 pb-10">
+    <!-- title -->
+    <h4 class="mb-2">
       <a href={project.link} target="_blank">{project.title}</a>
-    </h3>
+    </h4>
 
     <!-- description and link -->
-    <p
-      class={`${featured ? "text-base" : "text-sm"} leading-snug tracking-tight`}
-    >
+    <p class="leading-snug">
       {project.description}
     </p>
-    <div class="link absolute bottom-4 right-4 text-right text-base">
+    <div class="absolute text-base text-right link bottom-4 right-4">
       <a href={project.link} class="underline">Open →</a>
     </div>
   </section>
@@ -67,6 +61,7 @@
   .link a:hover {
     outline-offset: calc(-1 * var(--gap));
   }
+
   /* .image-container {
     width: 100%;
     padding-top: 100%;
