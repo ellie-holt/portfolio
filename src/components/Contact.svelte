@@ -2,7 +2,7 @@
 </script>
 
 <section id="contact" class="flex flex-col px-5 pb-8">
-  <h3 class="pt-4 pb-4 pl-4 text-2xl h-15 scroll-m-14">// contact me</h3>
+  <h3 class="pt-4 pb-4 pl-4 text-2xl h-15 scroll-m-14">// contact</h3>
   <article class="flex flex-wrap gap-2 text-xl leading-loose contact-info">
     <div class="flex-grow px-4 pb-2 text-center bg-white border rounded-xl s">
       <span class="font-bold">email:</span>

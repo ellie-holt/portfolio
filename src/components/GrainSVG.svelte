@@ -52,6 +52,7 @@
   .background-gradient {
     position: absolute;
     inset: 0;
+    background-color: hsla(0, 0%, 100%, 1);
     background-color: hsla(18, 100%, 97%, 1);
     background-image: radial-gradient(
         at 28% 25%,

@@ -14,14 +14,14 @@
   class="relative z-20 flex justify-center p-0 px-5 2xs:pl-0 2xs:justify-end navbar h-14"
 >
   <ul
-    class="relative flex items-stretch justify-between w-full font-sans text-lg leading-none border border-black rounded-xl divide-x divide-black 2xs:w-5/9 sm:w-6/12 md:w-4-12 sm:text-xl"
+    class="relative flex items-stretch justify-between w-full font-sans text-lg leading-none border border-black rounded-xl divide-x divide-black 2xs:w-5/9 sm:w-6/12 md:w-4/12 sm:text-xl"
   >
     <li class="relative flex justify-center flex-1">
-      <a href="#work" class="block w-full px-2 py-4 text-center">work</a>
+      <a href="#about" class="block w-full px-2 py-4 text-center">about</a>
     </li>
     <!-- <span class="text-[3em] relative top-[0.06em] text-tangerine-500">•</span> -->
     <li class="relative flex justify-center flex-1">
-      <a href="#about" class="block w-full px-2 py-4 text-center">about</a>
+      <a href="#work" class="block w-full px-2 py-4 text-center">work</a>
     </li>
     <!-- <span class="text-[3em] relative top-[0.06em] text-tangerine-500">•</span> -->
     <li class="relative flex justify-center flex-1">
@@ -54,15 +54,39 @@
     background-color: var(--color-aquamarine-100);
   }
 
+  li:first-of-type {
+    border-top-left-radius: 0.75rem;
+    border-bottom-left-radius: 0.75rem;
+  }
+
+  li:last-of-type {
+    border-top-right-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+  }
+
+  /* li {
+    background-color: hsla(18, 100%, 97%, 1);
+    background-image: radial-gradient(
+        at 28% 25%,
+        hsla(221, 86%, 88%, 1) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 95% 98%, hsla(18, 100%, 76%, 1) 0px, transparent 50%),
+      radial-gradient(at 51% 37%, hsla(159, 87%, 74%, 1) 0px, transparent 50%),
+      radial-gradient(at 43% 84%, hsla(160, 88%, 86%, 1) 0px, transparent 50%),
+      radial-gradient(at 82% 28%, hsla(221, 93%, 80%, 1) 0px, transparent 50%),
+      radial-gradient(at 19% 59%, hsla(18, 100%, 87%, 1) 0px, transparent 50%);
+  } */
+
   li::before {
     content: "";
-    background-color: var(--color-azure-300);
+    background-color: var(--color-aquamarine-200);
+
     position: absolute;
     z-index: -1;
-    left: 0;
     bottom: 0;
     width: 100%;
-    height: 10px;
+    height: 15px;
     transition: all 0.3s ease-in-out;
   }
 

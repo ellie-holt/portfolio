@@ -57,7 +57,7 @@
 
   <!-- HEADER: BIG HERO-->
   <header class="relative z-10">
-    <section id="hero" class="top-0 w-full pt-5 pb-4 border-black hero">
+    <section id="hero" class="top-0 w-full pt-5 border-black hero">
       <Hero />
     </section>
   </header>
@@ -68,7 +68,7 @@
   >
     <div
       bind:this={heroTrigger}
-      class="absolute top-0 left-0 z-20 h-0 pointer-events-none hero-trigger"
+      class="absolute top-0 left-0 z-0 h-0 pointer-events-none hero-trigger"
     ></div>
 
     <HeroBanner bannerIsVisible={showHeroBanner} />
@@ -79,15 +79,15 @@
   <!-- MAIN CONTENT -->
   <div class={`content relative z-10 `}>
     <main class="relative flex flex-col justify-center">
-      <Work />
       <About />
+      <Work />
       <Contact />
     </main>
     <Footer />
   </div>
 </div>
 
-<svg class="absolute inset-0" aria-hidden="true" focusable="false">
+<svg class="svg absolute hidden inset-0" aria-hidden="true" focusable="false">
   <filter id="heading-noise">
     <feTurbulence
       type="turbulence"
@@ -110,7 +110,7 @@
 </svg>
 
 <svg
-  class="absolute inset-0"
+  class="svg absolute hidden inset-0"
   aria-hidden="true"
   focusable="false"
   width="200"

@@ -19,6 +19,7 @@
     "vite": "^6.3.1"
   },
   "dependencies": {
-    "pixi.js": "^8.10.1"
+    "pixi.js": "^8.10.1",
+    "typewriter-effect": "^2.22.0"
   }
 }
