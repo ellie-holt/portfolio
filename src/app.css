@@ -58,7 +58,10 @@
   }
   a {
     z-index: 9999 !important;
-    pointer-events: auto !important;
+    /* pointer-events: auto !important; */
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: var(--font-mono);
   }
 
   body {

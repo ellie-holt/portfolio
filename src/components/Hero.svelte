@@ -185,7 +185,7 @@
   </div>
   <!-- image -->
   <div
-    class="flex w-full h-full col-start-1 col-end-5 row-start-6 border border-black row-end-13"
+    class="flex w-full h-full col-start-1 col-end-5 row-start-6 bg-aquamarine-100 row-end-13"
   ></div>
 
   <!-- scroll down arrow -->
@@ -201,10 +201,6 @@
 </div>
 
 <style>
-  .brackets {
-    top: 0.06em;
-  }
-
   /* .heading-noise {
     filter: url(#heading-noise);
   } */
