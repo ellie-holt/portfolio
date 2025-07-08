@@ -47,16 +47,6 @@
     background-color: var(--color-aquamarine-100);
   } */
 
-  li:first-of-type {
-    border-top-left-radius: 0.75rem;
-    border-bottom-left-radius: 0.75rem;
-  }
-
-  li:last-of-type {
-    border-top-right-radius: 0.75rem;
-    border-bottom-right-radius: 0.75rem;
-  }
-
   /* li {
     background-color: hsla(18, 100%, 97%, 1);
     background-image: radial-gradient(

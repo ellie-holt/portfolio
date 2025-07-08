@@ -12,7 +12,7 @@
     <div class="flex-1 border rounded-xl border-black bg-white px-6 pt-6 pb-10">
       <h4 class="mb-4">Tech and tools</h4>
       <div class="flex flex-col justify-center gap-6">
-        <ul class="flex justify-around">
+        <!-- <ul class="flex justify-around">
           <li class="group relative">HTML</li>
           <ul>
             <li>Semantic markup</li>
@@ -31,7 +31,7 @@
             <li>DOM manipulation and event handling</li>
             <li>Async JavaScript and APIs</li>
           </ul>
-        </ul>
+        </ul> -->
         <br />
         <ul class="flex justify-around">
           <li class="group relative">React</li>

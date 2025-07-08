@@ -5,7 +5,10 @@
 <li
   class="z-30 group relative overflow-hidden flex justify-center items-center flex-1 border rounded-xl bg-none cursor-pointer isolate"
 >
-  <a href={link} class="relative block w-full px-2 text-center">{text}</a>
+  <a
+    href={link}
+    class="relative block w-full px-2 text-center uppercase font-bold">{text}</a
+  >
 
   <svg
     class="absolute inset-0 w-full h-full pointer-events-none z-0"
@@ -55,7 +58,7 @@
       height="150%"
       x="-25%"
       y="-25%"
-      class="opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"
+      class="opacity-0 hover:opacity-100 group-focus:opacity-100 group-hover:opacity-100 transition-opacity duration-500 ease-in-out"
       fill="url(#grad-hover)"
       filter="url(#noise)"
     />

@@ -19,21 +19,25 @@
 
 <div class="grid grid-cols-12 px-5 -mb-12 grid-rows-12">
   <div
-    class="col-start-9 col-end-13 row-start-1 row-end-5 pt-2 flex flex-col gap-y-2 lg:gap-y-4"
+    class="col-start-9 col-end-13 row-start-1 row-end-5 sm:row-end-4 lg:row-end-3 pt-2 flex flex-col gap-y-2 lg:gap-y-4"
   >
     <!-- github icon -->
-    <div class="flex items-center justify-end pr-2 gap-x-2 lg:gap-x-4">
+    <div
+      class="flex flex-grow items-center justify-end pr-2 gap-x-2 lg:gap-x-4"
+    >
       <p class="font-mono text-xl lg:text-2xl xl:text-3xl">Github</p>
       <GitHubIcon
-        classes="w-full max-w-10 md:max-w-12 lg:max-w-14 min-w-0 hover:rotate-10 transition-transform duration-300 ease-in-out"
+        classes="min-w-8 xs:w-full max-w-10 md:max-w-12 lg:max-w-14 min-w-0 hover:rotate-10 transition-transform duration-300 ease-in-out"
         link="https://github.com/ellie-holt"
       />
     </div>
 
-    <div class="flex items-center justify-end pr-2 gap-x-2 lg:gap-x-4">
+    <div
+      class="flex flex-grow items-center justify-end pr-2 gap-x-2 lg:gap-x-4"
+    >
       <p class="font-mono text-xl lg:text-2xl xl:text-3xl">CV</p>
       <GitHubIcon
-        classes="w-full max-w-10 md:max-w-12 lg:max-w-14 min-w-0 hover:rotate-10 transition-transform duration-300 ease-in-out"
+        classes="min-w-8 xs:w-full max-w-10 md:max-w-12 lg:max-w-14 min-w-0 hover:rotate-10 transition-transform duration-300 ease-in-out"
         link="https://github.com/ellie-holt"
       />
     </div>
@@ -190,7 +194,7 @@
 
   <!-- scroll down arrow -->
   <div class="col-start-11 col-end-12 row-start-9 row-end-13">
-    <a href="#about"
+    <a href="#about" class=""
       ><div
         class="relative text-[16vw] xl:text-[14vw] leading-none cursor-pointer hover:translate-y-2 transition-transform duration-300 ease-in-out"
       >
