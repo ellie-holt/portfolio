@@ -37,9 +37,6 @@
     <p class="leading-snug">
       {project.description}
     </p>
-    <div class="absolute text-base text-right link bottom-4 right-4">
-      <a href={project.link} class="underline">Open →</a>
-    </div>
   </section>
 </article>
 

@@ -17,16 +17,16 @@
 </script>
 
 <div
-  class={`${bannerIsVisible ? "visible" : "invisible"} flex flex-col items-center justify-center px-1 pt-2 pb-3 bg-aquamarine-100`}
+  class={`${bannerIsVisible ? "visible" : "invisible"} flex flex-col items-center justify-center pt-2 pb-3 bg-aquamarine-100`}
   transition:fade|global
 >
   <h1
-    class="text-xl 3xs:text-2xl font-extrabold hero-title font-mono leading-[-0.5em]"
+    class="text-lg 4xs:text-xl 3xs:text-2xl font-extrabold hero-title font-mono leading-[-0.5em]"
   >
     Ellie Holt<span class="-mr-1 3xs:-mr-3 sm:mr-0">:</span>
 
     <span
-      class="text-xl font-medium leading-none 3xs:text-2xl font-mono-3 2xs:full"
+      class="text-lg font-medium leading-none 4xs:text-xl 3xs:text-2xl font-mono-3 2xs:full"
     >
       <span
         class="brackets text-tangerine-500 font-semibold relative top-[0.06em] text-[1.5em]"
