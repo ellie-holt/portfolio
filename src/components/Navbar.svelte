@@ -12,7 +12,7 @@
 </script>
 
 <nav
-  class="relative z-20 flex justify-center p-0 px-5 2xs:pl-0 2xs:justify-end navbar h-14"
+  class="relative z-20 flex justify-center h-10 p-0 px-5 md:px-8 lg:px-32 xl:px-48 2xs:pl-0 2xs:justify-end navbar 3xs:h-12 md:h-14"
 >
   <ul
     class="relative flex items-stretch justify-between w-full font-sans text-lg leading-none 2xs:w-7/12 sm:w-6/12 md:w-5/12 lg:w-4/12 sm:text-xl"
@@ -72,11 +72,6 @@
     height: 15px;
     transition: all 0.3s ease-in-out;
   } */
-
-  li:hover::before {
-    bottom: 0;
-    height: 100%;
-  }
 
   /* a {
     --size: 10px;

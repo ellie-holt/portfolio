@@ -49,10 +49,10 @@
 </script>
 
 <div
-  class="relative inset-0 z-0 w-full min-h-screen pointer-events-auto wrapper min-w-screen"
+  class="relative inset-0 z-0 w-full min-h-screen pointer-events-auto wrapper min-w-screen bg-tangerine-wash"
 >
-  <div class="background-gradient -z-10"></div>
-  <BackgroundGrain mode="auto" />
+  <!-- <div class="background-gradient -z-10"></div>
+  <BackgroundGrain mode="auto" /> -->
   <!-- <GrainyGradient classes="absolute inset-0 w-max min-w-screen min-h-full" /> -->
 
   <!-- HEADER: BIG HERO-->
@@ -87,7 +87,7 @@
   </div>
 </div>
 
-<svg class="svg absolute hidden inset-0" aria-hidden="true" focusable="false">
+<svg class="absolute inset-0 hidden svg" aria-hidden="true" focusable="false">
   <filter id="heading-noise">
     <feTurbulence
       type="turbulence"
@@ -110,7 +110,7 @@
 </svg>
 
 <svg
-  class="svg absolute hidden inset-0"
+  class="absolute inset-0 hidden svg"
   aria-hidden="true"
   focusable="false"
   width="200"
@@ -178,5 +178,26 @@
     bottom: 20px;
     border-top: 1px solid #666;
     border-bottom: 1px solid #666;
+  }
+
+  @media screen and (min-width: 768px) {
+    .wrapper::before {
+      left: 32px;
+      right: 32px;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .wrapper::before {
+      left: 128px;
+      right: 128px;
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    .wrapper::before {
+      left: 192px;
+      right: 192px;
+    }
   }
 </style>

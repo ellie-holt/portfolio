@@ -1,7 +1,11 @@
 <script lang="js">
   import { getCanvasBoundingBox } from "pixi.js";
 
-  // import me from "../assets/me.jpeg";
+  import me from "../assets/me.jpeg";
+  import me160 from "../assets/me-160.webp";
+  import me320 from "../assets/me-320.webp";
+  import me640 from "../assets/me-640.webp";
+  import me1080 from "../assets/me-1080.webp";
   import {
     isScrolled,
     scrollProgress,
@@ -17,13 +21,15 @@
   });
 </script>
 
-<div class="grid grid-cols-12 px-5 -mb-12 grid-rows-12">
+<div
+  class="grid grid-cols-12 px-5 -mb-12 md:px-8 lg:px-32 xl:px-48 grid-rows-12"
+>
   <div
-    class="col-start-9 col-end-13 row-start-1 row-end-5 sm:row-end-4 lg:row-end-3 pt-2 flex flex-col gap-y-2 lg:gap-y-4"
+    class="flex flex-col col-start-9 col-end-13 row-start-1 row-end-5 pt-2 sm:row-end-4 2xl:row-end-3 gap-y-2 lg:gap-y-4"
   >
     <!-- github icon -->
     <div
-      class="flex flex-grow items-center justify-end pr-2 gap-x-2 lg:gap-x-4"
+      class="flex items-center justify-end flex-grow pr-2 gap-x-2 lg:gap-x-4"
     >
       <p class="font-mono text-xl lg:text-2xl xl:text-3xl">Github</p>
       <GitHubIcon
@@ -33,7 +39,7 @@
     </div>
 
     <div
-      class="flex flex-grow items-center justify-end pr-2 gap-x-2 lg:gap-x-4"
+      class="flex items-center justify-end flex-grow pr-2 gap-x-2 lg:gap-x-4"
     >
       <p class="font-mono text-xl lg:text-2xl xl:text-3xl">CV</p>
       <GitHubIcon
@@ -58,7 +64,6 @@
             <rect id="clip-rect-ellie" x="0" y="0" width="0" height="200" />
           </clipPath> -->
         </defs>
-        <title>Ellie Holt</title>
 
         <text
           x="0%"
@@ -101,7 +106,6 @@
             <rect id="clip-rect-holt" x="0" y="0" width="0" height="200" />
           </clipPath> -->
         </defs>
-        <title>Ellie Holt</title>
 
         <text
           x="5%"
@@ -158,8 +162,11 @@
           font-weight="500"
           preserveAspectRatio="xMinYMid slice"
         >
-          <tspan font-size="150" fill="#f27941">{`{`}</tspan><tspan dy="0.13em">
-            {` front-end web`}</tspan
+          <tspan font-size="150" fill="#f27941" dx="0.2em">{`{`}</tspan><tspan
+            dy="0.13em"
+            dx="0.3em"
+          >
+            {`front-end web`}</tspan
           >
         </text>
       </svg>
@@ -178,9 +185,10 @@
           font-weight="500"
           preserveAspectRatio="xMinYMid meet"
         >
-          <tspan>{`developer `}</tspan><tspan
+          <tspan dx="0.5em">{`developer`}</tspan><tspan
             font-size="150"
             dy="0.08em"
+            dx="0.3em"
             fill="#f27941">{`}`}</tspan
           >
         </text>
@@ -189,14 +197,27 @@
   </div>
   <!-- image -->
   <div
-    class="flex w-full h-full col-start-1 col-end-5 row-start-6 bg-aquamarine-100 row-end-13"
-  ></div>
+    class="flex col-end-5 row-start-5 row-end-13 md:row-end-12 col-start-2 grayscale-25 p-2 md:p-3 max-h-[520px] mt-4 xl:mt-0 2xl:mt-4"
+  >
+    <img
+      alt="Ellie Holt"
+      srcset="{me1080} 1080w,
+        {me640} 640w,
+        {me320} 320w,
+        {me160} 160w"
+      src={me}
+      class="object-cover object-bottom w-full h-full"
+      loading="lazy"
+    />
+  </div>
 
   <!-- scroll down arrow -->
-  <div class="col-start-11 col-end-12 row-start-9 row-end-13">
+  <div
+    class="col-start-11 col-end-12 row-start-9 row-end-13 justify-self-center"
+  >
     <a href="#about" class=""
       ><div
-        class="relative text-[16vw] xl:text-[14vw] leading-none cursor-pointer hover:translate-y-2 transition-transform duration-300 ease-in-out"
+        class="relative text-[13.5vw] xl:text-[12vw] leading-none cursor-pointer hover:translate-y-2 transition-transform duration-300 ease-in-out z-10"
       >
         ↓
       </div></a

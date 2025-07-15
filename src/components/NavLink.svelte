@@ -7,7 +7,8 @@
 >
   <a
     href={link}
-    class="relative block w-full px-2 text-center uppercase font-bold">{text}</a
+    class="w-full px-2 align-baseline text-center font-bold inline py-4"
+    >{text}</a
   >
 
   <svg
@@ -19,13 +20,13 @@
     <defs>
       <!-- Gradient before hover -->
       <linearGradient id="grad-default" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="50%" stop-color="var(--color-aquamarine-100)" />
+        <stop offset="50%" stop-color="var(--color-tangerine-100)" />
         <stop offset="85%" stop-color="var(--color-azure-300)" />
       </linearGradient>
 
       <!-- Gradient after hover -->
       <linearGradient id="grad-hover" x1="0%" y1="0%" x2="0%" y2="100%">
-        <stop offset="15%" stop-color="var(--color-aquamarine-100)" />
+        <stop offset="15%" stop-color="var(--color-tangerine-100)" />
         <stop offset="70%" stop-color="var(--color-azure-300)" />
       </linearGradient>
 

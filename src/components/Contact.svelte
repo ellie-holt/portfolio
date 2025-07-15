@@ -1,13 +1,13 @@
 <script lang="js">
 </script>
 
-<section id="contact" class="flex flex-col px-5 pb-8">
+<section id="contact" class="flex flex-col px-5 pb-8 md:px-8 lg:px-32 xl:px-48">
   <h3 class="pt-4 pb-4 pl-4 text-2xl h-15 scroll-m-14">// contact</h3>
   <article
-    class="flex flex-wrap gap-2 text-lg xs:text-xl leading-loose contact-info"
+    class="flex flex-wrap gap-2 text-lg leading-loose xs:text-xl contact-info"
   >
     <div
-      class="flex flex-col 2xs:inline items-center flex-grow px-4 pt-3 pb-4 text-center bg-white border rounded-xl"
+      class="flex flex-col items-center flex-grow px-4 pt-3 pb-4 text-center bg-white border 2xs:inline rounded-xl"
     >
       <span class="font-bold">email:</span>
 
@@ -31,7 +31,7 @@
       </a>
     </div>
     <div
-      class="flex flex-col 2xs:inline items-center flex-grow px-4 pt-3 pb-4 text-center bg-white border rounded-xl"
+      class="flex flex-col items-center flex-grow px-4 pt-3 pb-4 text-center bg-white border 2xs:inline rounded-xl"
     >
       <span class="font-bold">github:</span>
 

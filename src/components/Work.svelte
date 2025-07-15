@@ -5,11 +5,12 @@
   import aiPoetImage from "../assets/ai-poet.png";
 </script>
 
-<section id="work" class="flex flex-col px-5 scroll-m-14">
+<section
+  id="work"
+  class="flex flex-col px-5 md:px-8 lg:px-32 xl:px-48 scroll-m-10 3xs:scroll-m-12 md:scroll-m-14"
+>
   <h3 class="pt-4 pb-4 pl-4 text-2xl h-15">// work</h3>
-  <section
-    class="grid grid-cols-2 grid-rows-[1fr_auto] md:grid-rows-2 md:grid-cols-2 gap-2"
-  >
+  <section class="grid grid-cols-2 gap-8">
     <Project
       project={{
         title: "Weather App",

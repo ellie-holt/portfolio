@@ -14,20 +14,22 @@
 </script>
 
 <article
-  class={`flex  border-black border rounded-xl  ${featured ? "  col-span-2 row-span-1 " : "col-span-1 row-span-1"}`}
+  class={`relative place-self-center border border-black rounded-xl flex col-span-full   ${featured ? "md:col-span-2 xl:w-10/12 2xl:w-9/12" : "md:col-span-1"} divide-x`}
 >
-  <div class="w-20 rounded-l-xl flex items-center p-4">→</div>
+  <!-- <div class="absolute inset-0 bg-transparent w-2/3 h-full"></div> -->
   <!-- image -->
-  <section class={`${featured ? "" : ""}  `}>
+  <section
+    class={`relative z-10 flex-1 ${featured ? "" : ""} overflow-hidden rounded-l-xl`}
+  >
     <img
       src={image.src}
       alt={image.alt}
-      class={`rounded-tl-xl max-w-96 ${featured ? "rounded-l-xl w-full h-full" : "rounded-tr-xl md:rounded-tr-none  md:rounded-bl-xl w-full h-full"}  object-cover`}
+      class="w-full h-full object-cover"
       loading="lazy"
     />
   </section>
 
-  <section class="relative px-6 pt-6 pb-10">
+  <section class="px-6 pt-6 pb-10 flex-1 bg-azure-100 rounded-r-xl">
     <!-- title -->
     <h4 class="mb-2">
       <a href={project.link} target="_blank">{project.title}</a>
@@ -36,6 +38,16 @@
     <!-- description and link -->
     <p class="leading-snug">
       {project.description}
+    </p>
+    <h4 class="mt-4 text-lg">Blah</h4>
+    <ul class="list-disc pl-6">
+      <li class="mt-4">Lorem ipsum</li>
+      <li class="mt-2">Lorem ipsum dolor sit amet</li>
+      <li class="mt-2">Lorem ipsum dolor sit amet consectetur</li>
+    </ul>
+    <h4 class="mt-4 text-lg">etc</h4>
+    <p class="mt-2 italic text-sm">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
     </p>
   </section>
 </article>
