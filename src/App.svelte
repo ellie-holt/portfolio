@@ -9,6 +9,7 @@
   import GrainSVG from "./components/GrainSVG.svelte";
   import GrainCanvas from "./components/GrainCanvas.svelte";
   import BackgroundGrain from "./components/BackgroundGrain.svelte";
+  import GrainBackground from "./components/GrainBackground.svelte";
   import { onMount } from "svelte";
   import {
     scrollY,
@@ -49,15 +50,16 @@
 </script>
 
 <div
-  class="relative inset-0 z-0 w-full min-h-screen pointer-events-auto wrapper min-w-screen bg-tangerine-wash"
+  class="relative inset-0 z-0 w-full min-h-screen pointer-events-auto wrapper"
 >
-  <!-- <div class="background-gradient -z-10"></div>
-  <BackgroundGrain mode="auto" /> -->
-  <!-- <GrainyGradient classes="absolute inset-0 w-max min-w-screen min-h-full" /> -->
+  <!-- <GrainBackground opacity={0.2} speed={100} resolution={0.7} /> -->
+
+  <div class="grainy-gradient -z-10"></div>
+  <!-- <BackgroundGrain mode="auto" /> -->
 
   <!-- HEADER: BIG HERO-->
   <header class="relative z-10">
-    <section id="hero" class="top-0 w-full pt-5 border-black hero">
+    <section id="hero" class="top-0 w-full pt-2.5 xs:pt-5 border-black hero">
       <Hero />
     </section>
   </header>
@@ -77,7 +79,7 @@
   </section>
 
   <!-- MAIN CONTENT -->
-  <div class={`content relative z-10 `}>
+  <div class={`content relative z-10`}>
     <main class="relative flex flex-col justify-center">
       <About />
       <Work />
@@ -153,6 +155,30 @@
     background-size: cover;
   }
 
+  .grainy-gradient {
+    inset: 0;
+    position: absolute;
+    filter: contrast(120%) brightness(160%);
+    background-color: hsla(18, 100%, 97%, 1);
+
+    background: radial-gradient(
+        circle at -35% -40%,
+        hsl(160, 89%, 65%),
+        rgba(0, 255, 0, 0) 70%
+      ),
+      radial-gradient(
+        circle at 123% -40%,
+        hsl(18, 100%, 55%),
+        rgba(255, 255, 0, 0) 50%
+      ),
+      radial-gradient(
+        circle at 33% 138%,
+        hsl(221, 87%, 60%),
+        rgba(255, 255, 255, 0) 60%
+      ),
+      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 500' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
   .wrapper::before,
   .wrapper::after {
     content: "";
@@ -163,21 +189,32 @@
   .wrapper::before {
     z-index: 20;
     top: 0;
-    left: 20px;
-    right: 20px;
+    left: 10px;
+    right: 10px;
     bottom: 0;
-    border-left: 1px solid #666;
-    border-right: 1px solid #666;
+    border-left: 2px solid var(--color-aquamarine-muted);
+    border-right: 2px solid var(--color-aquamarine-muted);
   }
 
   .wrapper::after {
     z-index: 0;
-    top: 20px;
+    top: 10px;
     left: 0;
     right: 0;
-    bottom: 20px;
-    border-top: 1px solid #666;
-    border-bottom: 1px solid #666;
+    bottom: 10px;
+    border-top: 2px solid var(--color-aquamarine-muted);
+    border-bottom: 2px solid var(--color-aquamarine-muted);
+  }
+
+  @media screen and (min-width: 576px) {
+    .wrapper::before {
+      left: 20px;
+      right: 20px;
+    }
+    .wrapper::after {
+      top: 20px;
+      bottom: 20px;
+    }
   }
 
   @media screen and (min-width: 768px) {

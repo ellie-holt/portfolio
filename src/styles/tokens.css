@@ -1,0 +1,57 @@
+/* src/styles/tokens.css */
+
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;1,400&family=IBM+Plex+Mono:ital,wght@0,400;1,400&family=IBM+Plex+Serif:ital,wght@0,400;1,400&display=swap");
+
+@theme {
+  /* COLOURS */
+
+  --color-*: initial;
+
+  --color-azure-wash: #f0f4ff;
+  --color-azure-100: #e7eefd;
+  --color-azure-200: #c9d8fb;
+  --color-azure-300: #9fbbfc;
+  --color-azure-400: #7ea5ff;
+  --color-azure-500: #5f85de;
+  --color-azure-600: #1f49ad;
+  --color-azure-ink: #010b21;
+
+  --color-aquamarine-wash: #f2fffb;
+  --color-aquamarine-100: #e1fdf4;
+  --color-aquamarine-200: #bcfbe6;
+  --color-aquamarine-300: #86f7d1;
+  --color-aquamarine-400: #52ebb7;
+  --color-aquamarine-500: #2bd69d;
+  --color-aquamarine-600: #079d6b;
+  --color-aquamarine-ink: #011c13;
+
+  --color-tangerine-wash: #fff6f2;
+  --color-tangerine-100: #ffefe8;
+  --color-tangerine-200: #ffd3bf;
+  --color-tangerine-300: #ffab85;
+  --color-tangerine-400: #ff935f;
+  --color-tangerine-500: #f27941;
+  --color-tangerine-600: #a63a08;
+  --color-tangerine-ink: #1a0901;
+
+  /* SHADOWS */
+
+  --shadow-blocky-sm: 4px 4px 0 0;
+  --shadow-blocky-md: 6px 6px 0 0;
+  --shadow-blocky-lg: 8px 8px 0 0;
+  --shadow-blocky-xl: 12px 12px 0 0;
+  --shadow-blocky: var(--shadow-blocky-md);
+
+  /* BREAKPOINTS */
+
+  --breakpoint-4xs: 22rem; /* 352px */
+  --breakpoint-3xs: 28rem; /* 448px */
+  --breakpoint-2xs: 34rem; /* 544px */
+  --breakpoint-xs: 36rem; /* 576px */
+
+  /* FONTS */
+
+  --font-sans: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-serif: "IBM Plex Serif", serif;
+}

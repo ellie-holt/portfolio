@@ -1,0 +1,55 @@
+/* src/styles/base.css */
+
+@layer base {
+  :root {
+    scroll-behavior: smooth;
+  }
+
+  html {
+    font-size: 100%;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+
+  h1 {
+    @apply text-5xl font-bold font-mono text-aquamarine-ink mb-6;
+  }
+
+  h2 {
+    @apply text-4xl font-bold font-mono text-aquamarine-ink mb-5;
+  }
+
+  h3 {
+    @apply text-3xl font-semibold font-mono text-aquamarine-ink mb-4;
+  }
+
+  h4 {
+    @apply text-2xl font-bold font-mono uppercase text-aquamarine-ink mb-3;
+  }
+
+  h5 {
+    @apply text-xl font-sans font-medium text-aquamarine-ink mb-2;
+  }
+
+  h6 {
+    @apply text-lg font-mono font-medium text-aquamarine-ink mb-2;
+  }
+
+  /* Paragraphs */
+
+  p {
+    @apply text-base font-sans;
+  }
+
+  /* Links */
+
+  a {
+    @apply font-mono;
+  }
+}

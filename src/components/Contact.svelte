@@ -1,13 +1,18 @@
 <script lang="js">
 </script>
 
-<section id="contact" class="flex flex-col px-5 pb-8 md:px-8 lg:px-32 xl:px-48">
-  <h3 class="pt-4 pb-4 pl-4 text-2xl h-15 scroll-m-14">// contact</h3>
+<section
+  id="contact"
+  class="flex flex-col px-2.5 xs:px-5 pb-8 md:px-8 lg:px-32 xl:px-48 mb-12"
+>
+  <h3 class="pt-4 pb-4 pl-4 text-3xl h-15 scroll-m-14 font-semibold">
+    // contact
+  </h3>
   <article
-    class="flex flex-wrap gap-2 text-lg leading-loose xs:text-xl contact-info"
+    class="grid grid-cols-3 gap-2 text-lg leading-loose xs:text-xl contact-info"
   >
     <div
-      class="flex flex-col items-center flex-grow px-4 pt-3 pb-4 text-center bg-white border 2xs:inline rounded-xl"
+      class="flex flex-col items-center col-start-1 col-end-3 px-4 pt-3 pb-4 text-center bg-white border-2 2xs:inline shadow-blocky-sm"
     >
       <span class="font-bold">email:</span>
 
@@ -31,7 +36,16 @@
       </a>
     </div>
     <div
-      class="flex flex-col items-center flex-grow px-4 pt-3 pb-4 text-center bg-white border 2xs:inline rounded-xl"
+      class="flex flex-col items-center col-start-2 col-end-4 px-4 pt-3 pb-4 text-center bg-white border-2 2xs:inline shadow-blocky-smld clock app. Fetches data from WorldTimeAPI. Looks up location using Geocode API.
+Blah
+
+    Lorem ipsum
+    Lorem ipsum dolor sit amet
+    Lorem ipsum dolor sit amet consectetur
+
+etc
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae."
     >
       <span class="font-bold">github:</span>
 
@@ -58,4 +72,21 @@
 </section>
 
 <style>
+  .grid {
+    background-image: linear-gradient(
+        var(--color-aquamarine-muted) 0.5px,
+        transparent 0.5px,
+        transparent calc(100% - 0.5px),
+        var(--color-aquamarine-muted) calc(100% - 0.5px)
+      ),
+      linear-gradient(
+        90deg,
+        var(--color-aquamarine-muted) 0.5px,
+        transparent 0.5px,
+        transparent calc(100% - 0.5px),
+        var(--color-aquamarine-muted) calc(100% - 0.5px)
+      );
+    background-size: 16.666666666666668% 16.666666666666668%;
+    border: 0.5px solid var(--color-aquamarine-muted);
+  }
 </style>

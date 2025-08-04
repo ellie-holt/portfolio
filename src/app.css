@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Chivo:ital,wght@0,100..900;1,100..900&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fira+Mono:wght@400;500;700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inconsolata:wght@200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
 @import "tailwindcss";
 
 @theme {
@@ -14,6 +14,7 @@
   --color-azure-400: #7ea5ff;
   --color-azure-500: #5f85de;
   --color-azure-600: #1f49ad;
+  --color-azure-muted: hsl(220, 20%, 50%, 50%);
   --color-azure-ink: #010b21;
 
   --color-aquamarine-wash: #f2fffb;
@@ -23,6 +24,8 @@
   --color-aquamarine-400: #52ebb7;
   --color-aquamarine-500: #2bd69d;
   --color-aquamarine-600: #079d6b;
+  --color-aquamarine-muted: hsla(160, 20%, 50%, 0.199);
+  --color-aquamarine-muted-opaque: hsl(160, 20%, 50%);
   --color-aquamarine-ink: #011c13;
 
   --color-tangerine-wash: #fff6f2;
@@ -32,6 +35,7 @@
   --color-tangerine-400: #ff935f;
   --color-tangerine-500: #f27941;
   --color-tangerine-600: #a63a08;
+  --color-tangerine-muted: hsl(19, 20%, 50%, 50%);
   --color-tangerine-ink: #1a0901;
 
   --shadow-blocky-sm: 4px 4px 0 0;
@@ -57,6 +61,7 @@
   :root {
     scroll-behavior: smooth;
   }
+
   a {
     z-index: 9999 !important;
     /* pointer-events: auto !important; */
@@ -64,8 +69,10 @@
   }
 
   body {
+    scrollbar-gutter: stable both-edges;
     font-family: var(--font-sans);
     scroll-behavior: smooth;
+    image-rendering: -webkit-optimize-contrast;
   }
 
   h1,

@@ -8,14 +8,13 @@
   } from "../lib/ScrollState.svelte";
   import GrainSVG from "./GrainSVG.svelte";
   import NavLink from "./NavLink.svelte";
-  // let gradientClass = $state("from-sky-400 to-blue-600");
 </script>
 
 <nav
-  class="relative z-20 flex justify-center h-10 p-0 px-5 md:px-8 lg:px-32 xl:px-48 2xs:pl-0 2xs:justify-end navbar 3xs:h-12 md:h-14"
+  class="relative z-20 flex justify-center h-10 p-0 px-2.5 xs:px-5 md:px-8 lg:px-32 xl:px-48 2xs:pl-0 2xs:justify-end navbar 3xs:h-12 md:h-14"
 >
   <ul
-    class="relative flex items-stretch justify-between w-full font-sans text-lg leading-none 2xs:w-7/12 sm:w-6/12 md:w-5/12 lg:w-4/12 sm:text-xl"
+    class="relative flex items-stretch justify-between w-full font-sans text-lg leading-none divide-x-2 border-4 border-aquamarine-muted-opaque 2xs:w-7/12 sm:w-6/12 md:w-5/12 lg:w-4/12 sm:text-xl"
   >
     <NavLink text="about" link="#about" />
     <NavLink text="work" link="#work" />
@@ -26,14 +25,14 @@
 <style>
   .navbar::before {
     content: "";
-    border-top: 1px solid #666;
+    border-top: 2px solid var(--color-aquamarine-muted-opaque);
     position: absolute;
     inset: 0;
   }
 
   .navbar::after {
     content: "";
-    border-bottom: 1px solid #666;
+    border-bottom: 2px solid var(--color-aquamarine-muted-opaque);
     inset: 0;
     position: absolute;
   }

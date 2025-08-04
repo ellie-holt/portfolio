@@ -14,12 +14,11 @@
 </script>
 
 <article
-  class={`relative place-self-center border border-black rounded-xl flex col-span-full   ${featured ? "md:col-span-2 xl:w-10/12 2xl:w-9/12" : "md:col-span-1"} divide-x`}
+  class={`relative border-2 border-black shadow-blocky-sm flex flex-wrap flex-col sm:flex-row 2xl:flex-col 2xl:divide-x-0 divide-y-2 sm:divide-y-2 2xl:divide-y-2 col-span-full ${featured ? "2xl:col-span-1" : "md:flex-col md:col-span-1"} bg-white`}
 >
-  <!-- <div class="absolute inset-0 bg-transparent w-2/3 h-full"></div> -->
   <!-- image -->
   <section
-    class={`relative z-10 flex-1 ${featured ? "" : ""} overflow-hidden rounded-l-xl`}
+    class={`relative z-10 overflow-hidden sm:flex-1 sm:border-r-2 ${featured ? "2xl:border-r-0 2xl:flex-auto" : "md:border-r-0 md:flex-auto"}`}
   >
     <img
       src={image.src}
@@ -29,45 +28,31 @@
     />
   </section>
 
-  <section class="px-6 pt-6 pb-10 flex-1 bg-azure-100 rounded-r-xl">
-    <!-- title -->
-    <h4 class="mb-2">
+  <!-- title and description -->
+  <section
+    class={`p-6 sm:flex-0 ${featured ? "2xl:flex-auto sm:basis-1/4" : "md:flex-auto"}`}
+  >
+    <h4 class="mb-3">
       <a href={project.link} target="_blank">{project.title}</a>
     </h4>
-
-    <!-- description and link -->
     <p class="leading-snug">
       {project.description}
     </p>
-    <h4 class="mt-4 text-lg">Blah</h4>
+  </section>
+
+  <!-- extra info and link -->
+  <section
+    class={`sm:basis-full ${featured ? "2xl:basis-0" : "md:basis-0"} px-6 pb-10`}
+  >
+    <h5 class="mt-6 text-lg mb-3">Blah</h5>
     <ul class="list-disc pl-6">
-      <li class="mt-4">Lorem ipsum</li>
-      <li class="mt-2">Lorem ipsum dolor sit amet</li>
-      <li class="mt-2">Lorem ipsum dolor sit amet consectetur</li>
+      <li class="mb-3">Lorem ipsum</li>
+      <li class="mb-3">Lorem ipsum dolor sit amet</li>
+      <li class="mb-3">Lorem ipsum dolor sit amet consectetur</li>
     </ul>
-    <h4 class="mt-4 text-lg">etc</h4>
-    <p class="mt-2 italic text-sm">
+    <h5 class="mt-6 text-lg mb-3">etc</h5>
+    <p class=" italic text-sm">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
     </p>
   </section>
 </article>
-
-<style>
-  /* .image-container {
-    width: 100%;
-    padding-top: 100%;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .project-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top;
-    overflow-x: visible;
-  } */
-</style>

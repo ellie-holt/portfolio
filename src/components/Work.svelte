@@ -7,10 +7,10 @@
 
 <section
   id="work"
-  class="flex flex-col px-5 md:px-8 lg:px-32 xl:px-48 scroll-m-10 3xs:scroll-m-12 md:scroll-m-14"
+  class="flex flex-col px-2.5 xs:px-5 md:px-8 lg:px-32 xl:px-48 scroll-m-10 3xs:scroll-m-12 md:scroll-m-14 mb-12"
 >
-  <h3 class="pt-4 pb-4 pl-4 text-2xl h-15">// work</h3>
-  <section class="grid grid-cols-2 gap-8">
+  <h3 class="pt-4 pb-4 pl-4 text-3xl font-semibold h-15">// work</h3>
+  <section class="grid grid-cols-2 2xl:grid-cols-3 gap-8">
     <Project
       project={{
         title: "Weather App",
@@ -52,6 +52,23 @@
 </section>
 
 <style>
+  .grid {
+    background-image: linear-gradient(
+        var(--color-aquamarine-muted) 0.5px,
+        transparent 0.5px,
+        transparent calc(100% - 0.5px),
+        var(--color-aquamarine-muted) calc(100% - 0.5px)
+      ),
+      linear-gradient(
+        90deg,
+        var(--color-aquamarine-muted) 0.5px,
+        transparent 0.5px,
+        transparent calc(100% - 0.5px),
+        var(--color-aquamarine-muted) calc(100% - 0.5px)
+      );
+    background-size: 16.666666666666668% 16.666666666666668%;
+    border: 0.5px solid var(--color-aquamarine-muted);
+  }
   /* :global(.projects > .project) {
     border-right: 4px solid #000;
   } */
