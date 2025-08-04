@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "pixi.js": "^8.10.1",
+    "roughjs": "^4.6.6",
     "typewriter-effect": "^2.22.0"
   }
 }
