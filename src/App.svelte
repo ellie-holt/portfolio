@@ -10,6 +10,8 @@
   import GrainCanvas from "./components/GrainCanvas.svelte";
   import BackgroundGrain from "./components/BackgroundGrain.svelte";
   import GrainBackground from "./components/GrainBackground.svelte";
+  import noise from "./assets/noise.svg";
+  import BackgroundLayer from "./components/BackgroundLayer.svelte";
   import { onMount } from "svelte";
   import {
     scrollY,
@@ -52,10 +54,7 @@
 <div
   class="relative inset-0 z-0 w-full min-h-screen pointer-events-auto wrapper"
 >
-  <!-- <GrainBackground opacity={0.2} speed={100} resolution={0.7} /> -->
-
-  <div class="grainy-gradient -z-10"></div>
-  <!-- <BackgroundGrain mode="auto" /> -->
+  <BackgroundLayer />
 
   <!-- HEADER: BIG HERO-->
   <header class="relative z-10">
@@ -89,94 +88,30 @@
   </div>
 </div>
 
-<svg class="absolute inset-0 hidden svg" aria-hidden="true" focusable="false">
-  <filter id="heading-noise">
-    <feTurbulence
-      type="turbulence"
-      baseFrequency="0.7"
-      numOctaves="2"
-      stitchTiles="stitch"
-      result="turbulence"
-    />
-
-    <feComposite
-      operator="in"
-      in="turbulence"
-      in2="SourceAlpha"
-      result="composite"
-    />
-
-    <feColorMatrix in="composite" type="luminanceToAlpha" />
-    <feBlend in="SourceGraphic" in2="composite" mode="screen" />
-  </filter>
-</svg>
-
-<svg
-  class="absolute inset-0 hidden svg"
-  aria-hidden="true"
-  focusable="false"
-  width="200"
-  height="200"
-  viewBox="0 0 220 220"
-  xmlns="http://www.w3.org/2000/svg"
->
-  <filter id="noise">
-    <feTurbulence
-      type="turbulence"
-      baseFrequency="0.05"
-      numOctaves="3"
-      result="turbulence"
-    />
-    <feDisplacementMap
-      in2="turbulence"
-      in="SourceGraphic"
-      scale="6.3"
-      xChannelSelector="R"
-      yChannelSelector="G"
-    />
-  </filter>
-</svg>
-
 <style>
-  .background-gradient {
-    position: absolute;
-    inset: 0;
-    background-color: hsla(18, 100%, 97%, 1);
-    background-image: radial-gradient(
-        at 28% 25%,
-        hsla(221, 86%, 88%, 1) 0px,
+  :root {
+    --gradient: radial-gradient(
+        at 26% 90%,
+        hsla(18, 100%, 76%, 0.64) 0px,
         transparent 50%
       ),
-      radial-gradient(at 95% 98%, hsla(18, 100%, 76%, 1) 0px, transparent 50%),
-      radial-gradient(at 51% 37%, hsla(159, 87%, 74%, 1) 0px, transparent 50%),
-      radial-gradient(at 43% 84%, hsla(160, 88%, 86%, 1) 0px, transparent 50%),
-      radial-gradient(at 82% 28%, hsla(221, 93%, 80%, 1) 0px, transparent 50%),
-      radial-gradient(at 19% 59%, hsla(18, 100%, 87%, 1) 0px, transparent 50%);
-    background-size: cover;
-  }
-
-  .grainy-gradient {
-    inset: 0;
-    position: absolute;
-    filter: contrast(120%) brightness(160%);
-    background-color: hsla(18, 100%, 97%, 1);
-
-    background: radial-gradient(
-        circle at -35% -40%,
-        hsl(160, 89%, 65%),
-        rgba(0, 255, 0, 0) 70%
-      ),
+      radial-gradient(at 73% 92%, hsla(221, 86%, 88%, 1) 0px, transparent 50%),
+      radial-gradient(at 73% 42%, hsla(0, 0%, 100%, 1) 0px, transparent 50%),
+      radial-gradient(at 92% 7%, hsla(160, 88%, 86%, 1) 0px, transparent 50%),
+      radial-gradient(at 43% 2%, hsla(0, 0%, 100%, 1) 0px, transparent 50%),
+      radial-gradient(at 84% 67%, hsla(18, 100%, 87%, 1) 0px, transparent 50%),
+      radial-gradient(at 13% 62%, hsla(0, 0%, 100%, 1) 0px, transparent 50%),
       radial-gradient(
-        circle at 123% -40%,
-        hsl(18, 100%, 55%),
-        rgba(255, 255, 0, 0) 50%
+        at 15% 29%,
+        hsla(221, 92%, 80%, 0.69) 0px,
+        transparent 50%
       ),
+      radial-gradient(at 9% 15%, hsla(0, 0%, 100%, 1) 0px, transparent 50%),
       radial-gradient(
-        circle at 33% 138%,
-        hsl(221, 87%, 60%),
-        rgba(255, 255, 255, 0) 60%
-      ),
-      url("data:image/svg+xml,%3Csvg viewBox='0 0 200 500' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='2' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        at 61% 53%,
+        hsla(159, 86%, 74%, 0.78) 0px,
+        transparent 50%
+      );
   }
 
   .wrapper::before,
@@ -192,8 +127,8 @@
     left: 10px;
     right: 10px;
     bottom: 0;
-    border-left: 2px solid var(--color-aquamarine-muted);
-    border-right: 2px solid var(--color-aquamarine-muted);
+    border-left: 1px solid var(--color-azure-muted);
+    border-right: 1px solid var(--color-azure-muted);
   }
 
   .wrapper::after {
@@ -202,8 +137,8 @@
     left: 0;
     right: 0;
     bottom: 10px;
-    border-top: 2px solid var(--color-aquamarine-muted);
-    border-bottom: 2px solid var(--color-aquamarine-muted);
+    border-top: 1px solid var(--color-azure-muted);
+    border-bottom: 1px solid var(--color-azure-muted);
   }
 
   @media screen and (min-width: 576px) {

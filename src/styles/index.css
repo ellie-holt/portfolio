@@ -2,6 +2,6 @@
 
 @import "./tokens.css";
 @import "./base.css";
-/* @import "./utilities.css"; */
+@import "./utilities.css";
 
 @import "tailwindcss";

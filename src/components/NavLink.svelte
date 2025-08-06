@@ -3,7 +3,7 @@
 </script>
 
 <li
-  class="z-30 group relative overflow-hidden flex justify-center items-center flex-1 border-aquamarine-muted-opaque bg-none cursor-pointer isolate"
+  class="z-30 group relative overflow-hidden flex justify-center items-center flex-1 border-azure-muted bg-none cursor-pointer isolate"
 >
   <a
     href={link}
@@ -21,13 +21,13 @@
       <!-- Gradient before hover -->
       <linearGradient id="grad-default" x1="0%" y1="0%" x2="0%" y2="100%">
         <stop offset="50%" stop-color="var(--color-tangerine-wash)" />
-        <stop offset="85%" stop-color="var(--color-aquamarine-200)" />
+        <stop offset="85%" stop-color="var(--color-azure-200)" />
       </linearGradient>
 
       <!-- Gradient after hover -->
       <linearGradient id="grad-hover" x1="0%" y1="0%" x2="0%" y2="100%">
         <stop offset="15%" stop-color="var(--color-tangerine-wash)" />
-        <stop offset="70%" stop-color="var(--color-aquamarine-200)" />
+        <stop offset="70%" stop-color="var(--color-azure-200)" />
       </linearGradient>
 
       <!-- Noise filter -->

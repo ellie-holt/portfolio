@@ -1,0 +1,14 @@
+/* src/styles/utilities.css */
+
+@layer utilities {
+  .bg-gradient {
+    background-image: radial-gradient(
+        at 28% 25%,
+        hsla(221, 86%, 88%, 1) 0px,
+        transparent 50%
+      ),
+      radial-gradient(at 95% 98%, hsla(18, 100%, 76%, 1) 0px, transparent 50%),
+      radial-gradient(at 51% 37%, hsla(159, 87%, 74%, 1) 0px, transparent 50%),
+      radial-gradient(at 43% 84%, hsla(160, 88%, 86%, 1) 0px, transparent 50%);
+  }
+}

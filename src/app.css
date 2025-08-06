@@ -14,7 +14,8 @@
   --color-azure-400: #7ea5ff;
   --color-azure-500: #5f85de;
   --color-azure-600: #1f49ad;
-  --color-azure-muted: hsl(220, 20%, 50%, 50%);
+  --color-azure-muted: hsla(218, 40%, 79%, 0.4);
+  --color-azure-muted-opaque: hsl(218, 40%, 79%);
   --color-azure-ink: #010b21;
 
   --color-aquamarine-wash: #f2fffb;
