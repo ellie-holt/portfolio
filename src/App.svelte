@@ -139,8 +139,8 @@
     left: 10px;
     right: 10px;
     bottom: 0;
-    border-left: 1px solid var(--color-azure-muted);
-    border-right: 1px solid var(--color-azure-muted);
+    border-left: 1px solid var(--color-azure-ink);
+    border-right: 1px solid var(--color-azure-ink);
   }
 
   .wrapper::after {
@@ -149,8 +149,8 @@
     left: 0;
     right: 0;
     bottom: 10px;
-    border-top: 1px solid var(--color-azure-muted);
-    border-bottom: 1px solid var(--color-azure-muted);
+    border-top: 1px solid var(--color-azure-ink);
+    border-bottom: 1px solid var(--color-azure-ink);
   }
 
   @media screen and (min-width: 576px) {
@@ -166,22 +166,22 @@
 
   @media screen and (min-width: 768px) {
     .wrapper::before {
-      left: 32px;
-      right: 32px;
+      left: 24px;
+      right: 24px;
     }
   }
 
-  @media screen and (min-width: 1024px) {
+  /* @media screen and (min-width: 1024px) {
     .wrapper::before {
       left: 128px;
       right: 128px;
     }
-  }
+  } */
 
-  @media screen and (min-width: 1280px) {
+  /* @media screen and (min-width: 1280px) {
     .wrapper::before {
       left: 192px;
       right: 192px;
     }
-  }
+  } */
 </style>

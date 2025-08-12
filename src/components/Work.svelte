@@ -7,7 +7,7 @@
 
 <section
   id="work"
-  class="flex flex-col px-2.5 xs:px-5 md:px-8 lg:px-32 xl:px-48 scroll-m-10 3xs:scroll-m-12 md:scroll-m-14 mb-12"
+  class="flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-10 3xs:scroll-m-12 md:scroll-m-14 mb-12"
 >
   <h3 class="pt-4 pb-4 pl-4 text-3xl font-semibold h-15">// work</h3>
   <section class="grid grid-cols-2 2xl:grid-cols-3 gap-8">

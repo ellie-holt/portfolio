@@ -3,7 +3,7 @@
 
 <section
   id="contact"
-  class="flex flex-col px-2.5 xs:px-5 pb-8 md:px-8 lg:px-32 xl:px-48 mb-12"
+  class="flex flex-col mx-2.5 xs:mx-5 pb-8 md:mx-6 lg:mx-6 xl:mx-6 mb-12"
 >
   <h3 class="pt-4 pb-4 pl-4 text-3xl h-15 scroll-m-14 font-semibold">
     // contact
