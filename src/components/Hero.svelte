@@ -24,14 +24,18 @@
   $effect(() => {
     if (!arrowCanvas) return;
 
-    const { width, height } = arrowCanvas;
+    const { width, height } = arrowCanvas.getBoundingClientRect();
+
+    arrowCanvas.width = width;
+    arrowCanvas.height = height;
+
     const rc = rough.canvas(arrowCanvas);
 
     // 1) Arrow shaft
     const x1 = width / 2;
-    const y1 = height / 6;
+    const y1 = height / 8;
     const x2 = width / 2;
-    const y2 = height - height / 6;
+    const y2 = height - height / 8;
 
     rc.line(x1, y1, x2, y2, {
       stroke: "#f27941",
@@ -183,57 +187,6 @@
     </div>
 
     <!-- hero subtitle -->
-    <!-- <div
-      class="col-start-5 col-end-12 row-start-8 row-end-10 text-[7vw] xs:text-[6vw] sm:text-[9vw] xl:text-[4rem] font-mono contents"
-    > -->
-    <!-- all font sizes * 1.2 for the first line due to svg sizing -->
-    <!-- <h2 class="font-mono font-medium leading-none contents">
-        <svg
-          viewBox="0 0 1100 100"
-          class="relative z-10 w-full h-full col-start-6 col-end-11 leading-none text-black bg-white fill-current element-border row-start-8 row-end-10"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <text
-            x="0%"
-            y="100%"
-            dominant-baseline="baseline"
-            text-anchor="start"
-            font-size="132"
-            font-family="'IBM Plex Mono', monospace"
-            font-weight="500"
-            preserveAspectRatio="xMinYMid slice"
-          >
-            <tspan font-size="240" fill="#f27941" dy="1.2rem" dx="0.5rem"
-              >{`{`}</tspan
-            ><tspan dy="-1.2rem" dx="0.5rem"> {`front-end`}</tspan>
-          </text>
-        </svg>
-        <svg
-          viewBox="0 0 1100 100"
-          class="relative z-10 w-full h-full col-start-6 col-end-12 leading-none text-black bg-white fill-current element-border row-start-10 row-end-12"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <text
-            x="99%"
-            y="50%"
-            dominant-baseline="central"
-            text-anchor="end"
-            font-size="110"
-            font-family="'IBM Plex Mono', monospace"
-            font-weight="500"
-            preserveAspectRatio="xMinYMid slice"
-          >
-            <tspan>{`web developer`}</tspan><tspan
-              font-size="200"
-              dx="0.5rem"
-              dy="-1.2rem"
-              fill="#f27941">{`}`}</tspan
-            >
-          </text>
-        </svg>
-      </h2>
-    </div> -->
-    <!-- hero subtitle -->
     <h2 class="font-mono font-medium leading-none contents">
       <svg
         viewBox="0 0 1100 100"
@@ -250,8 +203,7 @@
           font-weight="500"
           preserveAspectRatio="xMinYMid slice"
         >
-          <tspan font-size="100" fill="#f27941" dy="-0.5rem" dx="0.5rem"
-            >{`{`}</tspan
+          <tspan font-size="100" fill="#f27941" dy="-0.5rem" dx="0">{`{`}</tspan
           ><tspan dy="0.5rem" dx="0.5rem">
             {`front-end web developer`}</tspan
           ><tspan font-size="100" dx="0.5rem" dy="-0.5rem" fill="#f27941"
@@ -281,14 +233,12 @@
     <!-- scroll down arrow - need to make scalable -->
 
     <div
-      class="col-start-10 col-end-12 w-full h-full row-start-6 row-end-10 flex items-center justify-center"
+      class="col-start-9 col-end-13 w-full h-full row-start-6 row-end-10 flex items-center justify-center"
     >
       <a href="#about" aria-label="Scroll down">
         <canvas
           bind:this={arrowCanvas}
-          width="100"
-          height="120"
-          class="hover:translate-y-2 transition-transform duration-300 ease-in-out"
+          class="w-full h-full hover:translate-y-2 transition-transform duration-300 ease-in-out"
         >
         </canvas></a
       >
@@ -315,6 +265,7 @@
         transparent calc(100% - 0.5px),
         var(--line-color) calc(100% - 0.5px)
       );
+
     background-size: 8.333333333333334% 8.333333333333334%;
   }
 

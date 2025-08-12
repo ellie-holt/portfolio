@@ -52,24 +52,4 @@
 </section>
 
 <style>
-  .grid {
-    background-image: linear-gradient(
-        var(--color-aquamarine-muted) 0.5px,
-        transparent 0.5px,
-        transparent calc(100% - 0.5px),
-        var(--color-aquamarine-muted) calc(100% - 0.5px)
-      ),
-      linear-gradient(
-        90deg,
-        var(--color-aquamarine-muted) 0.5px,
-        transparent 0.5px,
-        transparent calc(100% - 0.5px),
-        var(--color-aquamarine-muted) calc(100% - 0.5px)
-      );
-    background-size: 16.666666666666668% 16.666666666666668%;
-    border: 0.5px solid var(--color-aquamarine-muted);
-  }
-  /* :global(.projects > .project) {
-    border-right: 4px solid #000;
-  } */
 </style>

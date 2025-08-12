@@ -55,6 +55,9 @@
   class="relative inset-0 z-0 w-full min-h-screen pointer-events-auto wrapper"
 >
   <BackgroundLayer />
+  <div
+    class="fixed inset-0 grid-overlay pointer-events-none opacity-20 z-0"
+  ></div>
 
   <!-- HEADER: BIG HERO-->
   <header class="relative z-10">
@@ -112,6 +115,15 @@
         hsla(159, 86%, 74%, 0.78) 0px,
         transparent 50%
       );
+  }
+
+  .grid-overlay {
+    background-image: linear-gradient(
+        rgba(167, 192, 205, 0.6) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(167, 192, 205, 0.6) 1px, transparent 1px);
+    background-size: 10px 10px;
   }
 
   .wrapper::before,
