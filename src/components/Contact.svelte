@@ -3,16 +3,20 @@
 
 <section
   id="contact"
-  class="flex flex-col mx-2.5 xs:mx-5 pb-8 md:mx-6 lg:mx-6 xl:mx-6 mb-12"
+  class="flex flex-col relative mx-2.5 xs:mx-5 pb-8 md:mx-6 lg:mx-6 xl:mx-6 mb-12 3xs:scroll-m-12 md:scroll-m-16"
 >
-  <h3 class="pt-4 pb-4 pl-4 text-3xl h-15 scroll-m-14 font-semibold">
-    // contact
-  </h3>
+  <div class="h-16 flex items-end">
+    <h3
+      class="md:py-4 py-3 pl-4 md:text-3xl text-2xl 3xs:h-14 md:h-16 font-semibold"
+    >
+      // contact
+    </h3>
+  </div>
   <article
-    class="grid grid-cols-3 gap-2 text-lg leading-loose xs:text-xl contact-info"
+    class="min-h-[75vh] text-lg leading-loose xs:text-xl px-[1px] contact-info"
   >
     <div
-      class="flex flex-col items-center col-start-1 col-end-3 px-4 pt-3 pb-4 text-center bg-white border-2 2xs:inline shadow-blocky-sm"
+      class="flex flex-col items-center px-4 pt-3 pb-4 text-center bg-white shadow-border"
     >
       <span class="font-bold">email:</span>
 
@@ -36,16 +40,7 @@
       </a>
     </div>
     <div
-      class="flex flex-col items-center col-start-2 col-end-4 px-4 pt-3 pb-4 text-center bg-white border-2 2xs:inline shadow-blocky-smld clock app. Fetches data from WorldTimeAPI. Looks up location using Geocode API.
-Blah
-
-    Lorem ipsum
-    Lorem ipsum dolor sit amet
-    Lorem ipsum dolor sit amet consectetur
-
-etc
-
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae."
+      class="flex flex-col items-center px-4 pt-3 pb-4 text-center bg-white 2xs:inline shadow-border"
     >
       <span class="font-bold">github:</span>
 

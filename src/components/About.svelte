@@ -1,14 +1,16 @@
 <section
   id="about"
-  class="flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-10 3xs:scroll-m-12 md:scroll-m-14 mb-12 mt-6"
+  class="flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-12 3xs:scroll-m-12 md:scroll-m-16 mb-12 mt-6"
 >
-  <h3 class="pt-4 pb-4 pl-4 text-3xl font-semibold h-15 scroll-m-14">
-    // about
-  </h3>
-  <div class="grid grid-cols-3 grid-rows-3 gap-[4px] about-content">
+  <div class="h-16 flex items-end">
+    <h3 class="md:py-4 py-3 pl-4 md:text-3xl text-2xl font-semibold">
+      // about
+    </h3>
+  </div>
+  <div class="grid grid-cols-3 grid-rows-3 gap-[1px] px-[1px] about-content">
     <!-- opening paragraph -->
     <div
-      class="col-start-1 col-span-full bg-white px-6 pt-6 pb-9 outline-4 outline-tangerine-200"
+      class="col-start-1 row-start-1 col-end-3 bg-white shadow-border px-6 pt-6 pb-9"
     >
       <h4 class="pb-3">Title</h4>
       <p class="leading-loose">
@@ -17,9 +19,18 @@
         ad repellendus dicta aut modi voluptas accusamus perspiciatis et.
       </p>
     </div>
+
+    <div
+      class="col-start-3 row-start-1 row-end-3 bg-white shadow-border px-6 pt-6 pb-9"
+    >
+      <h4 class="pb-3">Additional Content</h4>
+      <p class="leading-loose">
+        This is some additional content to enhance the section.
+      </p>
+    </div>
     <!-- tech list -->
     <div
-      class="col-start-1 col-end-2 row-start-2 row-end-4 bg-white border-black px-6 pt-6 pb-9 outline-4 outline-tangerine-200"
+      class="col-start-1 col-end-2 row-start-2 row-end-4 bg-white shadow-border px-6 pt-6 pb-9"
     >
       <h4 class="pb-3">Tech and tools</h4>
       <div class="flex flex-col justify-center gap-6">
@@ -55,7 +66,7 @@
     </div>
     <!-- interests and approach -->
     <div
-      class="flex-1 row-start-3 col-start-2 col-end-4 bg-white border-black px-6 pt-6 pb-9 outline-4 outline-tangerine-200"
+      class="flex-1 row-start-3 col-start-2 col-end-4 bg-white shadow-border px-6 pt-6 pb-9"
     >
       <h4 class="pb-3">Interests and approach</h4>
       <ul class="leading-loose">

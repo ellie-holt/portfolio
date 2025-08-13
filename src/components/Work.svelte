@@ -7,10 +7,14 @@
 
 <section
   id="work"
-  class="flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-10 3xs:scroll-m-12 md:scroll-m-14 mb-12"
+  class="flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-10 3xs:scroll-m-12 md:scroll-m-16 mb-12"
 >
-  <h3 class="pt-4 pb-4 pl-4 text-3xl font-semibold h-15">// work</h3>
-  <section class="grid grid-cols-2 2xl:grid-cols-3 gap-8">
+  <div class="h-16 flex items-end">
+    <h3 class="md:py-4 py-3 pl-4 md:text-3xl text-2xl font-semibold">
+      // work
+    </h3>
+  </div>
+  <section class="grid grid-cols-2 2xl:grid-cols-3 gap-8 px-[1px]">
     <Project
       project={{
         title: "Weather App",

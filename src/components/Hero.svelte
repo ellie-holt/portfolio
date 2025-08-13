@@ -30,9 +30,9 @@
 
     // 1) Arrow shaft
     const x1 = width / 2;
-    const y1 = height / 8;
+    const y1 = height / 5;
     const x2 = width / 2;
-    const y2 = height - height / 8;
+    const y2 = height - height / 5;
 
     rc.line(x1, y1, x2, y2, {
       stroke: "#f27941",

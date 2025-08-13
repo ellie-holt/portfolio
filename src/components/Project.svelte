@@ -14,11 +14,11 @@
 </script>
 
 <article
-  class={`relative border-2 border-black shadow-blocky-sm flex flex-wrap flex-col sm:flex-row 2xl:flex-col 2xl:divide-x-0 divide-y-2 sm:divide-y-2 2xl:divide-y-2 col-span-full ${featured ? "2xl:col-span-1" : "md:flex-col md:col-span-1"} bg-white`}
+  class={`relative shadow-border flex flex-wrap flex-col sm:flex-row 2xl:flex-col 2xl:divide-x-0 divide-y-2 sm:divide-y 2xl:divide-y col-span-full ${featured ? "2xl:col-span-1" : "md:flex-col md:col-span-1"} bg-white`}
 >
   <!-- image -->
   <section
-    class={`relative z-10 overflow-hidden sm:flex-1 sm:border-r-2 ${featured ? "2xl:border-r-0 2xl:flex-auto" : "md:border-r-0 md:flex-auto"}`}
+    class={`relative z-10 overflow-hidden sm:flex-1 sm:border-r ${featured ? "2xl:border-r-0 2xl:flex-auto" : "md:border-r-0 md:flex-auto"}`}
   >
     <img
       src={image.src}
