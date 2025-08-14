@@ -3,7 +3,7 @@
 </script>
 
 <li
-  class="z-30 group relative overflow-hidden flex justify-center items-center flex-1 bg-none cursor-pointer isolate"
+  class="z-30 group relative overflow-hidden shadow-border flex justify-center items-center flex-1 bg-none cursor-pointer isolate"
 >
   <a
     href={link}

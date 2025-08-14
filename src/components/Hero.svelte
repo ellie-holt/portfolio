@@ -66,7 +66,7 @@
   <div class="relative top-[1px]">
     <!-- top bar with links?  -->
     <div
-      class="relative z-10 flex items-center bg-white justify-around border-azure-ink border-b"
+      class="relative z-10 3xs:h-14 md:h-16 h-12 flex items-center bg-white justify-around border-azure-ink border-b"
     >
       <p class="font-mono text-xl lg:text-2xl xl:text-3xl">Github</p>
       <GitHubIcon

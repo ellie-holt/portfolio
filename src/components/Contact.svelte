@@ -13,10 +13,10 @@
     </h3>
   </div>
   <article
-    class="min-h-[75vh] text-lg leading-loose xs:text-xl px-[1px] contact-info"
+    class="min-h-[75vh] text-lg leading-loose xs:text-xl grid grid-cols-3 grid-rows-6 gap-[1px] px-[1px] contact-info"
   >
     <div
-      class="flex flex-col items-center px-4 pt-3 pb-4 text-center bg-white shadow-border"
+      class=" items-center col-span-2 row-start-1 text-center bg-white shadow-border"
     >
       <span class="font-bold">email:</span>
 
@@ -40,7 +40,7 @@
       </a>
     </div>
     <div
-      class="flex flex-col items-center px-4 pt-3 pb-4 text-center bg-white 2xs:inline shadow-border"
+      class=" items-center col-span-2 row-start-2 text-center bg-white 2xs:inline shadow-border"
     >
       <span class="font-bold">github:</span>
 

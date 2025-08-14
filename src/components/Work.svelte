@@ -14,7 +14,7 @@
       // work
     </h3>
   </div>
-  <section class="grid grid-cols-2 2xl:grid-cols-3 gap-8 px-[1px]">
+  <section class="grid grid-cols-3 2xl:grid-cols-3 gap-[1px] px-[1px]">
     <Project
       project={{
         title: "Weather App",
