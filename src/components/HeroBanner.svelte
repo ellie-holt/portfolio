@@ -13,7 +13,7 @@
 </script>
 
 <div
-  class={`${bannerIsVisible ? "visible" : "invisible"} flex flex-col items-center justify-center pt-2 pb-3 3xs:h-14 md:h-16 h-12 bg-aquamarine-100`}
+  class={`${bannerIsVisible ? "visible" : "invisible"} flex flex-col items-center justify-center pt-2 pb-3 h-banner bg-aquamarine-100`}
   transition:fade|global
 >
   <h1

@@ -55,7 +55,26 @@
   --font-serif: "IBM Plex Serif", serif;
 
   --font-sans: "IBM Plex Sans", sans-serif;
+
+  --spacing-banner: 3rem;
 }
+
+@theme inline {
+  --spacing-banner: var(--spacing-banner, 3rem);
+}
+
+@layer theme {
+  :root,
+  :host {
+    @variant 3xs {
+      --spacing-banner: 3.5rem;
+    }
+    @variant md {
+      --spacing-banner: 4rem;
+    }
+  }
+}
+
 @custom-variant hover (&:hover);
 
 @layer base {
