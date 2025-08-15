@@ -21,8 +21,9 @@
     <form
       name="contact"
       method="POST"
+      action="https://httpbin.org/post"
       data-netlify="true"
-      class="w-full flex flex-col gap-4 font-mono text-lg leading-loose xs:text-xl"
+      class="w-full flex flex-col gap-4 font-mono text-lg leading-loose xs:text-xl mb-6"
     >
       <div class="flex h-banner px-[1px] gap-[1px]">
         <label
@@ -72,19 +73,19 @@
     </form>
 
     <!-- contact links -->
-    <h4>...or just email me directly</h4>
+    <h4 class="text-2xl mb-4 px-2">...or email me directly</h4>
     <article
-      class=" text-lg leading-loose xs:text-xl grid grid-cols-3 grid-rows-6 gap-[1px] px-[1px] contact-info"
+      class=" text-lg leading-loose xs:text-xl gap-[1px] px-[1px] contact-info grid grid-cols-3 grid-rows-2"
     >
       <div
-        class=" items-center col-span-2 row-start-1 text-center bg-white shadow-border"
+        class="flex items-center col-span-2 row-start-1 justify-center gap-4 bg-white shadow-border h-banner"
       >
-        <span class="font-bold">email:</span>
+        <span class="font-bold relative top-[1px]">email:</span>
 
         <a
           href="mailto:eleanorholt97@gmail.com"
           target="_blank"
-          class="relative inline-flex items-center font-mono email-link group xs:top-1"
+          class="relative inline-flex items-center font-mono email-link group"
         >
           <span
             class="brackets relative pr-[0.2em] text-[1.7em] font-semibold text-tangerine-500 transition-transform duration-300 ease-in group-hover:translate-x-1 group-hover:scale-90 leading-none"
@@ -101,14 +102,14 @@
         </a>
       </div>
       <div
-        class=" items-center col-span-2 row-start-2 text-center bg-white 2xs:inline shadow-border"
+        class="flex items-center col-start-2 col-span-2 row-start-2 justify-center gap-4 bg-white shadow-border h-banner"
       >
-        <span class="font-bold">github:</span>
+        <span class="font-bold relative">github:</span>
 
         <a
           href="https://github.com/ellie-holt"
           target="_blank"
-          class="relative inline-flex items-center font-mono email-link group xs:top-1"
+          class="relative inline-flex items-center font-mono email-link group"
         >
           <span
             class="brackets relative pr-[0.2em] text-[1.7em] font-semibold text-tangerine-500 transition-transform duration-300 ease-in group-hover:translate-x-1 group-hover:scale-90 leading-none"
