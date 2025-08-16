@@ -21,10 +21,11 @@
   $effect(() => {
     if (!arrowCanvas) return;
 
-    const { width, height } = arrowCanvas.getBoundingClientRect();
+    arrowCanvas.width = 150;
+    arrowCanvas.height = 150;
 
-    arrowCanvas.width = width;
-    arrowCanvas.height = height;
+    const width = arrowCanvas.width;
+    const height = arrowCanvas.height;
 
     const rc = rough.canvas(arrowCanvas);
 
@@ -63,10 +64,10 @@
 </script>
 
 <div class="mx-2.5 xs:mx-5 -mb-15 md:mx-6 lg:mx-6 xl:mx-6">
-  <div class="relative top-[1px]">
+  <div class="relative top-[1px] px-[1px]">
     <!-- top bar with links?  -->
     <div
-      class="relative z-10 h-banner flex items-center bg-white justify-around border-azure-ink border-b text-lg xs:text-xl"
+      class="relative z-10 h-banner flex items-center bg-white justify-around shadow-border text-lg xs:text-xl"
     >
       <a
         href="mailto:eleanorholt97@gmail.com"
@@ -120,14 +121,14 @@
             >{`}`}</span
           >
         </h2>
-        <div class="flex items-center justify-center row-start-1 col-start-2">
+        <div class="relative z-30 group pointer-events-auto">
           <a href="#about" aria-label="Scroll down">
             <canvas
               bind:this={arrowCanvas}
-              class="w-full h-full hover:translate-y-2 transition-transform duration-300 ease-in-out"
+              class="w-full h-full group-hover:translate-y-2 transition-transform duration-300 ease-in-out"
             >
-            </canvas>
-          </a>
+            </canvas></a
+          >
         </div>
       </div>
     </div>

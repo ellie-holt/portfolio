@@ -62,7 +62,7 @@
   ></div>
 
   <!-- HEADER: BIG HERO-->
-  <header class="relative z-10">
+  <header class="relative z-30">
     <section id="hero" class="top-0 w-full pt-2.5 xs:pt-5 border-black hero">
       <Hero />
     </section>
