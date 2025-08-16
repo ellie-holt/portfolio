@@ -23,10 +23,10 @@
       method="POST"
       action="https://httpbin.org/post"
       data-netlify="true"
-      class="w-full grid grid-cols-2 gap-[1px] font-mono text-lg leading-loose xs:text-xl mb-24 auto-rows-auto"
+      class="w-full xl:w-2/3 grid grid-cols-2 gap-[1px] font-mono text-lg leading-loose xs:text-xl mb-24 auto-rows-auto"
     >
       <div
-        class="xs:h-banner px-[1px] row-start-1 row-span-2 xs:row-span-1 col-span-full xl:col-start-1 xl:col-span-1 grid grid-cols-subgrid grid-rows-subgrid"
+        class="xs:h-banner px-[1px] row-start-1 row-span-2 xs:row-span-1 col-span-full grid grid-cols-subgrid grid-rows-subgrid"
       >
         <label
           for="name"
@@ -43,7 +43,7 @@
         />
       </div>
       <div
-        class="xs:h-banner px-[1px] col-span-full row-start-3 row-span-2 xs:row-span-1 xs:row-start-2 xs:row-end-3 xl:col-start-1 xl:col-span-1 grid grid-cols-subgrid grid-rows-subgrid"
+        class="xs:h-banner px-[1px] col-span-full row-start-3 row-span-2 xs:row-span-1 xs:row-start-2 xs:row-end-3 grid grid-cols-subgrid grid-rows-subgrid"
       >
         <label
           for="email"
@@ -60,7 +60,7 @@
         />
       </div>
       <div
-        class=" px-[1px] col-span-full xl:col-start-1 xl:col-span-1 row-span-2 grid grid-cols-subgrid grid-rows-subgrid row-start-5 xs:row-span-2 xs:row-start-3 xs:row-end-5"
+        class=" px-[1px] col-span-full row-span-2 grid grid-cols-subgrid grid-rows-subgrid row-start-5 xs:row-span-2 xs:row-start-3 xs:row-end-5"
       >
         <label
           for="message"

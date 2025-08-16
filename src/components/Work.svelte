@@ -1,8 +1,8 @@
 <script lang="js">
   import Project from "./Project.svelte";
-  import weatherAppImage from "../assets/weather-app.png";
-  import worldClockImage from "../assets/world-clock.png";
-  import aiPoetImage from "../assets/ai-poet.png";
+  import weatherAppImage from "../assets/weather-app-square.png";
+  import worldClockImage from "../assets/world-clock-square.png";
+  import aiPoetImage from "../assets/ai-poet-square.png";
 </script>
 
 <section
@@ -14,25 +14,24 @@
       // work
     </h3>
   </div>
-  <section class="grid grid-cols-3 2xl:grid-cols-3 gap-[1px] px-[1px]">
+  <section class="flex flex-col lg:grid lg:grid-cols-3 gap-[1px] px-[1px]">
     <Project
       project={{
         title: "Weather App",
         description:
-          "React weather app. Fetches data from OpenWeather API. Looks up location using Geocode API.",
+          "A responsive and interactive weather application built with React and Tailwind CSS as part of a web development course. It fetches real-time weather data and displays it in a clean, accessible user interface with dynamic styling and custom components.",
         link: "https://herecomestherainagain.netlify.app/",
       }}
       image={{
         src: weatherAppImage,
         alt: "Weather App",
       }}
-      featured={true}
     />
     <Project
       project={{
         title: "World Clock",
         description:
-          "World clock app. Fetches data from WorldTimeAPI. Looks up location using Geocode API.",
+          "A visually engaging world clock built with vanilla JavaScript and styled with custom CSS. Displays the time and date across multiple global cities, with responsive design and dynamic theming based on the time of day.",
         link: "https://findthetime.netlify.app/",
       }}
       image={{
@@ -44,7 +43,7 @@
       project={{
         title: "AI Poet",
         description:
-          "AI poet app. Generates poems using OpenAI API. Saves poems to local storage. Lol kidding.",
+          "A minimalist web app that lets users generate short poems based on their input prompts. Built with HTML, CSS, and vanilla JavaScript, it integrates the SheCodes AI API to return AI-generated verses which are then displayed using a smooth typewriter animation. The project focuses on clean, accessible UI with a soft, book-inspired visual aesthetic.",
         link: "https://aipoet.netlify.app/",
       }}
       image={{

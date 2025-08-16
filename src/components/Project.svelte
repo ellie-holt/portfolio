@@ -1,4 +1,6 @@
 <script lang="js">
+  import rough from "roughjs";
+
   let {
     project = {
       title: "",
@@ -9,50 +11,114 @@
       src: "",
       alt: "",
     },
-    featured = false,
   } = $props();
+
+  let arrowCanvas;
+  $effect(() => {
+    if (!arrowCanvas) return;
+
+    const { width, height } = arrowCanvas.getBoundingClientRect();
+
+    arrowCanvas.width = width;
+    arrowCanvas.height = height;
+
+    const rc = rough.canvas(arrowCanvas);
+
+    // 1) Arrow shaft
+    const x1 = width / 5;
+    const y1 = height / 2;
+    const x2 = width - width / 5;
+    const y2 = height / 2;
+
+    rc.line(x1, y1, x2, y2, {
+      stroke: "#f27941",
+      strokeWidth: 5,
+    });
+
+    // Arrowhead length and angle
+    const headlen = width / 4;
+    const θ = Math.atan2(y2 - y1, x2 - x1);
+    const φ = Math.PI / 6; // 30°
+
+    // Top side of arrowhead
+    const x3 = x2 - headlen * Math.cos(θ - φ);
+    const y3 = y2 - headlen * Math.sin(θ - φ);
+    rc.line(x2, y2, x3, y3, {
+      stroke: "#f27941",
+      strokeWidth: 5,
+    });
+
+    // Bottom side of arrowhead
+    const x4 = x2 - headlen * Math.cos(θ + φ);
+    const y4 = y2 - headlen * Math.sin(θ + φ);
+    rc.line(x2, y2, x4, y4, {
+      stroke: "#f27941",
+      strokeWidth: 5,
+    });
+  });
 </script>
 
-<article
-  class={`relative shadow-border flex flex-wrap flex-col sm:flex-row 2xl:flex-col 2xl:divide-x-0 divide-y-2 sm:divide-y 2xl:divide-y col-span-full ${featured ? "2xl:col-span-1" : "md:flex-col md:col-span-1"} bg-white`}
->
-  <!-- image -->
-  <section
-    class={`relative z-10 overflow-hidden sm:flex-1 sm:border-r ${featured ? "2xl:border-r-0 2xl:flex-auto" : "md:border-r-0 md:flex-auto"}`}
+<div class="mb-24 lg:col-span-1">
+  <article
+    class="grid grid-cols-[4fr_1fr] xs:grid-cols-[3fr_1fr] sm:grid-cols-2 lg:grid-cols-1 lg:grid-rows-[6fr_7fr] xl:grid-rows-[7fr_6fr] 2xl:grid-rows-[3fr_2fr] 3xl:grid-rows-[2fr_1fr] relative shadow-border bg-white"
   >
-    <img
-      src={image.src}
-      alt={image.alt}
-      class="w-full h-full object-cover"
-      loading="lazy"
-    />
-  </section>
+    <!-- image -->
+    <section class="relative lg:row-start-1 z-10 overflow-hidden shadow-border">
+      <img
+        src={image.src}
+        alt={image.alt}
+        class="w-full h-full object-cover"
+        loading="lazy"
+      />
+    </section>
 
-  <!-- title and description -->
-  <section
-    class={`p-6 sm:flex-0 ${featured ? "2xl:flex-auto sm:basis-1/4" : "md:flex-auto"}`}
-  >
-    <h4 class="mb-3">
-      <a href={project.link} target="_blank">{project.title}</a>
-    </h4>
-    <p class="leading-snug">
-      {project.description}
-    </p>
-  </section>
+    <!-- title and description -->
+    <section
+      class="shadow-border flex lg:row-start-2 flex-col gap-[1px] w-full h-full lg:col-span-2"
+    >
+      <div class="w-full h-full sm:h-auto shadow-border flex items-center">
+        <h2
+          class="py-2 xs:py-6 px-6 text-text-7xl xl:text-[3.4rem] lg:text-4xl [writing-mode:vertical-rl] sm:[writing-mode:horizontal-tb]"
+        >
+          {project.title}
+        </h2>
+      </div>
 
-  <!-- extra info and link -->
-  <section
-    class={`sm:basis-full ${featured ? "2xl:basis-0" : "md:basis-0"} px-6 pb-10`}
-  >
-    <h5 class="mt-6 text-lg mb-3">Blah</h5>
-    <ul class="list-disc pl-6">
-      <li class="mb-3">Lorem ipsum</li>
-      <li class="mb-3">Lorem ipsum dolor sit amet</li>
-      <li class="mb-3">Lorem ipsum dolor sit amet consectetur</li>
-    </ul>
-    <h5 class="mt-6 text-lg mb-3">etc</h5>
-    <p class=" italic text-sm">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae.
-    </p>
-  </section>
-</article>
+      <div class="p-6 shadow-border w-full h-full hidden sm:block">
+        <p class="">
+          {project.description}
+        </p>
+      </div>
+    </section>
+
+    <section class="sm:hidden col-span-2 pt-[1px]">
+      <div class="p-6 shadow-border w-full h-full">
+        <p class="">
+          {project.description}
+        </p>
+      </div>
+    </section>
+  </article>
+
+  <div class="w-full shadow-border h-banner flex items-center overflow-hidden">
+    <a
+      href={project.link}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="px-6 py-3 font-semibold flex items-center justify-end w-full group"
+    >
+      <h3
+        class="md:py-4 xl:text-3xl lg:text-2xl md:text-3xl text-2xl lowercase"
+      >
+        view project
+      </h3>
+      <div class="w-25">
+        <canvas
+          bind:this={arrowCanvas}
+          class="w-full h-full group-hover:translate-x-2 transition-transform duration-300 ease-in-out"
+        >
+        </canvas>
+      </div>
+    </a>
+  </div>
+</div>
