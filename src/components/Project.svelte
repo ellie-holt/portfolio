@@ -110,7 +110,7 @@
       class="px-6 py-3 font-semibold flex items-center justify-end w-full group"
     >
       <h3
-        class="md:py-4 xl:text-3xl lg:text-2xl md:text-3xl text-2xl lowercase"
+        class="md:py-4 xl:text-3xl lg:text-2xl md:text-3xl text-2xl lowercase underline decoration-1 group-hover:decoration-transparent transition-all duration-300 ease-in-out"
       >
         view project
       </h3>

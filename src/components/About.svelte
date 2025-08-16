@@ -7,7 +7,9 @@
       // about
     </h3>
   </div>
-  <div class="grid grid-cols-3 grid-rows-3 gap-[1px] px-[1px] about-content">
+  <div
+    class="grid grid-cols-3 grid-rows-3 gap-[1px] pt-[1px] px-[1px] about-content"
+  >
     <!-- opening paragraph -->
     <div
       class="col-start-1 row-start-1 col-end-3 bg-white shadow-border px-6 pt-6 pb-9"

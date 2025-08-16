@@ -56,6 +56,7 @@
 <div
   class="relative inset-0 z-0 w-full min-h-screen pointer-events-auto wrapper"
 >
+  <div id="page-top" class="absolute top-0 left-0 w-full h-0"></div>
   <BackgroundLayer />
   <div
     class="fixed inset-0 grid-overlay pointer-events-none opacity-20 z-0"

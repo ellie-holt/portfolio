@@ -14,7 +14,9 @@
       // work
     </h3>
   </div>
-  <section class="flex flex-col lg:grid lg:grid-cols-3 gap-[1px] px-[1px]">
+  <section
+    class="flex flex-col lg:grid lg:grid-cols-3 gap-[1px] px-[1px] pt-[1px]"
+  >
     <Project
       project={{
         title: "Weather App",
