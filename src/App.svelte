@@ -27,7 +27,7 @@
 
   let bannerTrigger = $state(null);
   let showHeroBanner = $state(false);
-  let makeNavLinksOpaque = $state(false);
+  let changeNavbarStyles = $state(false);
 
   $effect(() => {
     if (!bannerTrigger) return;
@@ -35,7 +35,7 @@
       ([entry]) => {
         showHeroBanner =
           entry.isIntersecting && entry.boundingClientRect.top === 0;
-        makeNavLinksOpaque = entry.isIntersecting;
+        changeNavbarStyles = entry.isIntersecting;
       },
       {
         root: null,
@@ -80,7 +80,7 @@
 
     <HeroBanner bannerIsVisible={showHeroBanner} />
 
-    <Navbar navLinksAreOpaque={makeNavLinksOpaque} />
+    <Navbar navbarIsScrolled={changeNavbarStyles} />
   </section>
 
   <!-- MAIN CONTENT -->
@@ -151,7 +151,7 @@
     top: 10px;
     left: 0;
     right: 0;
-    bottom: 10px;
+    bottom: 40px;
     border-top: 1px solid var(--color-azure-ink);
     border-bottom: 1px solid var(--color-azure-ink);
   }
@@ -163,7 +163,7 @@
     }
     .wrapper::after {
       top: 20px;
-      bottom: 20px;
+      bottom: 40px;
     }
   }
 

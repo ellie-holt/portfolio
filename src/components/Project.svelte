@@ -58,7 +58,7 @@
   });
 </script>
 
-<div class="mb-24 lg:col-span-1">
+<div class="lg:col-span-1">
   <article
     class="grid grid-cols-[5fr_1fr] xs:grid-cols-[4fr_1fr] sm:grid-cols-2 lg:grid-cols-1 lg:grid-rows-[6fr_7fr] xl:grid-rows-[7fr_6fr] 2xl:grid-rows-[3fr_2fr] 3xl:grid-rows-[2fr_1fr] relative shadow-border bg-white"
   >

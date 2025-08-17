@@ -58,10 +58,12 @@
   --font-sans: "IBM Plex Sans", sans-serif;
 
   --spacing-banner: 3rem;
+  --spacing-form: 4rem;
 }
 
 @theme inline {
   --spacing-banner: var(--spacing-banner, 3rem);
+  --spacing-form: var(--spacing-form, 4rem);
 }
 
 @layer theme {
@@ -69,9 +71,11 @@
   :host {
     @variant 3xs {
       --spacing-banner: 3.5rem;
+      --spacing-form: 5rem;
     }
     @variant md {
       --spacing-banner: 4rem;
+      --spacing-form: 6rem;
     }
   }
 }

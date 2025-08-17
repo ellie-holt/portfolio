@@ -1,9 +1,11 @@
 <section
   id="about"
-  class="flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-12 3xs:scroll-m-12 md:scroll-m-16 mb-12 mt-6"
+  class="flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-12 3xs:scroll-m-14 2xs:scroll-m-0 pb-[1px]"
 >
-  <div class="h-16 flex items-end">
-    <h3 class="md:py-4 py-3 pl-4 md:text-3xl text-2xl font-semibold">
+  <div
+    class="h-[calc(var(--spacing-banner)_*_2)] bg-tangerine-100 flex items-end"
+  >
+    <h3 class="md:py-4 py-3 pl-6 md:text-3xl text-2xl font-semibold">
       // about
     </h3>
   </div>
