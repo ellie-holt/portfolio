@@ -3,23 +3,29 @@
 
 <section
   id="contact"
-  class="flex flex-col relative mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 3xs:scroll-m-14 2xs:scroll-m-0 scroll-m-23"
+  class="flex flex-col relative mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 3xs:scroll-m-14 2xs:scroll-m-0 scroll-m-14"
 >
   <div class="flex items-end h-[calc(var(--spacing-banner)_*_2)] bg-azure-100">
     <h3 class="md:py-4 py-3 pl-6 md:text-3xl text-2xl font-semibold">
       // contact
     </h3>
   </div>
-  <div class="px-[1px] py-[1px]">
-    <h2 class="text-center text-[8vw] lg:text-[6vw] py-9 shadow-border">
-      Let's get in touch!
-    </h2>
+  <div class="px-[1px] py-[1px] h-[calc(var(--spacing-banner)_*_2)]">
+    <div class="shadow-border h-full flex items-center justify-center">
+      <h2
+        class="text-center text-[8vw] lg:text-[6vw] xl:text-[5vw] 2xl:text-[4.5vw]"
+      >
+        Let's get in touch!
+      </h2>
+    </div>
   </div>
 
   <!-- contact form and links wrapper -->
   <div class=" lg:w-2/3 xl:w-3/5 w-full self-center overflow-hidden">
     <!-- contact form -->
-    <div class="flex bg-azure-100 px-[1px] h-form shadow-border items-center">
+    <div
+      class="flex bg-azure-100 px-[1px] xs:h-form h-[calc(var(--spacing-form)_*_2)] shadow-border items-center"
+    >
       <h4
         class="px-6 md:py-8 xs:py-6 py-4.5 xs:text-2xl text-xl w-full h-full shadow-border"
       >
@@ -88,7 +94,7 @@
         class="relative group pl-[1px] pr-[1px] xs:pr-0 gap-[1px] col-span-full col-start-1 xs:col-end-2 xs:col-span-1 row-start-7 xs:row-start-4 xs:row-end-5 bg-white"
       >
         <button
-          class="relative shadow-border w-full h-form xs:h-[calc(var(--spacing-form)_-_1px)] cursor-pointer text-2xl hover:font-semibold group z-20"
+          class="relative shadow-border w-full h-[calc(var(--spacing-banner)_*_2)] xs:h-[calc(var(--spacing-form)_-_1px)] cursor-pointer text-2xl hover:font-semibold group z-20"
           type="submit"
           >Send
         </button><span

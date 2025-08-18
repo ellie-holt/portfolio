@@ -7,7 +7,7 @@
 
 <section
   id="work"
-  class="flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-23 3xs:scroll-m-14 2xs:scroll-m-0 pb-[1px]"
+  class="flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-14 3xs:scroll-m-14 2xs:scroll-m-0 pb-[1px]"
 >
   <div
     class="h-[calc(var(--spacing-banner)_*_2)] bg-aquamarine-100 flex items-end"

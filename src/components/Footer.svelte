@@ -68,7 +68,7 @@
       >
       <!-- contact links -->
       <div
-        class="xs:text-2xl text-2xl flex flex-col sm:px-6 px-2 items-end justify-center gap-6 sm:mt-6 mt-12"
+        class="3xs:text-2xl 4xs:text-xl flex flex-col sm:px-6 px-2 items-end justify-center gap-6 sm:mt-6 mt-12"
       >
         <!-- email -->
         <div class="flex items-center justify-center gap-4">
@@ -86,7 +86,7 @@
               >&lcub;</span
             >
             <span
-              class="underline transition-all duration-300 ease-in group-hover:decoration-transparent"
+              class="text-center 3xs:text-left underline transition-all duration-300 ease-in group-hover:decoration-transparent"
               ><span class="break-all">eleanorholt97</span>@gmail.com</span
             >
             <span
@@ -110,8 +110,10 @@
               >&lcub;</span
             >
             <span
-              class="underline transition-all duration-300 ease-in group-hover:decoration-transparent"
-              >github.com/ellie-holt</span
+              class="text-center 3xs:text-left underline transition-all duration-300 ease-in group-hover:decoration-transparent"
+              ><span class="break-all">github.com/</span><span
+                class="break-keep">ellie-holt</span
+              ></span
             >
             <span
               class="brackets relative pl-[0.55em] text-[1.7em] font-semibold text-tangerine-500 transition-transform duration-300 ease-in group-hover:-translate-x-1 group-hover:scale-90 leading-none"
@@ -123,10 +125,12 @@
     </div>
   </div>
   <div
-    class="absolute bottom-0 left-0 right-0 h-10 xl:mx-6 mx-2.5 xs:mx-5 lg:mx-6 md:mx-6 flex items-center justify-between px-6"
+    class="absolute bottom-0 left-0 right-0 h-10 xl:mx-6 mx-2.5 xs:mx-5 lg:mx-6 md:mx-6 flex items-center justify-between"
   >
-    <p class="font-mono">&copy; 2025 Ellie Holt.</p>
-    <p class="font-mono">
+    <p class="3xs:pl-6 pl-4 font-mono 3xs:text-base text-sm">
+      &copy; 2025 Ellie Holt.
+    </p>
+    <p class="3xs:pr-6 pr-4 font-mono 3xs:text-base text-sm">
       Open source <a
         href="https://github.com/ellie-holt/portfolio"
         target="_blank"

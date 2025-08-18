@@ -45,11 +45,11 @@
   --shadow-blocky-xl: 12px 12px 0 0;
   --shadow-blocky: var(--shadow-blocky-md);
 
-  --breakpoint-4xs: 22rem;
-  --breakpoint-3xs: 28rem;
-  --breakpoint-2xs: 34rem;
-  --breakpoint-xs: 36rem;
-  --breakpoint-3xl: 112rem;
+  --breakpoint-4xs: 352px;
+  --breakpoint-3xs: 448px;
+  --breakpoint-2xs: 544px;
+  --breakpoint-xs: 576px;
+  --breakpoint-3xl: 1792px;
 
   --font-mono: "IBM Plex Mono", monospace;
 
@@ -69,6 +69,8 @@
 @layer theme {
   :root,
   :host {
+    --spacing-banner: 3rem;
+    --spacing-form: 3rem;
     @variant 3xs {
       --spacing-banner: 3.5rem;
       --spacing-form: 4rem;
