@@ -80,7 +80,7 @@
         class="w-full h-full sm:h-auto shadow-border flex items-center lg:justify-center"
       >
         <h2
-          class="py-3 xs:py-6 px-6 text-5xl sm:text-6xl md:text-7xl xl:text-[3.4rem] lg:text-4xl [writing-mode:vertical-rl] sm:[writing-mode:horizontal-tb]"
+          class="py-3 xs:py-6 px-6 text-4xl xs:text-5xl sm:text-6xl md:text-7xl xl:text-[3.4rem] lg:text-4xl [writing-mode:vertical-rl] sm:[writing-mode:horizontal-tb]"
         >
           {project.title}
         </h2>
@@ -94,7 +94,7 @@
     </section>
 
     <section class="sm:hidden col-span-2 pt-[1px]">
-      <div class="3xs:px-6 px-4 py-6 shadow-border w-full h-full">
+      <div class="3xs:px-6 px-4 py-6 shadow-border leading-loose w-full h-full">
         <p class="">
           {project.description}
         </p>

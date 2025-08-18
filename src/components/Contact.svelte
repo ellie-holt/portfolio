@@ -3,7 +3,7 @@
 
 <section
   id="contact"
-  class="flex flex-col relative mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 3xs:scroll-m-14 2xs:scroll-m-0 scroll-m-14"
+  class="flex flex-col relative mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 3xs:scroll-m-14 2xs:scroll-m-0 scroll-m-15"
 >
   <div class="flex items-end h-[calc(var(--spacing-banner)_*_2)] bg-azure-100">
     <h3 class="md:py-4 py-3 3xs:px-6 px-4 md:text-3xl text-2xl font-semibold">
