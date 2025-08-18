@@ -26,8 +26,12 @@
     <div
       class="bg-azure-100 px-[1px] xs:h-form h-[calc(var(--spacing-form)_*_1.5)] shadow-border items-center"
     >
-      <div class="w-full h-full shadow-border flex items-center">
-        <h4 class="px-6 xs:text-2xl text-2xl">Drop me a message...</h4>
+      <div
+        class="w-full h-full shadow-border flex justify-center 3xs:justify-start items-center"
+      >
+        <h4 class="px-6 xs:text-2xl text-2xl">
+          Drop me a message<span class="hidden 3xs:inline">...</span>
+        </h4>
       </div>
     </div>
 
