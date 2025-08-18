@@ -24,7 +24,7 @@
 
     const rc = rough.canvas(arrowCanvas);
 
-    // 1) Arrow shaft
+    // Arrow shaft
     const x1 = width / 5;
     const y1 = height / 2;
     const x2 = width - width / 5;
@@ -32,7 +32,7 @@
 
     rc.line(x1, y1, x2, y2, {
       stroke: "#f27941",
-      strokeWidth: 5,
+      strokeWidth: 3,
     });
 
     // Arrowhead length and angle
@@ -45,7 +45,7 @@
     const y3 = y2 - headlen * Math.sin(θ - φ);
     rc.line(x2, y2, x3, y3, {
       stroke: "#f27941",
-      strokeWidth: 5,
+      strokeWidth: 3,
     });
 
     // Bottom side of arrowhead
@@ -53,7 +53,7 @@
     const y4 = y2 - headlen * Math.sin(θ + φ);
     rc.line(x2, y2, x4, y4, {
       stroke: "#f27941",
-      strokeWidth: 5,
+      strokeWidth: 3,
     });
   });
 </script>
@@ -94,7 +94,7 @@
     </section>
 
     <section class="sm:hidden col-span-2 pt-[1px]">
-      <div class="3xs:px-6 px-4 py-6 shadow-border leading-loose w-full h-full">
+      <div class="px-6 py-6 shadow-border leading-loose w-full h-full">
         <p class="">
           {project.description}
         </p>
@@ -102,12 +102,14 @@
     </section>
   </article>
 
-  <div class="w-full shadow-border h-banner flex items-center overflow-hidden">
+  <div
+    class="w-full shadow-border lg:h-banner h-[calc(var(--spacing-banner)_*_2)] flex items-start lg:items-center overflow-hidden"
+  >
     <a
       href={project.link}
       target="_blank"
       rel="noopener noreferrer"
-      class="3xs:px-6 px-4 py-3 font-semibold flex items-center justify-end w-full group"
+      class="pl-6 py-3 font-semibold flex items-center justify-end w-full group"
     >
       <h3
         class="md:py-4 xl:text-3xl lg:text-2xl md:text-3xl text-2xl lowercase underline decoration-1 group-hover:decoration-transparent transition-all duration-300 ease-in-out"

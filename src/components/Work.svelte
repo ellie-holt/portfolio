@@ -12,7 +12,7 @@
   <div
     class="h-[calc(var(--spacing-banner)_*_2)] bg-aquamarine-100 flex items-end"
   >
-    <h3 class="md:py-4 py-3 3xs:px-6 px-4 md:text-3xl text-2xl font-semibold">
+    <h3 class="md:py-4 py-3 px-6 md:text-3xl text-2xl font-semibold">
       // work
     </h3>
   </div>

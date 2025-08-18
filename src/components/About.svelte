@@ -5,7 +5,7 @@
   <div
     class="h-[calc(var(--spacing-banner)_*_2)] bg-tangerine-100 flex items-end"
   >
-    <h3 class="md:py-4 py-3 3xs:px-6 px-4 md:text-3xl text-2xl font-semibold">
+    <h3 class="md:py-4 py-3 px-6 md:text-3xl text-2xl font-semibold">
       // about
     </h3>
   </div>
@@ -14,7 +14,7 @@
   >
     <!-- opening paragraph -->
     <div
-      class="col-start-1 row-start-1 col-end-3 bg-white shadow-border 3xs:px-6 px-4 py-6"
+      class="col-start-1 row-start-1 col-end-3 bg-white shadow-border px-6 py-6"
     >
       <h4 class="pb-3">Title</h4>
       <p class="leading-loose">
@@ -25,7 +25,7 @@
     </div>
 
     <div
-      class="col-start-3 row-start-1 row-end-3 bg-white shadow-border 3xs:px-6 px-4 py-6"
+      class="col-start-3 row-start-1 row-end-3 bg-white shadow-border px-6 py-6"
     >
       <h4 class="pb-3">A</h4>
       <p class="leading-loose">
@@ -34,7 +34,7 @@
     </div>
     <!-- tech list -->
     <div
-      class="col-start-1 col-end-2 row-start-2 row-end-4 bg-white shadow-border 3xs:px-6 px-4 py-6"
+      class="col-start-1 col-end-2 row-start-2 row-end-4 bg-white shadow-border px-6 py-6"
     >
       <h4 class="pb-3">Tech and tools</h4>
       <div class="flex flex-col justify-center gap-6">
@@ -70,7 +70,7 @@
     </div>
     <!-- interests and approach -->
     <div
-      class="flex-1 row-start-3 col-start-2 col-end-4 bg-white shadow-border 3xs:px-6 px-4 py-6"
+      class="flex-1 row-start-3 col-start-2 col-end-4 bg-white shadow-border px-6 py-6"
     >
       <h4 class="pb-3">Interests and approach</h4>
       <ul class="leading-loose">

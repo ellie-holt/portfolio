@@ -51,7 +51,7 @@
 >
   <div class="px-[1px] py-[1px] mb-10">
     <div
-      class="shadow-border w-full h-full md:min-h-[20vh] sm:min-h-[30vh] xs:min-h-[32vh] flex items-end pb-6 md:justify-between sm:justify-end justify-center"
+      class="shadow-border w-full h-full md:min-h-[24vh] sm:min-h-[34vh] xs:min-h-[28vh] flex items-end pb-6 md:justify-between sm:justify-end justify-center"
     >
       <!-- Scroll to top arrow -->
       <a
@@ -68,7 +68,7 @@
       >
       <!-- contact links -->
       <div
-        class="3xs:text-2xl 4xs:text-xl flex flex-col sm:px-6 px-2 items-end justify-center gap-6 sm:mt-6 mt-12"
+        class="3xs:text-2xl 4xs:text-xl text-lg flex flex-col sm:px-6 px-2 items-end justify-center gap-6 sm:mt-6 mt-12"
       >
         <!-- email -->
         <div class="flex items-center justify-center gap-4">
