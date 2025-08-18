@@ -24,13 +24,11 @@
   <div class=" lg:w-2/3 xl:w-3/5 w-full self-center overflow-hidden">
     <!-- contact form -->
     <div
-      class="flex bg-azure-100 px-[1px] xs:h-form h-[calc(var(--spacing-form)_*_2)] shadow-border items-center"
+      class="bg-azure-100 px-[1px] xs:h-form h-[calc(var(--spacing-form)_*_1.5)] shadow-border items-center"
     >
-      <h4
-        class="px-6 md:py-8 xs:py-6 py-4.5 xs:text-2xl text-xl w-full h-full shadow-border"
-      >
-        Drop me a message...
-      </h4>
+      <div class="w-full h-full shadow-border flex items-center">
+        <h4 class="px-6 xs:text-2xl text-2xl">Drop me a message...</h4>
+      </div>
     </div>
 
     <form
@@ -94,7 +92,7 @@
         class="relative group pl-[1px] pr-[1px] xs:pr-0 gap-[1px] col-span-full col-start-1 xs:col-end-2 xs:col-span-1 row-start-7 xs:row-start-4 xs:row-end-5 bg-white"
       >
         <button
-          class="relative shadow-border w-full h-[calc(var(--spacing-banner)_*_2)] xs:h-[calc(var(--spacing-form)_-_1px)] cursor-pointer text-2xl hover:font-semibold group z-20"
+          class="relative shadow-border w-full h-[calc(var(--spacing-form)_*_1.5)] xs:h-[calc(var(--spacing-form)_-_1px)] cursor-pointer text-2xl font-bold uppercase hover:font-semibold group z-20"
           type="submit"
           >Send
         </button><span
@@ -102,67 +100,6 @@
         ></span>
       </div>
     </form>
-
-    <!-- contact links -->
-    <!-- <div
-      class="flex bg-azure-100 px-[1px] py-[1px] h-form items-center justify-end"
-    >
-      <h4 class="px-2 py-8 text-2xl w-full h-full text-right shadow-border">
-        ...or email me directly
-      </h4>
-    </div>
-    <article
-      class=" text-lg leading-loose xs:text-xl gap-[1px] px-[1px] contact-info grid"
-    >
-      <div
-        class="flex items-center justify-center gap-4 bg-white col-span-full shadow-border h-banner"
-      >
-        <span class="font-bold relative top-[1px]">email:</span>
-
-        <a
-          href="mailto:eleanorholt97@gmail.com"
-          target="_blank"
-          class="relative inline-flex items-center font-mono email-link group"
-        >
-          <span
-            class="brackets relative pr-[0.2em] text-[1.7em] font-semibold text-tangerine-500 transition-transform duration-300 ease-in group-hover:translate-x-1 group-hover:scale-90 leading-none"
-            >&lcub;</span
-          >
-          <span
-            class="underline transition-all duration-300 ease-in group-hover:decoration-transparent"
-            ><span class="break-all">eleanorholt97</span>@gmail.com</span
-          >
-          <span
-            class="brackets relative pl-[0.2em] text-[1.7em] font-semibold text-tangerine-500 transition-transform duration-300 ease-in group-hover:-translate-x-1 group-hover:scale-90 leading-none"
-            >&rcub;</span
-          >
-        </a>
-      </div>
-      <div
-        class="flex items-center justify-center gap-4 bg-white col-span-full shadow-border h-banner"
-      >
-        <span class="relative font-bold">github:</span>
-
-        <a
-          href="https://github.com/ellie-holt"
-          target="_blank"
-          class="relative inline-flex items-center font-mono email-link group"
-        >
-          <span
-            class="brackets relative pr-[0.2em] text-[1.7em] font-semibold text-tangerine-500 transition-transform duration-300 ease-in group-hover:translate-x-1 group-hover:scale-90 leading-none"
-            >&lcub;</span
-          >
-          <span
-            class="underline transition-all duration-300 ease-in group-hover:decoration-transparent"
-            >github.com/ellie-holt</span
-          >
-          <span
-            class="brackets relative pl-[0.2em] text-[1.7em] font-semibold text-tangerine-500 transition-transform duration-300 ease-in group-hover:-translate-x-1 group-hover:scale-90 leading-none"
-            >&rcub;</span
-          >
-        </a>
-      </div>
-    </article> -->
   </div>
 </section>
 
