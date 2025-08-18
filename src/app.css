@@ -58,12 +58,12 @@
   --font-sans: "IBM Plex Sans", sans-serif;
 
   --spacing-banner: 3rem;
-  --spacing-form: 4rem;
+  --spacing-form: 3rem;
 }
 
 @theme inline {
   --spacing-banner: var(--spacing-banner, 3rem);
-  --spacing-form: var(--spacing-form, 4rem);
+  --spacing-form: var(--spacing-form, 3rem);
 }
 
 @layer theme {
@@ -71,6 +71,9 @@
   :host {
     @variant 3xs {
       --spacing-banner: 3.5rem;
+      --spacing-form: 4rem;
+    }
+    @variant xs {
       --spacing-form: 5rem;
     }
     @variant md {
@@ -97,7 +100,6 @@
     scrollbar-gutter: stable both-edges;
     font-family: var(--font-sans);
     scroll-behavior: smooth;
-    image-rendering: -webkit-optimize-contrast;
   }
 
   h1,

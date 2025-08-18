@@ -1,5 +1,5 @@
 <script lang="js">
-  import { getCanvasBoundingBox } from "pixi.js";
+  import { deprecation, getCanvasBoundingBox } from "pixi.js";
 
   import me160 from "../assets/me-160.webp";
   import me320 from "../assets/me-320.webp";
@@ -16,20 +16,26 @@
   isScrolled.subscribe(($isScrolled) => {
     console.log("isScrolled:", $isScrolled); // Debugging
   });
+  let { arrowIsHidden = false } = $props();
 
   let arrowCanvas;
+
+  let arrowCanvasWidth = 150;
+  let arrowCanvasHeight = 150;
+
   $effect(() => {
     if (!arrowCanvas) return;
 
-    arrowCanvas.width = 150;
-    arrowCanvas.height = 150;
+    const dpr = window.devicePixelRatio || 1;
+    arrowCanvas.width = Math.floor(arrowCanvasWidth * dpr);
+    arrowCanvas.height = Math.floor(arrowCanvasHeight * dpr);
 
-    const width = arrowCanvas.width;
-    const height = arrowCanvas.height;
+    const width = arrowCanvasWidth * dpr;
+    const height = arrowCanvasHeight * dpr;
 
     const rc = rough.canvas(arrowCanvas);
 
-    // 1) Arrow shaft
+    // Arrow shaft
     const x1 = width / 2;
     const y1 = height / 5;
     const x2 = width / 2;
@@ -37,7 +43,7 @@
 
     rc.line(x1, y1, x2, y2, {
       stroke: "#f27941",
-      strokeWidth: 5,
+      strokeWidth: 5 * dpr,
     });
 
     // Arrowhead length and angle
@@ -50,7 +56,7 @@
     const y3 = y2 - headlen * Math.sin(θ - φ);
     rc.line(x2, y2, x3, y3, {
       stroke: "#f27941",
-      strokeWidth: 5,
+      strokeWidth: 5 * dpr,
     });
 
     // Right side of arrowhead
@@ -58,7 +64,7 @@
     const y4 = y2 - headlen * Math.sin(θ + φ);
     rc.line(x2, y2, x4, y4, {
       stroke: "#f27941",
-      strokeWidth: 5,
+      strokeWidth: 5 * dpr,
     });
   });
 </script>
@@ -88,9 +94,11 @@
         >
       </a>
       <div class="flex items-center gap-4 justify-evenly">
-        <p class="font-mono text-xl lg:text-2xl xl:text-3xl">Github</p>
+        <p class="font-mono text-xl lg:text-2xl xl:text-3xl hidden 2xs:inline">
+          Github
+        </p>
         <GitHubIcon
-          classes="min-w-8 xs:w-full max-w-10 md:max-w-12 lg:max-w-14 min-w-0 hover:rotate-10 transition-transform duration-300 ease-in-out"
+          classes="min-w-6 xs:w-full max-w-9 3xs:max-w-10 md:max-w-12 lg:max-w-14 min-w-0 hover:rotate-10 transition-transform duration-300 ease-in-out"
           link="https://github.com/ellie-holt"
         />
       </div>
@@ -110,22 +118,26 @@
           class="font-mono font-medium text-black row-start-2 col-span-2 leading-snug"
         >
           <span
-            class="text-[8.5vw] lg:text-[8vw] xl:text-[7.5vw] text-[#f27941] relative top-2 left-5"
+            class="text-[10vw] 2xs:text-[8.5vw] lg:text-[8vw] xl:text-[7.5vw] text-[#f27941] relative top-0.5 3xs:top-1 2xs:top-1.5 xs:top-2 left-5"
             >{`{`}</span
           >
-          <span class="text-[5vw] lg:text-[4.5vw] xl:text-[4vw]"
-            >front-end web developer</span
+          <span class="text-[7vw] 2xs:text-[5vw] lg:text-[4.5vw] xl:text-[4vw]"
+            ><span class="2xs:inline hidden">front-end</span>
+            web developer</span
           >
+
           <span
-            class="text-[8.5vw] lg:text-[8vw] xl:text-[7.5vw] text-[#f27941] relative top-2 right-5"
+            class="text-[10vw] 2xs:text-[8.5vw] lg:text-[8vw] xl:text-[7.5vw] text-[#f27941] relative top-0.5 3xs:top-1 2xs:top-1.5 xs:top-2 right-5"
             >{`}`}</span
           >
         </h2>
-        <div class="relative z-30 group pointer-events-auto">
+        <div
+          class={`${arrowIsHidden ? "invisible" : "visible"} relative z-30 group pointer-events-auto 2xs:bottom-0 bottom-2`}
+        >
           <a href="#about" aria-label="Scroll down">
             <canvas
               bind:this={arrowCanvas}
-              class="w-full h-full group-hover:translate-y-2 transition-transform duration-300 ease-in-out"
+              class="2xs:w-[150px] 2xs:h-[150px] w-[100px] h-[100px] group-hover:translate-y-2 transition-transform duration-300 ease-in-out [image-rendering:smooth]"
             >
             </canvas></a
           >

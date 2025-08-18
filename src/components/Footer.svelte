@@ -4,8 +4,8 @@
   $effect(() => {
     if (!arrowCanvas) return;
 
-    arrowCanvas.width = 150;
-    arrowCanvas.height = 150;
+    arrowCanvas.width = 100;
+    arrowCanvas.height = 100;
 
     const width = arrowCanvas.width;
     const height = arrowCanvas.height;
@@ -51,7 +51,7 @@
 >
   <div class="px-[1px] py-[1px] mb-10">
     <div
-      class="shadow-border w-full h-full min-h-[20vh] flex items-end pb-6 md:justify-between justify-end"
+      class="shadow-border w-full h-full md:min-h-[20vh] sm:min-h-[30vh] xs:min-h-[32vh] flex items-end pb-6 md:justify-between sm:justify-end justify-center"
     >
       <!-- Scroll to top arrow -->
       <a
@@ -61,16 +61,20 @@
       >
         <canvas
           bind:this={arrowCanvas}
-          class="-mb-6 -ml-4 w-full h-full group-hover:-translate-y-2 transition-transform duration-300 ease-in-out"
+          class="-mb-4 -ml-4 w-full h-full group-hover:-translate-y-2 transition-transform duration-300 ease-in-out"
         >
         </canvas>
-        <p class="font-mono text-2xl -ml-12 whitespace-nowrap">to top</p></a
+        <p class="font-mono text-2xl -ml-8 whitespace-nowrap">to top</p></a
       >
       <!-- contact links -->
-      <div class="text-2xl flex flex-col px-6 items-end justify-center gap-6">
+      <div
+        class="xs:text-2xl text-2xl flex flex-col sm:px-6 px-2 items-end justify-center gap-6 sm:mt-6 mt-12"
+      >
         <!-- email -->
         <div class="flex items-center justify-center gap-4">
-          <span class="font-bold relative top-[1px]">email:</span>
+          <span class="font-bold relative top-[1px] xs:inline hidden"
+            >email:</span
+          >
 
           <a
             href="mailto:eleanorholt97@gmail.com"
@@ -94,7 +98,7 @@
 
         <!-- github -->
         <div class="flex items-center justify-center gap-4">
-          <span class="relative font-bold">github:</span>
+          <span class="relative font-bold xs:inline hidden">github:</span>
 
           <a
             href="https://github.com/ellie-holt"

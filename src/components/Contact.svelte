@@ -3,7 +3,7 @@
 
 <section
   id="contact"
-  class="flex flex-col relative mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 3xs:scroll-m-14 2xs:scroll-m-0"
+  class="flex flex-col relative mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 3xs:scroll-m-14 2xs:scroll-m-0 scroll-m-23"
 >
   <div class="flex items-end h-[calc(var(--spacing-banner)_*_2)] bg-azure-100">
     <h3 class="md:py-4 py-3 pl-6 md:text-3xl text-2xl font-semibold">
@@ -20,7 +20,9 @@
   <div class=" lg:w-2/3 xl:w-3/5 w-full self-center overflow-hidden">
     <!-- contact form -->
     <div class="flex bg-azure-100 px-[1px] h-form shadow-border items-center">
-      <h4 class="px-6 py-8 text-2xl w-full h-full shadow-border">
+      <h4
+        class="px-6 md:py-8 xs:py-6 py-4.5 xs:text-2xl text-xl w-full h-full shadow-border"
+      >
         Drop me a message...
       </h4>
     </div>

@@ -13,7 +13,7 @@
 </script>
 
 <div
-  class={`${bannerIsVisible ? "visible" : "invisible pointer-events-none z-0"} flex flex-col items-center justify-center pt-2 pb-3 h-banner bg-aquamarine-wash`}
+  class={`${bannerIsVisible ? "visible" : "invisible"} flex flex-col items-center justify-center pt-2 pb-3 h-banner bg-aquamarine-wash`}
   transition:fade|global
 >
   <a href="#page-top">

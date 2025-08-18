@@ -1,6 +1,6 @@
 <section
   id="about"
-  class="flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-12 3xs:scroll-m-14 2xs:scroll-m-0 pb-[1px]"
+  class="flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-23 3xs:scroll-m-14 2xs:scroll-m-0 pb-[1px]"
 >
   <div
     class="h-[calc(var(--spacing-banner)_*_2)] bg-tangerine-100 flex items-end"
@@ -27,7 +27,7 @@
     <div
       class="col-start-3 row-start-1 row-end-3 bg-white shadow-border px-6 pt-6 pb-9"
     >
-      <h4 class="pb-3">Additional Content</h4>
+      <h4 class="pb-3">A</h4>
       <p class="leading-loose">
         This is some additional content to enhance the section.
       </p>

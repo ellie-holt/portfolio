@@ -28,14 +28,16 @@
   let bannerTrigger = $state(null);
   let showHeroBanner = $state(false);
   let changeNavbarStyles = $state(false);
+  let hideArrow = $state(false);
 
   $effect(() => {
     if (!bannerTrigger) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
-        showHeroBanner =
+        showHeroBanner = entry.isIntersecting;
+        changeNavbarStyles =
           entry.isIntersecting && entry.boundingClientRect.top === 0;
-        changeNavbarStyles = entry.isIntersecting;
+        hideArrow = entry.isIntersecting;
       },
       {
         root: null,
@@ -65,13 +67,13 @@
   <!-- HEADER: BIG HERO-->
   <header class="relative z-30">
     <section id="hero" class="top-0 w-full pt-2.5 xs:pt-5 border-black hero">
-      <Hero />
+      <Hero arrowIsHidden={hideArrow} />
     </section>
   </header>
 
   <!-- sticky hero banner and navbar -->
   <section
-    class="sticky left-0 right-0 top-0 z-20 grid grid-cols-1 grid-rows-[auto_1fr]"
+    class={`sticky left-0 right-0 top-0 ${showHeroBanner ? "z-40" : "z-20"} grid grid-cols-1 grid-rows-[auto_1fr] `}
   >
     <div
       bind:this={bannerTrigger}
