@@ -73,7 +73,7 @@
   <div class="relative top-[1px] px-[1px]">
     <!-- top bar with links?  -->
     <div
-      class="relative z-10 h-banner flex items-center bg-white justify-around shadow-border text-lg xs:text-xl"
+      class="relative z-10 h-banner flex items-center bg-white justify-around shadow-border text-md 3xs:text-lg xs:text-xl"
     >
       <a
         href="mailto:eleanorholt97@gmail.com"
