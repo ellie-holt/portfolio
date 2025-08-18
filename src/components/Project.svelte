@@ -94,7 +94,7 @@
     </section>
 
     <section class="sm:hidden col-span-2 pt-[1px]">
-      <div class="p-6 shadow-border w-full h-full">
+      <div class="3xs:px-6 px-4 py-6 shadow-border w-full h-full">
         <p class="">
           {project.description}
         </p>
@@ -107,7 +107,7 @@
       href={project.link}
       target="_blank"
       rel="noopener noreferrer"
-      class="px-6 py-3 font-semibold flex items-center justify-end w-full group"
+      class="3xs:px-6 px-4 py-3 font-semibold flex items-center justify-end w-full group"
     >
       <h3
         class="md:py-4 xl:text-3xl lg:text-2xl md:text-3xl text-2xl lowercase underline decoration-1 group-hover:decoration-transparent transition-all duration-300 ease-in-out"
@@ -117,7 +117,7 @@
       <div class="w-25">
         <canvas
           bind:this={arrowCanvas}
-          class="w-full h-full group-hover:translate-x-2 transition-transform duration-300 ease-in-out"
+          class="relative w-full h-full group-hover:translate-x-2 transition-transform duration-300 ease-in-out"
         >
         </canvas>
       </div>

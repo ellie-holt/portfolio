@@ -6,7 +6,7 @@
   class="flex flex-col relative mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 3xs:scroll-m-14 2xs:scroll-m-0 scroll-m-14"
 >
   <div class="flex items-end h-[calc(var(--spacing-banner)_*_2)] bg-azure-100">
-    <h3 class="md:py-4 py-3 pl-6 md:text-3xl text-2xl font-semibold">
+    <h3 class="md:py-4 py-3 3xs:px-6 px-4 md:text-3xl text-2xl font-semibold">
       // contact
     </h3>
   </div>
@@ -27,7 +27,7 @@
       class="flex bg-azure-100 px-[1px] xs:h-form h-[calc(var(--spacing-form)_*_2)] shadow-border items-center"
     >
       <h4
-        class="px-6 md:py-8 xs:py-6 py-4.5 xs:text-2xl text-xl w-full h-full shadow-border"
+        class="3xs:px-6 px-4 md:py-8 xs:py-6 py-4.5 xs:text-2xl text-xl w-full h-full shadow-border"
       >
         Drop me a message...
       </h4>
@@ -45,7 +45,7 @@
       >
         <label
           for="name"
-          class="flex items-center col-start-1 row-start-1 row-end-2 px-6 font-sans font-bold uppercase shadow-border bg-tangerine-wash xs:col-span-1 col-span-full h-form"
+          class="flex items-center col-start-1 row-start-1 row-end-2 3xs:px-6 px-4 font-sans font-bold uppercase shadow-border bg-tangerine-wash xs:col-span-1 col-span-full h-form"
           ><span>Name:</span></label
         >
         <input
@@ -54,7 +54,7 @@
           id="name"
           placeholder="Your Name"
           required
-          class="col-start-1 row-start-2 row-end-3 px-6 bg-white shadow-border xs:col-span-1 xs:col-start-2 col-span-full xs:row-start-1 xs:row-end-2 h-form"
+          class="col-start-1 row-start-2 row-end-3 3xs:px-6 px-4 bg-white shadow-border xs:col-span-1 xs:col-start-2 col-span-full xs:row-start-1 xs:row-end-2 h-form"
         />
       </div>
       <div
@@ -62,7 +62,7 @@
       >
         <label
           for="email"
-          class="flex items-center col-start-1 row-start-1 px-6 font-sans font-bold uppercase shadow-border bg-tangerine-wash xs:col-span-1 col-span-full xs:row-start-2 h-form"
+          class="flex items-center col-start-1 row-start-1 3xs:px-6 px-4 font-sans font-bold uppercase shadow-border bg-tangerine-wash xs:col-span-1 col-span-full xs:row-start-2 h-form"
           ><span>Email:</span></label
         >
         <input
@@ -71,7 +71,7 @@
           id="email"
           placeholder="name@email.com"
           required
-          class="row-start-2 px-6 bg-white shadow-border xs:col-span-1 col-span-full xs:row-start-2 h-form"
+          class="row-start-2 3xs:px-6 px-4 bg-white shadow-border xs:col-span-1 col-span-full xs:row-start-2 h-form"
         />
       </div>
       <div
@@ -79,7 +79,7 @@
       >
         <label
           for="message"
-          class="flex items-center row-start-1 px-6 font-sans font-bold uppercase shadow-border h-form bg-tangerine-wash xs:col-span-1 col-span-full"
+          class="flex items-center row-start-1 3xs:px-6 px-4 font-sans font-bold uppercase shadow-border h-form bg-tangerine-wash xs:col-span-1 col-span-full"
           ><span>Message:</span></label
         >
         <textarea
@@ -87,7 +87,7 @@
           id="message"
           placeholder="Type your message here..."
           required
-          class="relative z-30 shadow-border px-6 pt-6 h-[calc(var(--spacing-form)_*_2)] leading-[1.7] text-md xs:text-lg bg-white xs:col-span-1 xs:col-start-2 col-span-full xs:row-start-1 row-span-2 row-start-2"
+          class="relative z-30 shadow-border 3xs:px-6 px-4 pt-6 h-[calc(var(--spacing-form)_*_2)] leading-[1.7] text-md xs:text-lg bg-white xs:col-span-1 xs:col-start-2 col-span-full xs:row-start-1 row-span-2 row-start-2"
         ></textarea>
       </div>
       <div

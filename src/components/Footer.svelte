@@ -127,10 +127,10 @@
   <div
     class="absolute bottom-0 left-0 right-0 h-10 xl:mx-6 mx-2.5 xs:mx-5 lg:mx-6 md:mx-6 flex items-center justify-between"
   >
-    <p class="3xs:pl-6 pl-4 font-mono 3xs:text-base text-sm">
+    <p class="3xs:pl-6 4xs:pl-4 pl-2 font-mono 3xs:text-base text-sm">
       &copy; 2025 Ellie Holt.
     </p>
-    <p class="3xs:pr-6 pr-4 font-mono 3xs:text-base text-sm">
+    <p class="3xs:pr-6 4xs:pr-4 pr-2 font-mono 3xs:text-base text-sm">
       Open source <a
         href="https://github.com/ellie-holt/portfolio"
         target="_blank"
