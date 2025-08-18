@@ -17,7 +17,7 @@
     </h3>
   </div>
   <section
-    class="flex flex-col lg:grid lg:grid-cols-3 gap-[1px] px-[1px] pt-[1px]"
+    class="flex flex-col lg:grid lg:grid-cols-3 grid-rows-1 gap-[1px] px-[1px] pt-[1px]"
   >
     <Project
       project={{
@@ -35,7 +35,7 @@
       project={{
         title: "World Clock",
         description:
-          "A visually engaging world clock built with vanilla JavaScript and styled with custom CSS. Displays the time and date across multiple global cities, with responsive design and dynamic theming based on the time of day.",
+          "A visually engaging world clock built with vanilla JavaScript and styled with custom CSS. Displays the time and date across multiple global cities, with responsive design and dynamic theming based on the time of day. Extra information includes sunrise and sunset times for each location.",
         link: "https://findthetime.netlify.app/",
       }}
       image={{
@@ -47,7 +47,7 @@
       project={{
         title: "AI Poet",
         description:
-          "A minimalist web app that lets users generate short poems based on their input prompts. Built with HTML, CSS, and vanilla JavaScript, it integrates the SheCodes AI API to return AI-generated verses which are then displayed using a smooth typewriter animation. The project focuses on clean, accessible UI with a soft, book-inspired visual aesthetic.",
+          "A minimalist web app that lets users generate short poems based on their input prompts. Built with HTML, CSS, and vanilla JavaScript, it integrates the SheCodes AI API to return AI-generated verses which are then displayed using a smooth typewriter animation.",
         link: "https://aipoet.netlify.app/",
       }}
       image={{

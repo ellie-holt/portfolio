@@ -58,9 +58,9 @@
   });
 </script>
 
-<div class="lg:col-span-1">
+<div class="lg:col-span-1 flex flex-col">
   <article
-    class="grid grid-cols-[5fr_1fr] xs:grid-cols-[4fr_1fr] sm:grid-cols-2 lg:grid-cols-1 lg:grid-rows-[6fr_7fr] xl:grid-rows-[7fr_6fr] 2xl:grid-rows-[3fr_2fr] 3xl:grid-rows-[2fr_1fr] relative shadow-border bg-white"
+    class="grid grid-cols-[5fr_1fr] xs:grid-cols-[4fr_1fr] sm:grid-cols-2 lg:grid-cols-1 lg:flex lg:flex-col relative shadow-border bg-white flex-1"
   >
     <!-- image -->
     <section class="relative lg:row-start-1 z-10 overflow-hidden shadow-border">
@@ -74,13 +74,13 @@
 
     <!-- title and description -->
     <section
-      class="shadow-border flex lg:row-start-2 flex-col gap-[1px] w-full h-full lg:col-span-2"
+      class="shadow-border flex lg:row-start-2 flex-col gap-[1px] w-full h-full lg:col-span-2 lg:flex-1"
     >
       <div
-        class="w-full h-full sm:h-auto shadow-border flex items-center lg:justify-center"
+        class="w-full h-full sm:h-auto shadow-border flex items-center lg:justify-center flex-1"
       >
         <h2
-          class="py-3 xs:py-6 px-6 text-4xl xs:text-5xl sm:text-6xl md:text-7xl xl:text-[3.4rem] lg:text-4xl [writing-mode:vertical-rl] sm:[writing-mode:horizontal-tb]"
+          class="py-3 xs:py-6 px-6 text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-[2.5rem] xl:text-[3.2rem] 2xl:text-[3.4rem] lg:text-4xl [writing-mode:vertical-rl] sm:[writing-mode:horizontal-tb]"
         >
           {project.title}
         </h2>
