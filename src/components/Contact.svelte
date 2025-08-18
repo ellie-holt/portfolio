@@ -11,7 +11,7 @@
     </h3>
   </div>
   <div class="px-[1px] py-[1px] h-[calc(var(--spacing-banner)_*_2)]">
-    <div class="shadow-border h-full flex items-center justify-center">
+    <div class="shadow-border h-full flex items-center justify-center px-6">
       <h2
         class="text-center text-[8vw] lg:text-[6vw] xl:text-[5vw] 2xl:text-[4.5vw]"
       >
