@@ -100,17 +100,28 @@
         <GitHubIcon
           classes="min-w-6 xs:w-full max-w-9 3xs:max-w-10 md:max-w-12 lg:max-w-14 min-w-0 hover:rotate-10 transition-transform duration-300 ease-in-out"
           link="https://github.com/ellie-holt"
+          fill="var(--color-tangerine-500)"
         />
       </div>
     </div>
 
     <!-- Expandable hero section -->
-    <div class="flex relative min-h-[84vh] z-0">
+    <div class="flex flex-col relative min-h-[80vh] z-0">
+      <!-- <div class="flex items-center gap-4 p-6 justify-evenly">
+        <p class="font-mono text-xl lg:text-2xl xl:text-3xl hidden 2xs:inline">
+          Github
+        </p>
+        <GitHubIcon
+          classes="min-w-6 xs:w-full max-w-9 3xs:max-w-10 md:max-w-12 lg:max-w-14 min-w-0 hover:rotate-10 transition-transform duration-300 ease-in-out"
+          link="https://github.com/ellie-holt"
+          fill="var(--color-tangerine-500)"
+        />
+      </div> -->
       <div
         class="absolute bottom-0 left-0 right-0 top-auto flex flex-col justify-end items-center leading-none"
       >
         <h1
-          class="text-[13vw] lg:text-[12vw] xl:text-[11vw] font-bold row-start-1 col-start-1 col-span-2 leading-none"
+          class="text-[26vw] text-center 3xs:text-left 3xs:text-[13vw] lg:text-[12vw] xl:text-[11vw] font-bold row-start-1 col-start-1 col-span-2 leading-none"
         >
           Ellie Holt:
         </h1>
@@ -118,16 +129,17 @@
           class="font-mono font-medium text-black row-start-2 col-span-2 leading-snug"
         >
           <span
-            class="text-[10vw] 2xs:text-[8.5vw] lg:text-[8vw] xl:text-[7.5vw] text-[#f27941] relative top-0.5 3xs:top-1 2xs:top-1.5 xs:top-2 left-5"
+            class="text-[11vw] 4xs:text-[11.5vw] 3xs:text-[12vw] 2xs:text-[8.5vw] lg:text-[8vw] xl:text-[7.5vw] text-[#f27941] relative top-0.5 3xs:top-1 2xs:top-1.5 xs:top-2 left-5"
             >{`{`}</span
           >
-          <span class="text-[7vw] 2xs:text-[5vw] lg:text-[4.5vw] xl:text-[4vw]"
+          <span
+            class="text-[7.7vw] 4xs:text-[8vw] 3xs:text-[8.5vw] 2xs:text-[5vw] lg:text-[4.5vw] xl:text-[4vw]"
             ><span class="2xs:inline hidden">front-end</span>
             web developer</span
           >
 
           <span
-            class="text-[10vw] 2xs:text-[8.5vw] lg:text-[8vw] xl:text-[7.5vw] text-[#f27941] relative top-0.5 3xs:top-1 2xs:top-1.5 xs:top-2 right-5"
+            class="text-[11vw] 4xs:text-[11.5vw] 3xs:text-[12vw] 2xs:text-[8.5vw] lg:text-[8vw] xl:text-[7.5vw] text-[#f27941] relative top-0.5 3xs:top-1 2xs:top-1.5 xs:top-2 right-5"
             >{`}`}</span
           >
         </h2>

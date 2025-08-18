@@ -1,5 +1,5 @@
 <script>
-  let { classes = "", link = "" } = $props();
+  let { classes = "", link = "", fill = "" } = $props();
 </script>
 
 <a
@@ -13,11 +13,11 @@
     width="64"
     xmlns="http://www.w3.org/2000/svg"
     class={classes}
-    fill="currentColor"
+    {fill}
     role="img"
     aria-label="GitHub logo"
   >
-    <g fill="#181616">
+    <g>
       <path
         fill-rule="evenodd"
         clip-rule="evenodd"
