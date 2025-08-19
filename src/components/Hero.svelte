@@ -130,7 +130,7 @@
           </h1>
         </a>
         <h2
-          class="font-mono font-medium text-black row-start-2 col-span-2 leading-snug"
+          class="font-mono font-medium text-black row-start-2 col-span-2 leading-snug whitespace-nowrap"
         >
           <span
             class="text-[11vw] 4xs:text-[11.5vw] 3xs:text-[12vw] 2xs:text-[8.5vw] lg:text-[8vw] xl:text-[7.5vw] text-[#f27941] relative top-0.5 3xs:top-1 2xs:top-1.5 xs:top-2 lg:top-2.5 xl:top-3 left-5"
