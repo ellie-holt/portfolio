@@ -106,7 +106,9 @@
     </div>
 
     <!-- Expandable hero section -->
-    <div class="flex flex-col relative min-h-[80vh] z-0">
+    <div
+      class="flex flex-col relative min-h-[calc(78vh_-_20px)] 3xs:min-h-[80vh] z-0"
+    >
       <!-- <div class="flex items-center gap-4 p-6 justify-evenly">
         <p class="font-mono text-xl lg:text-2xl xl:text-3xl hidden 2xs:inline">
           Github
@@ -129,7 +131,7 @@
           class="font-mono font-medium text-black row-start-2 col-span-2 leading-snug"
         >
           <span
-            class="text-[11vw] 4xs:text-[11.5vw] 3xs:text-[12vw] 2xs:text-[8.5vw] lg:text-[8vw] xl:text-[7.5vw] text-[#f27941] relative top-0.5 3xs:top-1 2xs:top-1.5 xs:top-2 left-5"
+            class="text-[11vw] 4xs:text-[11.5vw] 3xs:text-[12vw] 2xs:text-[8.5vw] lg:text-[8vw] xl:text-[7.5vw] text-[#f27941] relative top-0.5 3xs:top-1 2xs:top-1.5 xs:top-2 lg:top-2.5 xl:top-3 left-5"
             >{`{`}</span
           >
           <span
@@ -139,7 +141,7 @@
           >
 
           <span
-            class="text-[11vw] 4xs:text-[11.5vw] 3xs:text-[12vw] 2xs:text-[8.5vw] lg:text-[8vw] xl:text-[7.5vw] text-[#f27941] relative top-0.5 3xs:top-1 2xs:top-1.5 xs:top-2 right-5"
+            class="text-[11vw] 4xs:text-[11.5vw] 3xs:text-[12vw] 2xs:text-[8.5vw] lg:text-[8vw] xl:text-[7.5vw] text-[#f27941] relative top-0.5 3xs:top-1 2xs:top-1.5 xs:top-2 lg:top-2.5 xl:top-3 right-5"
             >{`}`}</span
           >
         </h2>
