@@ -122,11 +122,13 @@
       <div
         class="absolute bottom-0 left-0 right-0 top-auto flex flex-col justify-end items-center leading-none"
       >
-        <h1
-          class="text-[26vw] text-center 3xs:text-left 3xs:text-[13vw] lg:text-[12vw] xl:text-[11vw] font-bold row-start-1 col-start-1 col-span-2 leading-none"
-        >
-          Ellie Holt:
-        </h1>
+        <a href="index.html">
+          <h1
+            class="text-[26vw] text-center 3xs:text-left 3xs:text-[13vw] lg:text-[12vw] xl:text-[11vw] font-bold row-start-1 col-start-1 col-span-2 leading-none"
+          >
+            Ellie Holt:
+          </h1>
+        </a>
         <h2
           class="font-mono font-medium text-black row-start-2 col-span-2 leading-snug"
         >

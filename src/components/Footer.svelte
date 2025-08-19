@@ -1,49 +1,4 @@
 <script lang="js">
-  import rough from "roughjs";
-  let arrowCanvas;
-  $effect(() => {
-    if (!arrowCanvas) return;
-
-    arrowCanvas.width = 100;
-    arrowCanvas.height = 100;
-
-    const width = arrowCanvas.width;
-    const height = arrowCanvas.height;
-
-    const rc = rough.canvas(arrowCanvas);
-
-    // 1) Arrow shaft
-    const x1 = width / 2;
-    const y1 = height - height / 5;
-    const x2 = width / 2;
-    const y2 = height / 5;
-
-    rc.line(x1, y1, x2, y2, {
-      stroke: "#f27941",
-      strokeWidth: 5,
-    });
-
-    // Arrowhead length and angle
-    const headlen = height / 4;
-    const θ = Math.atan2(y2 - y1, x2 - x1);
-    const φ = Math.PI / 6; // 30°
-
-    // Left side of arrowhead
-    const x3 = x2 - headlen * Math.cos(θ - φ);
-    const y3 = y2 - headlen * Math.sin(θ - φ);
-    rc.line(x2, y2, x3, y3, {
-      stroke: "#f27941",
-      strokeWidth: 5,
-    });
-
-    // Right side of arrowhead
-    const x4 = x2 - headlen * Math.cos(θ + φ);
-    const y4 = y2 - headlen * Math.sin(θ + φ);
-    rc.line(x2, y2, x4, y4, {
-      stroke: "#f27941",
-      strokeWidth: 5,
-    });
-  });
 </script>
 
 <footer
@@ -51,21 +6,8 @@
 >
   <div class="px-[1px] py-[1px] mb-10">
     <div
-      class="shadow-border w-full h-full md:min-h-[24vh] sm:min-h-[34vh] xs:min-h-[28vh] flex items-end pb-6 md:justify-between sm:justify-end justify-center"
+      class="shadow-border w-full h-full md:min-h-[24vh] sm:min-h-[34vh] xs:min-h-[28vh] flex items-end pb-6 sm:justify-end justify-center"
     >
-      <!-- Scroll to top arrow -->
-      <a
-        href="#page-top"
-        aria-label="Scroll to top"
-        class="group md:flex items-end hidden group hover:cursor-pointer"
-      >
-        <canvas
-          bind:this={arrowCanvas}
-          class="-mb-4 -ml-4 w-full h-full group-hover:-translate-y-2 transition-transform duration-300 ease-in-out"
-        >
-        </canvas>
-        <p class="font-mono text-2xl -ml-8 whitespace-nowrap">to top</p></a
-      >
       <!-- contact links -->
       <div
         class="3xs:text-2xl 4xs:text-xl text-lg flex flex-col sm:px-6 px-2 items-end justify-center gap-6 sm:mt-6 mt-12"

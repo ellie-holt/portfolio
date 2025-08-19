@@ -59,7 +59,7 @@
 
 <a href="#page-top">
   <div
-    class={`${bannerIsVisible ? "visible" : "invisible"} flex items-center justify-between md:justify-center sm:justify-between 3xs:justify-around pt-2 pb-3 sm:pl-6 xs:pl-4 2xs:pl-6 3xs:pl-2 pl-4 sm:pr-2 xs:pr-1 3xs:pr-0 pr-1 h-banner w-full bg-aquamarine-wash`}
+    class={`${bannerIsVisible ? "visible" : "invisible"} group flex items-center justify-between md:justify-center sm:justify-between 3xs:justify-around pt-2 pb-3 sm:pl-6 xs:pl-4 2xs:pl-6 3xs:pl-2 pl-4 sm:pr-2 xs:pr-1 3xs:pr-0 pr-1 h-banner w-full bg-aquamarine-wash`}
     transition:fade|global
   >
     <h1
@@ -85,7 +85,9 @@
         >
       </span>
     </h1>
-    <canvas bind:this={arrowCanvas} class="relative top-0.5 w-11 h-11 3xs:h-13"
+    <canvas
+      bind:this={arrowCanvas}
+      class="relative top-0.5 w-11 h-11 3xs:h-13 group-hover:-translate-y-1 transition-transform duration-300 ease-in-out"
     ></canvas>
   </div>
 </a>
