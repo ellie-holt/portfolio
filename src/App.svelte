@@ -90,31 +90,6 @@
 </div>
 
 <style>
-  :root {
-    --gradient: radial-gradient(
-        at 26% 90%,
-        hsla(18, 100%, 76%, 0.64) 0px,
-        transparent 50%
-      ),
-      radial-gradient(at 73% 92%, hsla(221, 86%, 88%, 1) 0px, transparent 50%),
-      radial-gradient(at 73% 42%, hsla(0, 0%, 100%, 1) 0px, transparent 50%),
-      radial-gradient(at 92% 7%, hsla(160, 88%, 86%, 1) 0px, transparent 50%),
-      radial-gradient(at 43% 2%, hsla(0, 0%, 100%, 1) 0px, transparent 50%),
-      radial-gradient(at 84% 67%, hsla(18, 100%, 87%, 1) 0px, transparent 50%),
-      radial-gradient(at 13% 62%, hsla(0, 0%, 100%, 1) 0px, transparent 50%),
-      radial-gradient(
-        at 15% 29%,
-        hsla(221, 92%, 80%, 0.69) 0px,
-        transparent 50%
-      ),
-      radial-gradient(at 9% 15%, hsla(0, 0%, 100%, 1) 0px, transparent 50%),
-      radial-gradient(
-        at 61% 53%,
-        hsla(159, 86%, 74%, 0.78) 0px,
-        transparent 50%
-      );
-  }
-
   .grid-overlay {
     background-image: linear-gradient(
         rgba(167, 192, 205, 0.6) 1px,

@@ -22,38 +22,42 @@
 </script>
 
 <div class="mx-2.5 xs:mx-5 -mb-15 md:mx-6 lg:mx-6 xl:mx-6">
-  <div class="relative top-[1px] px-[1px]">
+  <div class="relative">
     <!-- top bar with links?  -->
-    <div
-      class="relative z-10 h-banner flex items-center bg-white justify-around shadow-border text-md 3xs:text-lg xs:text-xl"
-    >
-      <a
-        href="mailto:eleanorholt97@gmail.com"
-        target="_blank"
-        class="relative inline-flex items-center font-mono email-link group"
+    <div class="divider divider-rail relative z-10">
+      <div
+        class="h-banner flex items-center bg-white justify-around text-md 3xs:text-lg xs:text-xl"
       >
-        <span
-          class="brackets relative pr-[0.2em] text-[1.7em] font-semibold text-tangerine-500 transition-transform duration-300 ease-in group-hover:translate-x-1 group-hover:scale-90 leading-none"
-          >&lcub;</span
+        <a
+          href="mailto:eleanorholt97@gmail.com"
+          target="_blank"
+          class="relative inline-flex items-center font-mono email-link group"
         >
-        <span
-          class="underline transition-all duration-300 ease-in group-hover:decoration-transparent"
-          ><span class="break-all">eleanorholt97</span>@gmail.com</span
-        >
-        <span
-          class="brackets relative pl-[0.2em] text-[1.7em] font-semibold text-tangerine-500 transition-transform duration-300 ease-in group-hover:-translate-x-1 group-hover:scale-90 leading-none"
-          >&rcub;</span
-        >
-      </a>
-      <div class="flex items-center gap-4 justify-evenly">
-        <p class="font-mono text-xl lg:text-2xl xl:text-3xl hidden 2xs:inline">
-          Github
-        </p>
-        <GitHubIcon
-          classes="min-w-6 xs:w-full max-w-9 3xs:max-w-10 md:max-w-12 lg:max-w-14 min-w-0 hover:rotate-10 transition-transform duration-300 ease-in-out"
-          link="https://github.com/ellie-holt"
-          fill="var(--color-tangerine-500)"
-        />
+          <span
+            class="brackets relative pr-[0.2em] text-[1.7em] font-semibold text-tang-500 transition-transform duration-300 ease-in group-hover:translate-x-1 group-hover:scale-90 leading-none"
+            >&lcub;</span
+          >
+          <span
+            class="underline transition-all duration-300 ease-in group-hover:decoration-transparent"
+            ><span class="break-all">eleanorholt97</span>@gmail.com</span
+          >
+          <span
+            class="brackets relative pl-[0.2em] text-[1.7em] font-semibold text-tang-500 transition-transform duration-300 ease-in group-hover:-translate-x-1 group-hover:scale-90 leading-none"
+            >&rcub;</span
+          >
+        </a>
+        <div class="flex items-center gap-4 justify-evenly">
+          <p
+            class="font-mono text-xl lg:text-2xl xl:text-3xl hidden 2xs:inline"
+          >
+            Github
+          </p>
+          <GitHubIcon
+            classes="min-w-6 xs:w-full max-w-9 3xs:max-w-10 md:max-w-12 lg:max-w-14 min-w-0 hover:rotate-10 transition-transform duration-300 ease-in-out"
+            link="https://github.com/ellie-holt"
+            fill="var(--color-tangerine-500)"
+          />
+        </div>
       </div>
     </div>
 

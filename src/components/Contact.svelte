@@ -56,7 +56,7 @@
       >
         <label
           for="name"
-          class="flex items-center col-start-1 row-start-1 row-end-2 px-6 font-sans font-bold uppercase shadow-border bg-tangerine-wash xs:col-span-1 col-span-full h-form"
+          class="flex items-center col-start-1 row-start-1 row-end-2 px-6 font-sans font-bold uppercase shadow-border bg-tang-wash xs:col-span-1 col-span-full h-form"
           ><span>Name:</span></label
         >
         <input
@@ -73,7 +73,7 @@
       >
         <label
           for="email"
-          class="flex items-center col-start-1 row-start-1 px-6 font-sans font-bold uppercase shadow-border bg-tangerine-wash xs:col-span-1 col-span-full xs:row-start-2 h-form"
+          class="flex items-center col-start-1 row-start-1 px-6 font-sans font-bold uppercase shadow-border bg-tang-wash xs:col-span-1 col-span-full xs:row-start-2 h-form"
           ><span>Email:</span></label
         >
         <input
@@ -90,7 +90,7 @@
       >
         <label
           for="message"
-          class="flex items-center row-start-1 px-6 font-sans font-bold uppercase shadow-border h-form bg-tangerine-wash xs:col-span-1 col-span-full"
+          class="flex items-center row-start-1 px-6 font-sans font-bold uppercase shadow-border h-form bg-tang-wash xs:col-span-1 col-span-full"
           ><span>Message:</span></label
         >
         <textarea

@@ -21,8 +21,8 @@
     <ul
       class={`${navbarIsScrolled ? "bg-white " : "bg-transparent"} relative flex gap-[1px] items-stretch justify-between w-full font-sans text-lg leading-none 2xs:w-7/12 sm:w-6/12 md:w-6/12 lg:w-4/12 sm:text-xl`}
     >
-      <NavLink text="about" link="#about" colourClass="bg-tangerine-200" />
-      <NavLink text="work" link="#work" colourClass="bg-aquamarine-200" />
+      <NavLink text="about" link="#about" colourClass="bg-tang-200" />
+      <NavLink text="work" link="#work" colourClass="bg-aqua-200" />
       <NavLink text="contact" link="#contact" colourClass="bg-azure-200" />
     </ul>
   </div>

@@ -24,7 +24,7 @@
             class="relative inline-flex items-center font-mono email-link group"
           >
             <span
-              class="brackets relative pr-[0.2em] text-[1.7em] font-semibold text-tangerine-500 transition-transform duration-300 ease-in group-hover:translate-x-1 group-hover:scale-90 leading-none"
+              class="brackets relative pr-[0.2em] text-[1.7em] font-semibold text-tang-500 transition-transform duration-300 ease-in group-hover:translate-x-1 group-hover:scale-90 leading-none"
               >&lcub;</span
             >
             <span
@@ -32,7 +32,7 @@
               ><span class="break-all">eleanorholt97</span>@gmail.com</span
             >
             <span
-              class="brackets relative pl-[0.2em] text-[1.7em] font-semibold text-tangerine-500 transition-transform duration-300 ease-in group-hover:-translate-x-1 group-hover:scale-90 leading-none"
+              class="brackets relative pl-[0.2em] text-[1.7em] font-semibold text-tang-500 transition-transform duration-300 ease-in group-hover:-translate-x-1 group-hover:scale-90 leading-none"
               >&rcub;</span
             >
           </a>
@@ -48,7 +48,7 @@
             class="relative inline-flex items-center font-mono email-link group"
           >
             <span
-              class="brackets relative pr-[0.55em] text-[1.7em] font-semibold text-tangerine-500 transition-transform duration-300 ease-in group-hover:translate-x-1 group-hover:scale-90 leading-none"
+              class="brackets relative pr-[0.55em] text-[1.7em] font-semibold text-tang-500 transition-transform duration-300 ease-in group-hover:translate-x-1 group-hover:scale-90 leading-none"
               >&lcub;</span
             >
             <span
@@ -58,7 +58,7 @@
               ></span
             >
             <span
-              class="brackets relative pl-[0.55em] text-[1.7em] font-semibold text-tangerine-500 transition-transform duration-300 ease-in group-hover:-translate-x-1 group-hover:scale-90 leading-none"
+              class="brackets relative pl-[0.55em] text-[1.7em] font-semibold text-tang-500 transition-transform duration-300 ease-in group-hover:-translate-x-1 group-hover:scale-90 leading-none"
               >&rcub;</span
             ></a
           >

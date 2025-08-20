@@ -1,92 +1,195 @@
+<!-- FILE: src/components/About.svelte -->
+<script lang="js">
+  // Edit these strings/arrays only — the layout renders from this content.
+  import RoughArrow from "./RoughArrow.svelte";
+  import RoughJourneyArrow from "./RoughJourneyArrow.svelte";
+  const content = {
+    headline: "Hi, I'm Ellie — a front-end developer.",
+    subline:
+      "I build accessible, responsive interfaces with strong layout systems and small, thoughtful details. I like turning designs into fast, tidy code that feels good to use.",
+    chips: [
+      "London, UK",
+      "Open to junior roles",
+      "Open to small freelance projects",
+      "Accessibility-first",
+    ],
+    atAGlance: [
+      "Layouts that scale: CSS Grid, Flexbox, container queries",
+      "Utility-first styling with design tokens & Tailwind",
+      "React, Svelte, modern JS",
+      "Accessibility by default: semantic HTML, focus states, keyboard paths",
+    ],
+    tools: [
+      { icon: "devicon-react-original", label: "React" },
+      { icon: "devicon-svelte-plain", label: "Svelte" },
+      { icon: "devicon-tailwindcss-original", label: "Tailwind CSS" },
+      { icon: "devicon-javascript-plain", label: "JavaScript (ES6+)" },
+      { icon: "devicon-html5-plain", label: "HTML" },
+      { icon: "devicon-css3-plain", label: "CSS / SCSS" },
+      { icon: "devicon-git-plain", label: "Git & GitHub" },
+    ],
+    learning: [
+      { icon: "devicon-nextjs-original", label: "Next.js" },
+      { icon: "", label: "Accessibility testing" },
+      { icon: "", label: "Performance & Core Web Vitals" },
+    ],
+    story: {
+      photoAlt: "Ellie Holt portrait",
+      caption: "Hi 👋",
+      from: "A background in education.",
+      to: "Teaching myself front-end development.",
+    },
+    nowNext: [
+      "Now: polishing this portfolio & micro-interactions",
+      "Exploring: deepen Next.js & testing",
+      "Open to: junior roles & pairing",
+    ],
+    ctaText: "Get in touch →",
+    ctaHref: "#contact",
+  };
+</script>
+
 <section
   id="about"
-  class="flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-15 3xs:scroll-m-14 2xs:scroll-m-0 pb-[1px]"
+  class="mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-15 3xs:scroll-m-14 2xs:scroll-m-0"
 >
-  <div
-    class="h-[calc(var(--spacing-banner)_*_2)] bg-tangerine-100 flex items-end"
-  >
+  <div class="h-[calc(var(--spacing-banner)_*_2)] bg-tang-100 flex items-end">
     <h3 class="md:py-4 py-3 px-6 md:text-3xl text-2xl font-semibold">
       // about
     </h3>
   </div>
-  <div
-    class="grid grid-cols-3 grid-rows-3 gap-[1px] pt-[1px] px-[1px] about-content"
-  >
-    <!-- opening paragraph -->
-    <div
-      class="col-start-1 row-start-1 col-end-3 bg-white shadow-border px-6 py-6"
-    >
-      <h4 class="pb-3">Title</h4>
-      <p class="leading-loose">
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est esse quod
-        pariatur quo numquam aut veritatis animi corporis soluta illum? Suscipit
-        ad repellendus dicta aut modi voluptas accusamus perspiciatis et.
-      </p>
-    </div>
 
-    <div
-      class="col-start-3 row-start-1 row-end-3 bg-white shadow-border px-6 py-6"
-    >
-      <h4 class="pb-3">A</h4>
-      <p class="leading-loose">
-        This is some additional content to enhance the section.
-      </p>
-    </div>
-    <!-- tech list -->
-    <div
-      class="col-start-1 col-end-2 row-start-2 row-end-4 bg-white shadow-border px-6 py-6"
-    >
-      <h4 class="pb-3">Tech and tools</h4>
-      <div class="flex flex-col justify-center gap-6">
-        <!-- <ul class="flex justify-around">
-          <li class="relative group">HTML</li>
-          <ul>
-            <li>Semantic markup</li>
-            <li>ARIA roles and keyboard navigation</li>
-            <li>Accessible forms and validation</li>
-          </ul>
-          <li class="relative group">CSS</li>
-          <ul>
-            <li>Responsive design</li>
-            <li>CSS Grid and Flexbox</li>
-            <li>Animations and transitions</li>
-            <li>CSS variables and theming/dark mode</li>
-          </ul>
-          <li class="relative group">JavaScript</li>
-          <ul>
-            <li>DOM manipulation and event handling</li>
-            <li>Async JavaScript and APIs</li>
-          </ul>
-        </ul> -->
-        <br />
-        <ul class="flex justify-around">
-          <li class="relative group">React</li>
-          <li class="relative group">Svelte</li>
-          <li class="relative group"></li>
-          <li class="relative group"></li>
-        </ul>
-        <ul class="flex justify-around"></ul>
+  <div
+    class="divider divider-rail divider-gap grid grid-cols-1 md:grid-cols-6"
+    style="--thick:1px; --line:var(--color-azure-ink); --item-bg:#fff;"
+  >
+    <!-- Intro -->
+    <section class="md:col-span-4 px-6 py-6">
+      <h2
+        class="font-mono font-bold text-aquamarine-ink leading-tight text-[10vw] 3xs:text-[9vw] 2xs:text-[7.5vw] md:text-[4.25rem] xl:text-[4.5rem]"
+      >
+        {content.headline}
+      </h2>
+      <p class="leading-loose mt-4 text-balance">{content.subline}</p>
+      <div class="mt-6 flex flex-wrap gap-2 text-sm">
+        {#each content.chips as chip}
+          <span class="px-2 py-1 border border-black bg-white font-mono"
+            >{chip}</span
+          >
+        {/each}
       </div>
-    </div>
-    <!-- interests and approach -->
-    <div
-      class="flex-1 row-start-3 col-start-2 col-end-4 bg-white shadow-border px-6 py-6"
-    >
-      <h4 class="pb-3">Interests and approach</h4>
+    </section>
+
+    <!-- At a glance -->
+    <aside class="md:col-span-2 px-6 py-6">
+      <h4 class="pb-3">At a glance</h4>
       <ul class="leading-loose">
-        <li>
-          Exploring new front-end trends, especially where design and dev meet
-        </li>
-        <li>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
-          veniam provident sunt minus labore aliquid corporis nam facilis, ipsum
-          distinctio ea doloribus quasi quod inventore rerum laborum soluta
-          fugit unde.
-        </li>
+        {#each content.atAGlance as line}
+          <li>{line}</li>
+        {/each}
       </ul>
-    </div>
+    </aside>
+
+    <!-- Tools -->
+    <section class="md:col-span-4 px-6 py-6">
+      <h4 class="pb-3">Toolbox</h4>
+      <ul class="flex flex-wrap gap-3 text-sm">
+        {#each content.tools as item}
+          <li
+            class="inline-flex items-center gap-2 px-3 py-2 border border-black"
+          >
+            {#if item.icon}
+              <i class={item.icon} aria-hidden="true"></i>
+            {/if}
+            <span>{item.label}</span>
+          </li>
+        {/each}
+      </ul>
+    </section>
+
+    <!-- Learning -->
+    <section class="md:col-span-2 px-6 py-6">
+      <h4 class="pb-3">Leveling up</h4>
+      <ul class="flex flex-wrap gap-3 text-sm">
+        {#each content.learning as item}
+          <li
+            class="inline-flex items-center gap-2 px-3 py-2 border border-black"
+          >
+            {#if item.icon}
+              <i class={item.icon} aria-hidden="true"></i>
+            {/if}
+            <span>{item.label}</span>
+          </li>
+        {/each}
+      </ul>
+    </section>
+
+    <!-- Story -->
+    <section class="md:col-span-6">
+      <div
+        class="divider divider-gap relative grid grid-cols-1 md:grid-cols-6"
+        style="--thick:1px; --line:var(--color-azure-ink); --item-bg:#fff;"
+      >
+        <article
+          class="px-6 py-6 relative z-10 bg-white md:col-start-1 md:col-span-full flex flex-col"
+        >
+          <!-- From -->
+          <div class="self-start flex-1 w-1/2 md:w-1/3">
+            <h5 class="font-mono font-bold mb-2">From</h5>
+            <p class="leading-relaxed">{content.story.from}</p>
+          </div>
+
+          <!-- Arrow -->
+          <RoughJourneyArrow
+            class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 -6 sm:h-20 h-30 w-80 md:w-90 lg:w-100 xl:w-120"
+            wiggles={1}
+            amplitude={0.4}
+            stroke="#f27941"
+            strokeWidth={5}
+            dash={18}
+            gap={12}
+            headLen={28}
+          />
+
+          <!-- To -->
+          <div class="self-end w-1/2 md:w-1/3">
+            <h5 class="font-mono font-bold mb-2">To</h5>
+            <p class="leading-relaxed">{content.story.to}</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Now / Next -->
+    <section class="md:col-span-4 px-6 py-6">
+      <h4 class="pb-3">Now / Next</h4>
+      <div class="flex flex-wrap gap-2 text-sm">
+        {#each content.nowNext as line}
+          <span class="px-2 py-1 border border-black bg-white font-mono"
+            >{line}</span
+          >
+        {/each}
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <aside class="md:col-span-2 px-6 py-6 flex items-end">
+      <a
+        href={content.ctaHref}
+        class="underline decoration-1 hover:decoration-transparent transition-all font-mono text-xl"
+        >{content.ctaText}</a
+      >
+    </aside>
   </div>
 </section>
 
 <style>
+  i[class^="devicon-"],
+  i[class*=" devicon-"] {
+    font-size: 1.1em;
+    line-height: 1;
+  }
+  .text-balance {
+    text-wrap: balance;
+  }
 </style>
