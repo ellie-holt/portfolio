@@ -16,40 +16,49 @@
   }
 
   /* Headings */
-
   h1 {
-    @apply text-5xl font-bold font-mono text-aquamarine-ink mb-6;
+    @apply font-mono font-bold;
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    color: var(--color-aqua-ink);
   }
-
   h2 {
-    @apply text-4xl font-bold font-mono text-aquamarine-ink mb-5;
+    @apply font-mono font-bold mb-3;
+    font-size: clamp(1.75rem, 5vw, 3rem);
+    color: var(--color-aqua-ink);
   }
-
   h3 {
-    @apply text-3xl font-semibold font-mono text-aquamarine-ink mb-4;
+    @apply font-mono font-semibold mb-2;
+    font-size: clamp(1.25rem, 3.5vw, 2rem);
+    color: var(--color-aqua-ink);
   }
-
   h4 {
-    @apply text-2xl font-bold font-mono uppercase text-aquamarine-ink mb-3;
-  }
-
-  h5 {
-    @apply text-xl font-sans font-medium text-aquamarine-ink mb-2;
-  }
-
-  h6 {
-    @apply text-lg font-mono font-medium text-aquamarine-ink mb-2;
+    @apply font-mono font-bold uppercase mb-2;
+    font-size: 1rem;
+    color: var(--color-aqua-ink);
   }
 
   /* Paragraphs */
-
   p {
-    @apply text-base font-sans;
+    @apply font-sans;
+    font-size: 1rem;
   }
 
   /* Links */
-
   a {
     @apply font-mono;
+    z-index: 9999 !important;
+  }
+
+  /* Focus ring */
+  :where(a, button, input, textarea, select, [role="button"])::moz-focus-inner {
+    border: 0;
+  }
+  :where(a, button, input, textarea, select, [role="button"]) {
+    outline: none;
+  }
+  :where(a, button, input, textarea, select, [role="button"]):focus-visible {
+    outline: 3px solid var(--color-black);
+    outline-offset: 3px;
+    box-shadow: 6px 6px 0 0 var(--color-tang-300);
   }
 }

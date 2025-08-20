@@ -1,14 +1,57 @@
 /* src/styles/utilities.css */
 
 @layer utilities {
-  .bg-gradient {
-    background-image: radial-gradient(
-        at 28% 25%,
-        hsla(221, 86%, 88%, 1) 0px,
-        transparent 50%
+  /* Background gradient */
+  .bg-mesh-soft {
+    background-image: var(--bg-mesh-soft);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  /* Static noise */
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    background-repeat: repeat;
+    mix-blend-mode: multiply;
+    opacity: 0.25;
+  }
+
+  /* Grid overlay */
+  .grid-overlay {
+    background-image: linear-gradient(
+        rgba(167, 192, 205, 0.6) 1px,
+        transparent 1px
       ),
-      radial-gradient(at 95% 98%, hsla(18, 100%, 76%, 1) 0px, transparent 50%),
-      radial-gradient(at 51% 37%, hsla(159, 87%, 74%, 1) 0px, transparent 50%),
-      radial-gradient(at 43% 84%, hsla(160, 88%, 86%, 1) 0px, transparent 50%);
+      linear-gradient(90deg, rgba(167, 192, 205, 0.6) 1px, transparent 1px);
+    background-size: 10px 10px;
+  }
+
+  /* Flexible divider */
+  .divider {
+    --line: var(--color-azure-ink); /* line colour */
+    --thick: 1px; /* line thickness */
+    --item-bg: #fff; /* panel background */
+
+    background: var(--line); /* gap + padding reveal the lines */
+  }
+  .divider > * {
+    background: var(--item-bg);
+  }
+
+  .divider-rail {
+    padding: var(--thick);
+  }
+  .divider-gap {
+    gap: var(--thick);
+  }
+  .divider-x {
+    column-gap: var(--thick);
+  }
+  .divider-y {
+    row-gap: var(--thick);
+  }
+
+  .shadow-border {
+    box-shadow: 0 0 0 1px rgb(0, 0, 0);
   }
 }

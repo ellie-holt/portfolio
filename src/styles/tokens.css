@@ -1,11 +1,10 @@
 /* src/styles/tokens.css */
 
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;1,400&family=IBM+Plex+Mono:ital,wght@0,400;1,400&family=IBM+Plex+Serif:ital,wght@0,400;1,400&display=swap");
-
 @theme {
   /* COLOURS */
-
   --color-*: initial;
+  --color-white: #ffffff;
+  --color-black: #000000;
 
   --color-azure-wash: #f0f4ff;
   --color-azure-100: #e7eefd;
@@ -16,42 +15,82 @@
   --color-azure-600: #1f49ad;
   --color-azure-ink: #010b21;
 
-  --color-aquamarine-wash: #f2fffb;
-  --color-aquamarine-100: #e1fdf4;
-  --color-aquamarine-200: #bcfbe6;
-  --color-aquamarine-300: #86f7d1;
-  --color-aquamarine-400: #52ebb7;
-  --color-aquamarine-500: #2bd69d;
-  --color-aquamarine-600: #079d6b;
-  --color-aquamarine-ink: #011c13;
+  --color-aqua-wash: #f2fffb;
+  --color-aqua-100: #e1fdf4;
+  --color-aqua-200: #bcfbe6;
+  --color-aqua-300: #86f7d1;
+  --color-aqua-400: #52ebb7;
+  --color-aqua-500: #2bd69d;
+  --color-aqua-600: #079d6b;
+  --color-aqua-ink: #011c13;
 
-  --color-tangerine-wash: #fff6f2;
-  --color-tangerine-100: #ffefe8;
-  --color-tangerine-200: #ffd3bf;
-  --color-tangerine-300: #ffab85;
-  --color-tangerine-400: #ff935f;
-  --color-tangerine-500: #f27941;
-  --color-tangerine-600: #a63a08;
-  --color-tangerine-ink: #1a0901;
+  --color-tang-wash: #fff6f2;
+  --color-tang-100: #ffefe8;
+  --color-tang-200: #ffd3bf;
+  --color-tang-300: #ffab85;
+  --color-tang-400: #ff935f;
+  --color-tang-500: #f27941;
+  --color-tang-600: #a63a08;
+  --color-tang-ink: #1a0901;
+
+  /* TYPOGRAPHY */
+  --font-sans: "IBM Plex Sans", system-ui, -apple-system, Segoe UI, Roboto,
+    sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-serif: "IBM Plex Serif", Georgia, serif;
+
+  /* SPACING */
+  --spacing-banner: 3.5rem;
+  --spacing-form: 3.5rem;
+
+  /* RADIUS */
+  --radius-none: 0;
 
   /* SHADOWS */
-
   --shadow-blocky-sm: 4px 4px 0 0;
   --shadow-blocky-md: 6px 6px 0 0;
   --shadow-blocky-lg: 8px 8px 0 0;
-  --shadow-blocky-xl: 12px 12px 0 0;
   --shadow-blocky: var(--shadow-blocky-md);
 
   /* BREAKPOINTS */
-
   --breakpoint-4xs: 22rem; /* 352px */
   --breakpoint-3xs: 28rem; /* 448px */
   --breakpoint-2xs: 34rem; /* 544px */
   --breakpoint-xs: 36rem; /* 576px */
+  --breakpoint-3xl: 112rem; /* 1792px */
 
-  /* FONTS */
+  /* MESH GRADIENT */
+  --bg-mesh-soft: radial-gradient(
+      at 26% 90%,
+      hsla(18, 100%, 76%, 0.64) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 73% 92%, hsl(221 86% 88%) 0px, transparent 50%),
+    radial-gradient(at 92% 7%, hsl(160 88% 86%) 0px, transparent 50%),
+    radial-gradient(at 84% 67%, hsl(18 100% 87%) 0px, transparent 50%),
+    radial-gradient(at 61% 53%, hsl(159 86% 74% / 0.78) 0px, transparent 50%);
+}
 
-  --font-sans: "IBM Plex Sans", sans-serif;
-  --font-mono: "IBM Plex Mono", monospace;
-  --font-serif: "IBM Plex Serif", serif;
+@theme inline {
+  --spacing-banner: var(--spacing-banner, 3.5rem);
+  --spacing-form: var(--spacing-form, 3.5rem);
+}
+
+@layer theme {
+  :root,
+  :host {
+    --spacing-banner: 3.5rem;
+    --spacing-form: 3.5rem;
+    @variant 3xs {
+      --spacing-banner: 3.5rem;
+      --spacing-form: 4rem;
+    }
+    @variant xs {
+      --spacing-form: 5rem;
+    }
+    @variant md {
+      --spacing-banner: 4rem;
+      --spacing-form: 6rem;
+    }
+  }
 }
