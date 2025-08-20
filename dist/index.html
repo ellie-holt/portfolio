@@ -21,15 +21,13 @@
       method="POST"
       data-netlify="true"
       netlify-honeypot="bot-field"
+      action="index.html"
       hidden
     >
       <!-- Netlify detects field names at build time -->
-      <label for="shadow-name">Name:</label>
-      <input type="text" name="name" id="shadow-name" />
-      <label for="shadow-email">Email:</label>
-      <input type="email" name="email" id="shadow-email" />
-      <label for="shadow-message">Message:</label>
-      <textarea name="message" id="shadow-message"></textarea>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <textarea name="message"></textarea>
     </form>
     <div id="app"></div>
   </body>

@@ -38,6 +38,7 @@
     <form
       name="contact"
       method="POST"
+      action="index.html"
       data-netlify="true"
       class="w-full grid grid-cols-2 gap-[1px] font-mono text-lg leading-loose xs:text-xl auto-rows-auto"
     >
