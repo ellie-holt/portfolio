@@ -4,7 +4,7 @@
     gradientVar = "--bg-mesh-soft",
     noise = true,
     overlayColor = "transparent",
-    overlayBlend = "normal",
+    overlayBlend = "screen",
   } = $props();
 </script>
 

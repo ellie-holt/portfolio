@@ -29,9 +29,9 @@
       { icon: "devicon-git-plain", label: "Git & GitHub" },
     ],
     learning: [
-      { icon: "devicon-nextjs-original", label: "Next.js" },
-      { icon: "", label: "Accessibility testing" },
-      { icon: "", label: "Performance & Core Web Vitals" },
+      { icon: "devicon-nextjs-plain", label: "Next.js" },
+      { icon: "devicon-mysql-plain", label: "Databases (MySQL, PostgreSQL)" },
+      { icon: "devicon-typescript-plain", label: "TypeScript" },
     ],
     story: {
       photoAlt: "Ellie Holt portrait",
@@ -40,9 +40,9 @@
       to: "Teaching myself front-end development.",
     },
     nowNext: [
-      "Now: polishing this portfolio & micro-interactions",
-      "Exploring: deepen Next.js & testing",
-      "Open to: junior roles & pairing",
+      "Now: polishing this portfolio",
+      "Exploring: venturing into back-end development",
+      "Open to: junior roles & freelance opportunities",
     ],
     ctaText: "Get in touch →",
     ctaHref: "#contact",
@@ -73,7 +73,8 @@
       <p class="leading-loose mt-4 text-balance">{content.subline}</p>
       <div class="mt-6 flex flex-wrap gap-2 text-sm">
         {#each content.chips as chip}
-          <span class="px-2 py-1 border border-black bg-white font-mono"
+          <span
+            class="px-2 py-1 border border-black shadow-blocky-sm bg-white font-mono"
             >{chip}</span
           >
         {/each}
@@ -96,7 +97,7 @@
       <ul class="flex flex-wrap gap-3 text-sm">
         {#each content.tools as item}
           <li
-            class="inline-flex items-center gap-2 px-3 py-2 border border-black"
+            class="inline-flex shadow-blocky-sm items-center gap-2 px-3 py-2 border border-black"
           >
             {#if item.icon}
               <i class={item.icon} aria-hidden="true"></i>
@@ -109,11 +110,11 @@
 
     <!-- Learning -->
     <section class="md:col-span-2 px-6 py-6">
-      <h4 class="pb-3">Leveling up</h4>
+      <h4 class="pb-3">Levelling up</h4>
       <ul class="flex flex-wrap gap-3 text-sm">
         {#each content.learning as item}
           <li
-            class="inline-flex items-center gap-2 px-3 py-2 border border-black"
+            class="inline-flex shadow-blocky-sm items-center gap-2 px-3 py-2 border border-black"
           >
             {#if item.icon}
               <i class={item.icon} aria-hidden="true"></i>
@@ -165,7 +166,8 @@
       <h4 class="pb-3">Now / Next</h4>
       <div class="flex flex-wrap gap-2 text-sm">
         {#each content.nowNext as line}
-          <span class="px-2 py-1 border border-black bg-white font-mono"
+          <span
+            class="px-2 py-1 border shadow-blocky-sm border-black bg-white font-mono"
             >{line}</span
           >
         {/each}
@@ -176,7 +178,7 @@
     <aside class="md:col-span-2 px-6 py-6 flex items-end">
       <a
         href={content.ctaHref}
-        class="underline decoration-1 hover:decoration-transparent transition-all font-mono text-xl"
+        class="underline decoration-1 hover:decoration-transparent transition-all font-mono brutal-btn text-xl"
         >{content.ctaText}</a
       >
     </aside>
