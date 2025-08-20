@@ -6,11 +6,7 @@
   import About from "./components/About.svelte";
   import Contact from "./components/Contact.svelte";
   import Footer from "./components/Footer.svelte";
-  import GrainSVG from "./components/GrainSVG.svelte";
-  import GrainCanvas from "./components/GrainCanvas.svelte";
-  import BackgroundGrain from "./components/BackgroundGrain.svelte";
   import GrainBackground from "./components/GrainBackground.svelte";
-  import noise from "./assets/noise.svg";
   import BackgroundLayer from "./components/BackgroundLayer.svelte";
   import { onMount } from "svelte";
   import {
@@ -21,9 +17,6 @@
     initScrollTracking,
   } from "./lib/ScrollState.svelte.js";
   import { fade } from "svelte/transition";
-
-  // let heroHeight = $state(0);
-  // let navHeight = $state(0);
 
   let bannerTrigger = $state(null);
   let showHeroBanner = $state(false);

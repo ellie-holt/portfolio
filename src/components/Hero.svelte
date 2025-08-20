@@ -11,62 +11,14 @@
     initScrollTracking,
   } from "../lib/ScrollState.svelte.js";
   import GitHubIcon from "./svg/GitHubIcon.svelte";
-  import rough from "roughjs";
 
   isScrolled.subscribe(($isScrolled) => {
     console.log("isScrolled:", $isScrolled); // Debugging
   });
+
+  import RoughArrow from "./RoughArrow.svelte";
+
   let { arrowIsHidden = false } = $props();
-
-  let arrowCanvas;
-
-  let arrowCanvasWidth = 150;
-  let arrowCanvasHeight = 150;
-
-  $effect(() => {
-    if (!arrowCanvas) return;
-
-    const dpr = window.devicePixelRatio || 1;
-    arrowCanvas.width = Math.floor(arrowCanvasWidth * dpr);
-    arrowCanvas.height = Math.floor(arrowCanvasHeight * dpr);
-
-    const width = arrowCanvasWidth * dpr;
-    const height = arrowCanvasHeight * dpr;
-
-    const rc = rough.canvas(arrowCanvas);
-
-    // Arrow shaft
-    const x1 = width / 2;
-    const y1 = height / 5;
-    const x2 = width / 2;
-    const y2 = height - height / 5;
-
-    rc.line(x1, y1, x2, y2, {
-      stroke: "#f27941",
-      strokeWidth: 5 * dpr,
-    });
-
-    // Arrowhead length and angle
-    const headlen = height / 4;
-    const θ = Math.atan2(y2 - y1, x2 - x1);
-    const φ = Math.PI / 6; // 30°
-
-    // Left side of arrowhead
-    const x3 = x2 - headlen * Math.cos(θ - φ);
-    const y3 = y2 - headlen * Math.sin(θ - φ);
-    rc.line(x2, y2, x3, y3, {
-      stroke: "#f27941",
-      strokeWidth: 5 * dpr,
-    });
-
-    // Right side of arrowhead
-    const x4 = x2 - headlen * Math.cos(θ + φ);
-    const y4 = y2 - headlen * Math.sin(θ + φ);
-    rc.line(x2, y2, x4, y4, {
-      stroke: "#f27941",
-      strokeWidth: 5 * dpr,
-    });
-  });
 </script>
 
 <div class="mx-2.5 xs:mx-5 -mb-15 md:mx-6 lg:mx-6 xl:mx-6">
@@ -151,12 +103,11 @@
           class={`${arrowIsHidden ? "invisible" : "visible"} relative z-30 group pointer-events-auto 2xs:bottom-0 bottom-2`}
         >
           <a href="#about" aria-label="Scroll down">
-            <canvas
-              bind:this={arrowCanvas}
+            <RoughArrow
+              direction="down"
               class="2xs:w-[150px] 2xs:h-[150px] w-[100px] h-[100px] group-hover:translate-y-2 transition-transform duration-300 ease-in-out [image-rendering:smooth]"
-            >
-            </canvas></a
-          >
+            />
+          </a>
         </div>
       </div>
     </div>

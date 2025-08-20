@@ -106,10 +106,10 @@
 
   h1,
   h2,
-  h3 h4 {
+  h3,
+  h4 {
     color: var(--color-aquamarine-ink);
   }
-
   h1 {
     font-size: 4rem;
     font-family: var(--font-mono);
@@ -139,6 +139,19 @@
   p {
     font-size: var(--text-base);
     font-family: var(--font-sans);
+  }
+
+  /* Accessible focus ring for all focusable elements */
+  :where(a, button, input, textarea, select, [role="button"])::moz-focus-inner {
+    border: 0;
+  }
+  :where(a, button, input, textarea, select, [role="button"]) {
+    outline: none;
+  }
+  :where(a, button, input, textarea, select, [role="button"]):focus-visible {
+    outline: 3px solid var(--color-black);
+    outline-offset: 3px;
+    box-shadow: 6px 6px 0 0 var(--color-tangerine-300);
   }
 }
 

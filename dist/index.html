@@ -13,9 +13,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ellie Holt | Portfolio</title>
     <script type="module" crossorigin src="/assets/index-B3-bLW55.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BqMLCrbx.css">
+    <link rel="stylesheet" crossorigin href="/assets/index-BqMLCrbx.css" />
   </head>
   <body>
+    <form
+      name="contact"
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      hidden
+    >
+      <!-- Netlify detects field names at build time -->
+      <label for="shadow-name">Name:</label>
+      <input type="text" name="name" id="shadow-name" />
+      <label for="shadow-email">Email:</label>
+      <input type="email" name="email" id="shadow-email" />
+      <label for="shadow-message">Message:</label>
+      <textarea name="message" id="shadow-message"></textarea>
+    </form>
     <div id="app"></div>
   </body>
 </html>

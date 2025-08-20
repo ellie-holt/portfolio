@@ -6,7 +6,6 @@
     scrollProgress,
     initScrollTracking,
   } from "../lib/ScrollState.svelte";
-  import GrainSVG from "./GrainSVG.svelte";
   import NavLink from "./NavLink.svelte";
 
   let { navbarIsScrolled = false } = $props();

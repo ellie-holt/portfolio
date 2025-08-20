@@ -38,10 +38,18 @@
     <form
       name="contact"
       method="POST"
-      action="https://httpbin.org/post"
       data-netlify="true"
       class="w-full grid grid-cols-2 gap-[1px] font-mono text-lg leading-loose xs:text-xl auto-rows-auto"
     >
+      <input type="hidden" name="form-name" value="contact" />
+      <p class="hidden">
+        <label
+          >Don't fill this out if you're human: <input
+            name="bot-field"
+            type="text"
+          /></label
+        >
+      </p>
       <div
         class="xs:h-form px-[1px] row-start-1 row-span-2 xs:row-span-1 col-span-full grid grid-cols-subgrid grid-rows-subgrid"
       >

@@ -1,6 +1,4 @@
 <script lang="js">
-  import rough from "roughjs";
-
   let {
     project = {
       title: "",
@@ -13,49 +11,7 @@
     },
   } = $props();
 
-  let arrowCanvas;
-  $effect(() => {
-    if (!arrowCanvas) return;
-
-    const { width, height } = arrowCanvas.getBoundingClientRect();
-
-    arrowCanvas.width = width;
-    arrowCanvas.height = height;
-
-    const rc = rough.canvas(arrowCanvas);
-
-    // Arrow shaft
-    const x1 = width / 5;
-    const y1 = height / 2;
-    const x2 = width - width / 5;
-    const y2 = height / 2;
-
-    rc.line(x1, y1, x2, y2, {
-      stroke: "#f27941",
-      strokeWidth: 3,
-    });
-
-    // Arrowhead length and angle
-    const headlen = width / 4;
-    const θ = Math.atan2(y2 - y1, x2 - x1);
-    const φ = Math.PI / 6; // 30°
-
-    // Top side of arrowhead
-    const x3 = x2 - headlen * Math.cos(θ - φ);
-    const y3 = y2 - headlen * Math.sin(θ - φ);
-    rc.line(x2, y2, x3, y3, {
-      stroke: "#f27941",
-      strokeWidth: 3,
-    });
-
-    // Bottom side of arrowhead
-    const x4 = x2 - headlen * Math.cos(θ + φ);
-    const y4 = y2 - headlen * Math.sin(θ + φ);
-    rc.line(x2, y2, x4, y4, {
-      stroke: "#f27941",
-      strokeWidth: 3,
-    });
-  });
+  import RoughArrow from "./RoughArrow.svelte";
 </script>
 
 <div class="lg:col-span-1 flex flex-col">
@@ -117,11 +73,10 @@
         view project
       </h3>
       <div class="w-25">
-        <canvas
-          bind:this={arrowCanvas}
+        <RoughArrow
+          direction="right"
           class="relative w-full h-full group-hover:translate-x-2 transition-transform duration-300 ease-in-out"
-        >
-        </canvas>
+        />
       </div>
     </a>
   </div>
