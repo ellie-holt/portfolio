@@ -1,3 +1,4 @@
+<!-- FILE: src/components/Work.svelte -->
 <script lang="js">
   import Project from "./Project.svelte";
   import weatherAppImage from "../assets/weather-app-square.png";
@@ -8,53 +9,68 @@
 <section
   id="work"
   class="flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-15 3xs:scroll-m-14 2xs:scroll-m-0 pb-[1px]"
+  style="--cta-h: calc(var(--spacing-banner) * 1.2); --media-h: clamp(260px, 28vw, 380px);"
 >
-  <div class="h-[calc(var(--spacing-banner)_*_2)] bg-aqua-100 flex items-end">
+  <div
+    class="h-[calc(var(--spacing-banner)_*_2)] bg-aquamarine-100 flex items-end"
+  >
     <h3 class="md:py-4 py-3 px-6 md:text-3xl text-2xl font-semibold">
       // work
     </h3>
   </div>
+
   <section
-    class="flex flex-col lg:grid lg:grid-cols-3 grid-rows-1 gap-[1px] px-[1px] pt-[1px]"
+    class="grid lg:grid-cols-3 grid-cols-1 divider divider-rail divider-gap divider-grid"
   >
     <Project
       project={{
         title: "Weather App",
         description:
-          "A responsive and interactive weather application built with React and Tailwind CSS as part of a web development course. It fetches real-time weather data and displays it in a clean, accessible user interface with dynamic styling and custom components.",
+          "A responsive, accessible weather app with dynamic theming and geolocation support.",
         link: "https://herecomestherainagain.netlify.app/",
+        stack: ["React", "Tailwind", "SCSS", "OpenWeatherMap API"],
       }}
-      image={{
-        src: weatherAppImage,
-        alt: "Weather App",
-      }}
+      image={{ src: weatherAppImage, alt: "Weather App" }}
+      accent="var(--color-tang-500)"
     />
+
     <Project
       project={{
         title: "World Clock",
         description:
-          "A visually engaging world clock built with vanilla JavaScript and styled with custom CSS. Displays the time and date across multiple global cities, with responsive design and dynamic theming based on the time of day. Extra information includes sunrise and sunset times for each location.",
+          "A world clock with responsive CSS Grid and time-of-day theming.",
         link: "https://findthetime.netlify.app/",
+        stack: ["HTML/CSS", "JavaScript", "Moment.js"],
       }}
-      image={{
-        src: worldClockImage,
-        alt: "World Clock",
-      }}
+      image={{ src: worldClockImage, alt: "World Clock" }}
+      accent="var(--color-azure-500)"
     />
+
     <Project
       project={{
         title: "AI Poet",
         description:
-          "A minimalist web app that lets users generate short poems based on their input prompts. Built with HTML, CSS, and vanilla JavaScript, it integrates the SheCodes AI API to return AI-generated verses which are then displayed using a smooth typewriter animation.",
+          "A minimalist app that generates short poems from prompts via an AI API.",
         link: "https://aipoet.netlify.app/",
+        stack: ["HTML/CSS", "JavaScript", "SheCodes AI API"],
       }}
-      image={{
-        src: aiPoetImage,
-        alt: "AI Poet",
-      }}
+      image={{ src: aiPoetImage, alt: "AI Poet" }}
+      accent="var(--color-aqua-500)"
     />
   </section>
-</section>
 
-<style>
-</style>
+  <!-- Footer rail -->
+  <div class="divider divider-rail divider-gap">
+    <div class="bg-white flex items-center justify-between px-6 py-4">
+      <span class="font-mono text-sm">// more on GitHub</span>
+      <a
+        href="https://github.com/ellie-holt"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="underline decoration-1 hover:decoration-transparent transition-all font-mono"
+      >
+        browse repos →
+      </a>
+    </div>
+  </div>
+</section>

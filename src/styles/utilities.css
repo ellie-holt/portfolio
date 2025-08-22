@@ -50,6 +50,11 @@
   .divider-y {
     row-gap: var(--thick);
   }
+  .divider-inherit {
+    --thick: inherit;
+    --line: inherit;
+    --item-bg: inherit;
+  }
 
   .shadow-border {
     box-shadow: 0 0 0 1px rgb(0, 0, 0);
@@ -104,5 +109,11 @@
   .brutal-nav-item:hover > span,
   .brutal-nav-item:focus-within > span {
     @apply h-full;
+  }
+
+  .accent-spine {
+    --accent: var(--color-tang-500);
+    background-color: var(--accent);
+    @apply pointer-events-none absolute inset-y-0 left-0 w-1 opacity-80 transition-opacity duration-200 group-hover:opacity-100;
   }
 }

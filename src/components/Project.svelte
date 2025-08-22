@@ -1,83 +1,103 @@
 <script lang="js">
+  import RoughArrow from "./RoughArrow.svelte";
+
   let {
     project = {
       title: "",
       description: "",
       link: "",
+      stack: /** @type {string[]|undefined} */ (undefined),
     },
-    image = {
-      src: "",
-      alt: "",
-    },
+    image = { src: "", alt: "" },
+    accent = "var(--color-tang-500)",
   } = $props();
-
-  import RoughArrow from "./RoughArrow.svelte";
 </script>
 
-<div class="lg:col-span-1 flex flex-col">
-  <article
-    class="grid grid-cols-[5fr_1fr] xs:grid-cols-[4fr_1fr] sm:grid-cols-2 lg:grid-cols-1 lg:flex lg:flex-col relative shadow-border bg-white flex-1"
-  >
-    <!-- image -->
-    <section class="relative lg:row-start-1 z-10 overflow-hidden shadow-border">
-      <img
-        src={image.src}
-        alt={image.alt}
-        class="w-full h-full object-cover"
-        loading="lazy"
-      />
-    </section>
+<article
+  class="group relative bg-white grid gap-[1px] grid-cols-[5fr_1fr] xs:grid-cols-[4fr_1fr] sm:grid-cols-2 lg:flex lg:flex-col shadow-border"
+  style={`--accent:${accent};`}
+>
+  <!-- accent spine -->
+  <div
+    class="accent-spine md:hidden lg:block"
+    style={`--accent:${accent}`}
+    aria-hidden="true"
+  ></div>
 
-    <!-- title and description -->
-    <section
-      class="shadow-border flex lg:row-start-2 flex-col gap-[1px] w-full h-full lg:col-span-2 lg:flex-1"
+  <!-- image -->
+  <figure
+    class="relative overflow-hidden shadow-border md:row-span-3 order-1 bg-white"
+  >
+    <img
+      src={image.src}
+      alt={image.alt}
+      class="w-full h-full object-cover md:aspect-auto lg:aspect-auto transition-transform duration-300 ease-out hover:scale-[1.015]"
+      loading="lazy"
+    />
+  </figure>
+
+  <!-- title -->
+  <header
+    class="shadow-border order-2 flex items-center justify-center px-2 sm:px-4 bg-white"
+  >
+    <h2
+      class="py-3 xs:py-6 px-2 text-4xl xs:text-5xl sm:text-6xl md:text-6xl lg:text-[2.2rem] xl:text-[2.6rem] leading-tight [writing-mode:vertical-rl] sm:[writing-mode:horizontal-tb]"
+    >
+      {project.title}
+    </h2>
+  </header>
+
+  <!-- stack chips (optional) -->
+  {#if project.stack?.length}
+    <div
+      class="static sm:relative lg:static shadow-border order-3 col-span-2 md:col-span-1 md:col-start-2 bg-white"
     >
       <div
-        class="w-full h-full sm:h-auto shadow-border flex items-center lg:justify-center flex-1"
-      >
-        <h2
-          class="py-3 xs:py-6 px-6 text-4xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-[2.5rem] xl:text-[3.2rem] 2xl:text-[3.4rem] lg:text-4xl [writing-mode:vertical-rl] sm:[writing-mode:horizontal-tb]"
-        >
-          {project.title}
-        </h2>
-      </div>
+        class="accent-spine hidden sm:block lg:hidden"
+        style={`--accent:${accent}`}
+        aria-hidden="true"
+      ></div>
+      <ul class="px-6 py-3 flex flex-wrap gap-2 text-sm font-mono">
+        {#each project.stack as chip}
+          <li class="px-2 py-1 border border-black shadow-blocky-sm">
+            {chip}
+          </li>
+        {/each}
+      </ul>
+    </div>
+  {/if}
 
-      <div class="p-6 shadow-border w-full h-full hidden sm:block">
-        <p class="">
-          {project.description}
-        </p>
-      </div>
-    </section>
+  <!-- description -->
+  <section
+    class="static sm:relative lg:static shadow-border bg-white px-6 py-6 leading-relaxed order-4 col-span-2 md:col-span-1 md:col-start-2 lg:grow"
+  >
+    <div
+      class="accent-spine hidden sm:block lg:hidden"
+      style={`--accent:${accent}`}
+      aria-hidden="true"
+    ></div>
+    <p>{project.description}</p>
+  </section>
 
-    <section class="sm:hidden col-span-2 pt-[1px]">
-      <div class="px-6 py-6 shadow-border leading-loose w-full h-full">
-        <p class="">
-          {project.description}
-        </p>
-      </div>
-    </section>
-  </article>
-
+  <!-- link -->
   <div
-    class="w-full shadow-border lg:h-banner h-[calc(var(--spacing-banner)_*_2)] flex items-start lg:items-center overflow-hidden"
+    class="relative group/link w-full shadow-border h-[calc(var(--spacing-banner)_*_1.5)] flex items-center overflow-hidden bg-white order-5 col-span-full"
   >
     <a
       href={project.link}
       target="_blank"
       rel="noopener noreferrer"
-      class="pl-6 py-3 font-semibold flex items-center justify-end w-full group"
+      class="relative group z-10 ml-auto mr-0 pl-6 pr-6 lg:pr-3 xl:pr-6 py-3 font-semibold flex items-center gap-4 underline decoration-1 hover:decoration-transparent transition-all"
     >
-      <h3
-        class="md:py-4 xl:text-3xl lg:text-2xl md:text-3xl text-2xl lowercase underline decoration-1 group-hover:decoration-transparent transition-all duration-300 ease-in-out"
+      <span class="text-2xl md:text-3xl lg:text-2xl xl:text-3xl lowercase"
+        >view project</span
       >
-        view project
-      </h3>
-      <div class="w-25">
-        <RoughArrow
-          direction="right"
-          class="relative w-full h-full group-hover:translate-x-2 transition-transform duration-300 ease-in-out"
-        />
-      </div>
+      <RoughArrow
+        direction="right"
+        stroke="#f27941"
+        strokeWidth={3}
+        class="w-20 h-10 md:w-24 md:h-12 group-hover/link:translate-x-2 transition-transform duration-300 ease-out"
+      />
     </a>
   </div>
-</div>
+</article>

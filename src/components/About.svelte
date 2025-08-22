@@ -26,7 +26,9 @@
       { icon: "devicon-javascript-plain", label: "JavaScript (ES6+)" },
       { icon: "devicon-html5-plain", label: "HTML" },
       { icon: "devicon-css3-plain", label: "CSS / SCSS" },
+      { icon: "devicon-axios-plain", label: "Axios" },
       { icon: "devicon-git-plain", label: "Git & GitHub" },
+      { icon: "devicon-figma-plain", label: "Figma" },
     ],
     learning: [
       { icon: "devicon-nextjs-plain", label: "Next.js" },
