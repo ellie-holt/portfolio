@@ -32,7 +32,7 @@
     --thick: 1px; /* line thickness */
     --item-bg: #fff; /* panel background */
 
-    background: var(--line); /* gap + padding reveal the lines */
+    background-color: var(--line); /* gap + padding reveal the lines */
   }
   .divider > * {
     background: var(--item-bg);
@@ -46,14 +46,22 @@
   }
   .divider-x {
     column-gap: var(--thick);
+    padding-left: var(--thick);
+    padding-right: var(--thick);
   }
   .divider-y {
     row-gap: var(--thick);
+    padding-top: var(--thick);
+    padding-bottom: var(--thick);
   }
   .divider-inherit {
     --thick: inherit;
     --line: inherit;
     --item-bg: inherit;
+  }
+
+  .divider-inset {
+    padding: 0;
   }
 
   .shadow-border {
@@ -89,10 +97,10 @@
 
   /* Brutalist button */
   .brutal-btn {
-    @apply border-2 border-black bg-white font-mono font-bold uppercase shadow-blocky px-4 py-2 cursor-pointer transition-transform;
+    @apply border-2 border-black -translate-[6px] font-mono font-bold uppercase shadow-blocky px-4 py-2 cursor-pointer transition-all duration-100;
   }
   .brutal-btn:active {
-    box-shadow: none;
+    box-shadow: 6px 6px 0 0 transparent;
     transform: translate(6px, 6px);
   }
 

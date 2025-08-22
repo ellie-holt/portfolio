@@ -6,7 +6,7 @@
 >
   <div class="px-[1px] py-[1px] mb-10">
     <div
-      class="shadow-border w-full h-full md:min-h-[24vh] sm:min-h-[34vh] xs:min-h-[28vh] flex items-end pb-6 sm:justify-end justify-center"
+      class="w-full h-full md:min-h-[24vh] sm:min-h-[34vh] xs:min-h-[28vh] flex items-end pb-6 sm:justify-end justify-center"
     >
       <!-- contact links -->
       <div

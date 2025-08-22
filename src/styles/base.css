@@ -60,5 +60,6 @@
     outline: 3px solid var(--color-black);
     outline-offset: 3px;
     box-shadow: 6px 6px 0 0 var(--color-tang-300);
+    position: relative;
   }
 }

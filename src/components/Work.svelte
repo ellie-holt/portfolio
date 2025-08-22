@@ -8,20 +8,17 @@
 
 <section
   id="work"
-  class="flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-15 3xs:scroll-m-14 2xs:scroll-m-0 pb-[1px]"
-  style="--cta-h: calc(var(--spacing-banner) * 1.2); --media-h: clamp(260px, 28vw, 380px);"
+  class="flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-15 3xs:scroll-m-14 2xs:scroll-m-0 divider divider-rail"
+  style=" --media-h: clamp(260px, 28vw, 380px);"
 >
-  <div
-    class="h-[calc(var(--spacing-banner)_*_2)] bg-aquamarine-100 flex items-end"
-  >
+  <!-- subheading band -->
+  <div class="h-[calc(var(--spacing-banner)_*_2)] !bg-aqua-100 flex items-end">
     <h3 class="md:py-4 py-3 px-6 md:text-3xl text-2xl font-semibold">
       // work
     </h3>
   </div>
 
-  <section
-    class="grid lg:grid-cols-3 grid-cols-1 divider divider-rail divider-gap divider-grid"
-  >
+  <section class="grid lg:grid-cols-3 grid-cols-1 divider-gap">
     <Project
       project={{
         title: "Weather App",
@@ -43,7 +40,7 @@
         stack: ["HTML/CSS", "JavaScript", "Moment.js"],
       }}
       image={{ src: worldClockImage, alt: "World Clock" }}
-      accent="var(--color-azure-500)"
+      accent="var(--color-aqua-500)"
     />
 
     <Project
@@ -55,12 +52,12 @@
         stack: ["HTML/CSS", "JavaScript", "SheCodes AI API"],
       }}
       image={{ src: aiPoetImage, alt: "AI Poet" }}
-      accent="var(--color-aqua-500)"
+      accent="var(--color-azure-500)"
     />
   </section>
 
   <!-- Footer rail -->
-  <div class="divider divider-rail divider-gap">
+  <div class="">
     <div class="bg-white flex items-center justify-between px-6 py-4">
       <span class="font-mono text-sm">// more on GitHub</span>
       <a
