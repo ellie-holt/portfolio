@@ -1,11 +1,18 @@
 <script>
   let {
     baseColor = "#fff",
-    gradientVar = "--bg-mesh-soft",
+    variant = "soft", // "soft" | "brutal" | "inked"
     noise = true,
+    noiseOpacity = 0.18,
     overlayColor = "transparent",
     overlayBlend = "screen",
   } = $props();
+  const variantMap = {
+    soft: "--bg-mesh-soft",
+    brutal: "--bg-mesh-brutal",
+    inked: "--bg-mesh-inked",
+  };
+  let gradientVar = $derived(variantMap[variant] ?? "--bg-mesh-soft");
 </script>
 
 <div class="absolute inset-0 -z-10" style={`background-color:${baseColor};`}>
@@ -18,7 +25,10 @@
 
   <!-- Noise layer -->
   {#if noise}
-    <div class="absolute inset-0 z-10 pointer-events-none bg-noise"></div>
+    <div
+      class="absolute inset-0 z-10 pointer-events-none bg-noise"
+      style={`opacity:${noiseOpacity};`}
+    ></div>
   {/if}
 
   <!-- Colour overlay -->
