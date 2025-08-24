@@ -1,5 +1,5 @@
 <script lang="js">
-  import RoughArrow from "./RoughArrow.svelte";
+  import RoughArrow from "$lib/ui/Arrow/RoughArrow.svelte";
 
   let {
     project = {

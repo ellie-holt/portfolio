@@ -5,7 +5,7 @@
     isScrolled,
     scrollProgress,
     initScrollTracking,
-  } from "../lib/ScrollState.svelte";
+  } from "$lib/state/ScrollState.svelte";
   import NavLink from "./NavLink.svelte";
 
   let { navbarIsScrolled = false } = $props();

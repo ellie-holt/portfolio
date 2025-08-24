@@ -1,18 +1,13 @@
 <script lang="js">
   import rough from "roughjs";
   import { slide, fly, fade } from "svelte/transition";
-  // import {
-  //   isScrolled,
-  //   scrollProgress,
-  //   initScrollTracking,
-  // } from "../lib/ScrollState.svelte.js";
   /** @type {{ bannerIsVisible: boolean }} */
   let { bannerIsVisible = false } = $props();
   $inspect(() => {
     console.log("showHeroBanner:", bannerIsVisible); // Debugging
   });
 
-  import RoughArrow from "./RoughArrow.svelte";
+  import RoughArrow from "$lib/ui/Arrow/RoughArrow.svelte";
 </script>
 
 <a href="#page-top">

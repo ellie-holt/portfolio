@@ -69,6 +69,45 @@
     radial-gradient(at 92% 7%, hsl(160 88% 86%) 0px, transparent 50%),
     radial-gradient(at 84% 67%, hsl(18 100% 87%) 0px, transparent 50%),
     radial-gradient(at 61% 53%, hsl(159 86% 74% / 0.78) 0px, transparent 50%);
+
+  --bg-mesh-brutal: radial-gradient(
+      at 12% 18%,
+      hsla(18 95% 70%/0.9) 0 150px,
+      transparent 200px
+    ),
+    radial-gradient(
+      at 82% 22%,
+      hsla(221 82% 84%/0.9) 0 180px,
+      transparent 240px
+    ),
+    radial-gradient(
+      at 24% 78%,
+      hsla(160 82% 70%/0.9) 0 170px,
+      transparent 230px
+    ),
+    radial-gradient(at 76% 76%, hsla(18 88% 80%/0.9) 0 160px, transparent 220px);
+
+  --bg-mesh-inked: radial-gradient(
+      at 22% 82%,
+      hsla(160 72% 42%/0.28) 0 160px,
+      transparent 220px
+    ),
+    radial-gradient(
+      at 78% 18%,
+      hsla(221 72% 44%/0.22) 0 160px,
+      transparent 240px
+    ),
+    radial-gradient(
+      at 52% 48%,
+      hsla(18 90% 46%/0.26) 0 200px,
+      transparent 260px
+    );
+
+  /* Semantic surfaces */
+  --surface: var(--color-white);
+  --surface-muted: var(--color-azure-wash);
+  --line-color: var(--color-azure-ink);
+  --accent: var(--color-tang-500);
 }
 
 @theme inline {

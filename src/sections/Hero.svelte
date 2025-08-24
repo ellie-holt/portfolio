@@ -9,14 +9,14 @@
     isScrolled,
     scrollProgress,
     initScrollTracking,
-  } from "../lib/ScrollState.svelte.js";
-  import GitHubIcon from "./svg/GitHubIcon.svelte";
+  } from "$lib/state/ScrollState.svelte.js";
+  import GitHubIcon from "$lib/icons/GitHubIcon.svelte";
 
   isScrolled.subscribe(($isScrolled) => {
     console.log("isScrolled:", $isScrolled); // Debugging
   });
 
-  import RoughArrow from "./RoughArrow.svelte";
+  import RoughArrow from "../lib/ui/Arrow/RoughArrow.svelte";
 
   let { arrowIsHidden = false } = $props();
 </script>

@@ -1,8 +1,7 @@
 <!-- FILE: src/components/About.svelte -->
 <script lang="js">
-  // Edit these strings/arrays only — the layout renders from this content.
-  import RoughArrow from "./RoughArrow.svelte";
-  import RoughJourneyArrow from "./RoughJourneyArrow.svelte";
+  import RoughJourneyArrow from "$lib/ui/Arrow/RoughJourneyArrow.svelte";
+  import LinkButton from "$lib/ui/Button/LinkButton.svelte";
   const content = {
     headline: "Hi, I'm Ellie — a front-end developer.",
     subline:
@@ -178,11 +177,9 @@
 
     <!-- CTA -->
     <aside class="md:col-span-2 px-6 py-6 flex items-end">
-      <a
-        href={content.ctaHref}
-        class="underline decoration-1 hover:decoration-transparent transition-all font-mono brutal-btn text-xl"
-        >{content.ctaText}</a
-      >
+      <LinkButton href={content.ctaHref} class="text-xl"
+        >{content.ctaText}
+      </LinkButton>
     </aside>
   </div>
 </section>

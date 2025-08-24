@@ -1,13 +1,12 @@
 <script lang="js">
-  import Hero from "./components/Hero.svelte";
-  import HeroBanner from "./components/HeroBanner.svelte";
-  import Navbar from "./components/Navbar.svelte";
-  import Work from "./components/Work.svelte";
-  import About from "./components/About.svelte";
-  import Contact from "./components/Contact.svelte";
-  import Footer from "./components/Footer.svelte";
-  import GrainBackground from "./components/GrainBackground.svelte";
-  import BackgroundLayer from "./components/BackgroundLayer.svelte";
+  import Hero from "./sections/Hero.svelte";
+  import HeroBanner from "./sections/HeroBanner.svelte";
+  import Navbar from "./sections/Navbar.svelte";
+  import Work from "./sections/Work.svelte";
+  import About from "./sections/About.svelte";
+  import Contact from "./sections/Contact.svelte";
+  import Footer from "./sections/Footer.svelte";
+  import BackgroundLayer from "$lib/ui/Background/BackgroundLayer.svelte";
   import { onMount } from "svelte";
   import {
     scrollY,
@@ -15,7 +14,7 @@
     isScrolled,
     scrollProgress,
     initScrollTracking,
-  } from "./lib/ScrollState.svelte.js";
+  } from "$lib/state/ScrollState.svelte.js";
   import { fade } from "svelte/transition";
 
   let bannerTrigger = $state(null);
