@@ -4,10 +4,10 @@
 
 <section
   id="contact"
-  class="flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 3xs:scroll-m-14 2xs:scroll-m-0 scroll-m-15"
+  class="flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 3xs:scroll-m-14 2xs:scroll-m-0 scroll-m-15 collapse-border"
 >
   <!-- Subheading band -->
-  <div class="flex items-end h-[calc(var(--spacing-banner)_*_2)] bg-azure-100">
+  <div class="flex items-end h-[calc(var(--spacing-banner)_*_2)]">
     <h3 class="md:py-4 py-3 px-6 md:text-3xl text-2xl font-semibold">
       // contact
     </h3>
@@ -24,16 +24,15 @@
     </div>
   </div>
 
-  <div class="flex flex-col w-full lg:w-2/3 self-center">
-    <!-- Form wrapper: draws outer frame and inner rails -->
-    <div
-      class="seam-grid seam-rail seam-gap"
-      style="--thick:1px; --line:var(--color-azure-ink); --item-bg:#fff;"
-    >
+  <div class="flex flex-col w-full py-12">
+    <!-- Form wrapper -->
+    <div class="collapse-border w-full lg:w-2/3 flex flex-col self-center">
       <!-- Form header strip (panel) -->
-      <div class="xs:h-form h-[calc(var(--spacing-form)_*_1.5)]">
+      <div
+        class="xs:h-form collapse-border-2 h-[calc(var(--spacing-form)_*_1.5)]"
+      >
         <div
-          class="relative w-full h-full flex justify-center 3xs:justify-start items-center"
+          class="relative w-full h-full flex justify-center 3xs:justify-start items-center bg-azure-wash"
         >
           <span class="accent-spine" style="--accent:var(--color-azure-500);"
           ></span>
@@ -43,7 +42,7 @@
         </div>
       </div>
 
-      <!-- Form: vertical seams between rows -->
+      <!-- Form -->
 
       <form
         id="contact-form"
@@ -51,8 +50,7 @@
         method="POST"
         action="/"
         data-netlify="true"
-        class="seam-grid seam-y seam-inset w-full font-mono text-lg leading-loose xs:text-xl"
-        style="--thick:1px; --line:var(--color-azure-ink); --item-bg:#fff;"
+        class="w-full font-mono text-lg leading-loose xs:text-xl collapse-border"
       >
         <input type="hidden" name="form-name" value="contact" />
         <p class="hidden">
@@ -65,11 +63,11 @@
           >
         </p>
 
-        <!-- Name row: horizontal seam split -->
-        <div class="seam-grid seam-x seam-inset seam-cols-2 xs:h-form">
+        <!-- Name row -->
+        <div class="grid grid-cols-2 xs:h-form collapse-border-2 gap-0">
           <label
             for="name"
-            class="flex items-center px-6 font-sans font-bold uppercase bg-tang-wash"
+            class="flex items-center px-6 font-sans font-bold uppercase bg-tang-100"
             >Name:</label
           >
           <input
@@ -79,15 +77,15 @@
             placeholder="Your Name"
             required
             autocomplete="name"
-            class="px-6"
+            class="px-6 bg-tang-wash"
           />
         </div>
 
         <!-- Email row -->
-        <div class="seam-grid seam-x seam-inset seam-cols-2 xs:h-form">
+        <div class="grid grid-cols-2 xs:h-form collapse-border-2">
           <label
             for="email"
-            class="flex items-center px-6 font-sans font-bold uppercase bg-tang-wash"
+            class="flex items-center px-6 font-sans bg-tang-100 font-bold uppercase"
             >Email:</label
           >
           <input
@@ -97,15 +95,15 @@
             placeholder="name@email.com"
             required
             autocomplete="email"
-            class="px-6"
+            class="px-6 bg-tang-wash"
           />
         </div>
 
-        <!-- Message row (taller) -->
-        <div class="seam-grid seam-x seam-inset seam-cols-2">
+        <!-- Message row -->
+        <div class="grid grid-cols-2 collapse-border-2">
           <label
             for="message"
-            class="flex items-center px-6 font-sans font-bold uppercase bg-tang-wash h-[calc(var(--spacing-form)_*_2)]"
+            class="flex bg-tang-100 items-center px-6 font-sans font-bold uppercase h-[calc(var(--spacing-form)_*_2)]"
             >Message:</label
           >
           <textarea
@@ -113,20 +111,20 @@
             id="message"
             placeholder="Type your message here..."
             required
-            class="px-6 pt-6 h-[calc(var(--spacing-form)_*_2)] leading-[1.7] text-md xs:text-lg"
+            class="px-6 pt-6 h-[calc(var(--spacing-form)_*_2)] leading-[1.7] text-md xs:text-lg bg-tang-wash"
           ></textarea>
         </div>
 
         <!-- Submit -->
       </form>
+      <Button
+        type="submit"
+        form="contact-form"
+        bar
+        tone="azure"
+        class="h-form w-[calc(var(--spacing-form)_*_2)] mt-12 self-end bg-azure-wash"
+        >Send</Button
+      >
     </div>
-    <Button
-      type="submit"
-      form="contact-form"
-      bar
-      tone="azure"
-      class="h-form w-[calc(var(--spacing-form)_*_2)] mt-6 self-end"
-      >Send</Button
-    >
   </div>
 </section>

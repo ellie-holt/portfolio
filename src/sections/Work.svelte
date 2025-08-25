@@ -8,17 +8,17 @@
 
 <section
   id="work"
-  class="flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-15 3xs:scroll-m-14 2xs:scroll-m-0 divider divider-rail"
+  class="flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-15 3xs:scroll-m-14 2xs:scroll-m-0 collapse-border"
   style=" --media-h: clamp(260px, 28vw, 380px);"
 >
   <!-- subheading band -->
-  <div class="h-[calc(var(--spacing-banner)_*_2)] !bg-aqua-100 flex items-end">
+  <div class="h-[calc(var(--spacing-banner)_*_2)] flex items-end">
     <h3 class="md:py-4 py-3 px-6 md:text-3xl text-2xl font-semibold">
       // work
     </h3>
   </div>
 
-  <section class="grid lg:grid-cols-3 grid-cols-1 divider-gap">
+  <section class="grid lg:grid-cols-3 grid-cols-1">
     <Project
       project={{
         title: "Weather App",

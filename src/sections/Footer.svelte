@@ -2,7 +2,7 @@
 </script>
 
 <footer
-  class="flex flex-col xl:mx-6 mx-2.5 xs:mx-5 lg:mx-6 md:mx-6 bg-transparent footer"
+  class="flex flex-col xl:mx-6 mx-2.5 xs:mx-5 lg:mx-6 md:mx-6 bg-transparent footer collapse-border"
 >
   <div class="px-[1px] py-[1px] mb-10">
     <div

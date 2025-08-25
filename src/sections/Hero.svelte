@@ -21,12 +21,12 @@
   let { arrowIsHidden = false } = $props();
 </script>
 
-<div class="mx-2.5 xs:mx-5 -mb-15 md:mx-6 lg:mx-6 xl:mx-6">
-  <div class="relative">
+<div class="mx-2.5 xs:mx-5 -mb-16 md:mx-6 lg:mx-6 xl:mx-6">
+  <div class="relative collapse-border">
     <!-- top bar with links?  -->
-    <div class="divider divider-rail relative z-10">
+    <div class="relative z-10">
       <div
-        class="h-banner flex items-center bg-white justify-around text-md 3xs:text-lg xs:text-xl"
+        class="h-banner flex items-center justify-around text-md 3xs:text-lg xs:text-xl"
       >
         <a
           href="mailto:eleanorholt97@gmail.com"
@@ -80,7 +80,7 @@
       >
         <a href="index.html">
           <h1
-            class="text-[26vw] text-center 3xs:text-left 3xs:text-[13vw] lg:text-[12vw] xl:text-[11vw] font-bold row-start-1 col-start-1 col-span-2 leading-none"
+            class="text-[26vw] text-shadow text-azure-200 white text-center 3xs:text-left 3xs:text-[13vw] lg:text-[12vw] xl:text-[11vw] font-bold row-start-1 col-start-1 col-span-2 leading-none"
           >
             Ellie Holt:
           </h1>

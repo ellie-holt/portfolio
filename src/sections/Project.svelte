@@ -14,7 +14,7 @@
 </script>
 
 <article
-  class="group relative bg-white grid gap-[1px] grid-cols-[5fr_1fr] xs:grid-cols-[4fr_1fr] sm:grid-cols-2 lg:flex lg:flex-col shadow-border"
+  class="group relative bg-white grid gap-[1px] grid-cols-[5fr_1fr] xs:grid-cols-[4fr_1fr] sm:grid-cols-2 lg:flex lg:flex-col"
   style={`--accent:${accent};`}
 >
   <!-- accent spine -->

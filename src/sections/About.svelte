@@ -52,9 +52,9 @@
 
 <section
   id="about"
-  class="mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-15 3xs:scroll-m-14 2xs:scroll-m-0"
+  class="mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-15 3xs:scroll-m-14 2xs:scroll-m-0 collapse-border"
 >
-  <div class="h-[calc(var(--spacing-banner)_*_2)] bg-tang-100 flex items-end">
+  <div class="h-[calc(var(--spacing-banner)_*_2)] flex items-end">
     <h3 class="md:py-4 py-3 px-6 md:text-3xl text-2xl font-semibold">
       // about
     </h3>
