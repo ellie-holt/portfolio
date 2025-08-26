@@ -1,3 +1,5 @@
+<!-- src/lib/ui/Button/LinkButton.svelte -->
+
 <script lang="js">
   /** @typedef {import('svelte').Snippet} Snippet */
 
@@ -33,7 +35,7 @@
     }[tone] ?? "bg-azure-200";
 
   const base =
-    "brutal-btn inline-block" +
+    "brutal-btn inline-block link-underline" +
     (bar ? " relative group text-2xl font-bold  hover:font-semibold" : "") +
     (fullWidth ? " w-full" : "");
 

@@ -182,11 +182,15 @@
 
   /* Brutalist button */
   .brutal-btn {
-    @apply border-2 border-black -translate-[6px] font-mono font-bold uppercase shadow-blocky px-4 py-2 cursor-pointer underline decoration-1 hover:decoration-transparent transition-all duration-100;
+    @apply border-2 border-black -translate-[6px] font-mono font-bold uppercase shadow-blocky px-4 py-2 cursor-pointer;
   }
   .brutal-btn:active {
     box-shadow: 6px 6px 0 0 transparent;
     transform: translate(6px, 6px);
+  }
+
+  .link-underline {
+    @apply underline decoration-1 hover:decoration-transparent transition-all duration-100;
   }
 
   /* Brutalist nav item */

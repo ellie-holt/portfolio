@@ -1,7 +1,9 @@
+<!-- src/lib/ui/Button/Button.stories.svelte -->
+
 <script module>
   import { defineMeta } from "@storybook/addon-svelte-csf";
   import Button from "$lib/ui/Button/Button.svelte";
-  import LinkButton from "./LinkButton.svelte";
+  import LinkButton from "$lib/ui/Button/LinkButton.svelte";
   import { action } from "storybook/actions";
 
   const click = action("click");

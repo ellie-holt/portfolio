@@ -1,11 +1,13 @@
+<!-- src/lib/ui/Arrow/RoughJourneyArrow.svelte -->
+
 <script>
   import rough from "roughjs";
 
   let {
     stroke = "#f27941",
     strokeWidth = 5, // logical px
-    wiggles = 3,
-    amplitude = 0.18, // tail amplitude as fraction of height
+    wiggles = 2,
+    amplitude = 0.2, // tail amplitude as fraction of height
     dash = 18, // dash length (px in CSS pixels)
     gap = 12, // gap length (px in CSS pixels)
     rotation = 0,

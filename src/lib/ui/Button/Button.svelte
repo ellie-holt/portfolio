@@ -1,3 +1,5 @@
+<!-- src/lib/ui/Button/Button.svelte -->
+
 <script lang="js">
   /** @typedef {import('svelte').Snippet} Snippet */
 
@@ -34,9 +36,7 @@
 
   const base =
     "brutal-btn" +
-    (bar
-      ? " relative group text-2xl font-bold underline hover:font-semibold"
-      : "") +
+    (bar ? " relative group text-2xl font-bold hover:font-semibold" : "") +
     (fullWidth ? " w-full" : "");
 
   const btnClass = `${base} ${classes}`.trim();

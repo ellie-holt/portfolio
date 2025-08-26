@@ -1,3 +1,5 @@
+<!-- src/lib/ui/Background/BackgroundLayer.svelte -->
+
 <script>
   let {
     baseColor = "#fff",

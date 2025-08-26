@@ -26,7 +26,9 @@
 
   <div class="flex flex-col w-full py-12">
     <!-- Form wrapper -->
-    <div class="collapse-border w-full lg:w-2/3 flex flex-col self-center">
+    <div
+      class="collapse-border w-full lg:w-2/3 xl:w-3/5 2xl:w-4/9 flex flex-col self-center"
+    >
       <!-- Form header strip (panel) -->
       <div
         class="xs:h-form collapse-border-2 h-[calc(var(--spacing-form)_*_1.5)]"

@@ -1,3 +1,5 @@
+<!-- src/lib/ui/Arrow/RoughArrow.svelte -->
+
 <script>
   import rough from "roughjs";
   let {
