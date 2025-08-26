@@ -72,17 +72,17 @@
     padding: 0;
   }
 
+  .collapse-border > * {
+    box-shadow: 0 0 0 1px rgb(0, 0, 0);
+  }
+
   .collapse-border-2 {
     padding: 1px;
     gap: 1px;
   }
 
-  .collapse-border-2 > * {
+  .collapse-border-2 > *:not(.accent-spine) {
     box-shadow: 0 0 0 2px rgb(0, 0, 0);
-  }
-
-  .collapse-border > * {
-    box-shadow: 0 0 0 1px rgb(0, 0, 0);
   }
 
   .text-shadow {

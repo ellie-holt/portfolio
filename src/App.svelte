@@ -51,7 +51,7 @@
   class="relative inset-0 z-0 w-full min-h-screen pointer-events-auto wrapper"
 >
   <div id="page-top" class="absolute top-0 left-0 w-full h-0"></div>
-  <div class="fixed mesh-gradient inset-0 pointer-events-none z-0"></div>
+  <div class="fixed mesh-gradient-2 inset-0 pointer-events-none z-0"></div>
   <!-- <BackgroundLayer /> -->
   <!-- <div
     class="fixed inset-0 grid-overlay pointer-events-none opacity-20 z-0"
@@ -399,5 +399,31 @@
       );
     background-blend-mode: overlay, normal, normal, normal, normal, normal,
       normal;
+  }
+
+  .mesh-gradient-2 {
+    background-color: hsla(250.1470588235294, 44%, 63%, 1);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1227 1227' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"),
+      radial-gradient(
+        circle at 98% 97%,
+        hsla(59, 85%, 86%, 1) 15%,
+        transparent 50.28756377877879%
+      ),
+      radial-gradient(
+        circle at 43% 92%,
+        hsla(238, 38%, 78%, 1) 30.780839988590987%,
+        transparent 69%
+      ),
+      radial-gradient(
+        circle at 95% 18%,
+        hsla(1.0000000000000089, 81%, 89%, 1) 20%,
+        transparent 80%
+      ),
+      radial-gradient(
+        circle at 72% 71%,
+        hsla(197, 79%, 67%, 1) 11%,
+        transparent 69%
+      );
+    background-blend-mode: overlay, normal, normal, normal, normal;
   }
 </style>

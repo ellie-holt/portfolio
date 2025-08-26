@@ -60,10 +60,7 @@
     </h3>
   </div>
 
-  <div
-    class="divider divider-rail divider-gap grid grid-cols-1 md:grid-cols-6"
-    style="--thick:1px; --line:var(--color-azure-ink); --item-bg:#fff;"
-  >
+  <div class="collapse-border grid grid-cols-1 md:grid-cols-6">
     <!-- Intro -->
     <section class="md:col-span-4 px-6 py-6">
       <h2
@@ -128,12 +125,9 @@
 
     <!-- Story -->
     <section class="md:col-span-6">
-      <div
-        class="divider divider-gap relative grid grid-cols-1 md:grid-cols-6"
-        style="--thick:1px; --line:var(--color-azure-ink); --item-bg:#fff;"
-      >
+      <div class="relative grid grid-cols-1 md:grid-cols-6">
         <article
-          class="px-6 py-6 relative z-10 bg-white md:col-start-1 md:col-span-full flex flex-col"
+          class="px-6 py-6 relative z-10 md:col-start-1 md:col-span-full flex flex-col"
         >
           <!-- From -->
           <div class="self-start flex-1 w-1/2 md:w-1/3">
