@@ -66,10 +66,12 @@
         </p>
 
         <!-- Name row -->
-        <div class="grid grid-cols-2 xs:h-form collapse-border-2 gap-0">
+        <div
+          class="grid grid-cols-1 xs:grid-cols-2 xs:h-form collapse-border-2 gap-0"
+        >
           <label
             for="name"
-            class="flex items-center px-6 font-sans font-bold uppercase bg-tang-100"
+            class="flex items-center px-6 font-sans font-bold uppercase bg-tang-100 h-form"
             >Name:</label
           >
           <input
@@ -79,15 +81,17 @@
             placeholder="Your Name"
             required
             autocomplete="name"
-            class="px-6 bg-tang-wash"
+            class="px-6 bg-tang-wash h-form"
           />
         </div>
 
         <!-- Email row -->
-        <div class="grid grid-cols-2 xs:h-form collapse-border-2">
+        <div
+          class="grid grid-cols-1 xs:grid-cols-2 xs:h-form collapse-border-2"
+        >
           <label
             for="email"
-            class="flex items-center px-6 font-sans bg-tang-100 font-bold uppercase"
+            class="flex items-center px-6 font-sans bg-tang-100 font-bold uppercase h-form"
             >Email:</label
           >
           <input
@@ -97,12 +101,12 @@
             placeholder="name@email.com"
             required
             autocomplete="email"
-            class="px-6 bg-tang-wash"
+            class="px-6 bg-tang-wash h-form"
           />
         </div>
 
         <!-- Message row -->
-        <div class="grid grid-cols-2 collapse-border-2">
+        <div class="grid grid-cols-1 xs:grid-cols-2 collapse-border-2">
           <label
             for="message"
             class="flex bg-tang-100 items-center px-6 font-sans font-bold uppercase h-[calc(var(--spacing-form)_*_2)]"

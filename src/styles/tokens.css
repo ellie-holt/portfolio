@@ -47,6 +47,7 @@
   --radius-none: 0;
 
   /* SHADOWS */
+  --shadow-blocky-xs: 2px 2px 0 0;
   --shadow-blocky-sm: 4px 4px 0 0;
   --shadow-blocky-md: 6px 6px 0 0;
   --shadow-blocky-lg: 8px 8px 0 0;

@@ -26,10 +26,10 @@
 
   <!-- image -->
   <figure
-    class="relative overflow-hidden sm:row-span-3 md:row-span-4 order-1 bg-white"
+    class="group relative overflow-hidden sm:row-span-3 md:row-span-4 order-1 bg-white"
   >
     <figcaption
-      class="absolute left-6 right-6 top-6 z-10 bg-white border justify-center hidden lg:block"
+      class="absolute left-6 right-6 top-6 z-10 bg-white border-2 opacity-100 transition-opacity duration-300 ease--out group-hover:opacity-0 group-hover:z-0 justify-center hidden lg:block"
     >
       <h2
         class="text-center py-2 text-4xl mb-1 xs:text-5xl sm:text-6xl md:text-[4vw]"

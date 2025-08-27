@@ -155,19 +155,19 @@
   }
   /* Blocky shadow utilities */
   .shadow-blocky {
-    box-shadow: var(--shadow-blocky) var(--tw-shadow-color, var(--color-black));
+    box-shadow: var(--shadow-blocky) var(--color-shadow, var(--color-black));
+  }
+  .shadow-blocky-xs {
+    box-shadow: var(--shadow-blocky-xs) var(--color-shadow, var(--color-black));
   }
   .shadow-blocky-sm {
-    box-shadow: var(--shadow-blocky-sm)
-      var(--tw-shadow-color, var(--color-black));
+    box-shadow: var(--shadow-blocky-sm) var(--color-shadow, var(--color-black));
   }
   .shadow-blocky-md {
-    box-shadow: var(--shadow-blocky-md)
-      var(--tw-shadow-color, var(--color-black));
+    box-shadow: var(--shadow-blocky-md) var(--color-shadow, var(--color-black));
   }
   .shadow-blocky-lg {
-    box-shadow: var(--shadow-blocky-lg)
-      var(--tw-shadow-color, var(--color-black));
+    box-shadow: var(--shadow-blocky-lg) var(--color-shadow, var(--color-black));
   }
 
   /* Brutalist border */

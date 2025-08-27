@@ -3,6 +3,8 @@
 <script>
   import rough from "roughjs";
 
+  // This draws an arrow consisting of a meandering dashed tail attached to a roughly drawn arrowhead
+
   let {
     stroke = "#f27941",
     strokeWidth = 5, // logical px
@@ -75,39 +77,54 @@
     return pts;
   }
 
+  function rotatePts(pts, angle, cx, cy) {
+    const s = Math.sin(angle),
+      c = Math.cos(angle);
+    return pts.map(([x, y]) => {
+      const dx = x - cx,
+        dy = y - cy;
+      return [cx + (dx * c - dy * s), cy + (dx * s + dy * c)];
+    });
+  }
+
   function draw() {
     if (!canvas) return;
     const rect = canvas.getBoundingClientRect();
-    const dpr = Math.max(1, window.devicePixelRatio || 1);
     const cssW = Math.max(1, rect.width);
     const cssH = Math.max(1, rect.height);
 
-    canvas.width = Math.floor(cssW * dpr);
-    canvas.height = Math.floor(cssH * dpr);
+    // Backing store equals CSS size (no DPR scaling)
+    canvas.width = Math.floor(cssW);
+    canvas.height = Math.floor(cssH);
 
     const rc = rough.canvas(canvas);
 
-    // Build the meandering tail in CSS px, then upscale for DPR
+    // Build the meandering tail in CSS px
     const ptsCss = buildMeander(cssW, cssH, wiggles, amplitude);
-    const pts = ptsCss.map(([x, y]) => [x * dpr, y * dpr]);
+    const rot = rotatePts(
+      ptsCss,
+      (rotation * Math.PI) / 180,
+      cssW / 2,
+      cssH / 2
+    );
 
     const opts = {
       stroke,
-      strokeWidth: strokeWidth * dpr, // preserve visual
+      strokeWidth, // no DPR scaling
       roughness: 1.1,
       bowing: 0.8,
     };
 
-    // Tail: dashed polyline
-    drawDashedPolyline(rc, pts, dash * dpr, gap * dpr, opts);
+    // Tail: dashed polyline (no DPR scaling)
+    drawDashedPolyline(rc, rot, dash, gap, opts);
 
     // Arrowhead at tail end using tangent from last segment
-    if (pts.length >= 2) {
-      const [x2, y2] = pts[pts.length - 1];
-      const [x1, y1] = pts[pts.length - 2];
+    if (rot.length >= 2) {
+      const [x2, y2] = rot[rot.length - 1];
+      const [x1, y1] = rot[rot.length - 2];
       const theta = Math.atan2(y2 - y1, x2 - x1);
       const phi = (headAngleDeg * Math.PI) / 180;
-      const len = headLen * dpr;
+      const len = headLen; // no DPR scaling
 
       const hx1 = x2 - len * Math.cos(theta - phi);
       const hy1 = y2 - len * Math.sin(theta - phi);
