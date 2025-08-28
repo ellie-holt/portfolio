@@ -21,34 +21,34 @@
   let { arrowIsHidden = false } = $props();
 </script>
 
-<div class="mx-2.5 xs:mx-5 -mb-14 md:-mb-16 md:mx-6 lg:mx-6 xl:mx-6">
-  <div class="relative collapse-border">
+<div class="mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 -mb-14 md:-mb-16">
+  <div class="collapse-border relative">
     <!-- top bar with links?  -->
-    <div class="relative z-10">
+    <div class="z-10 relative">
       <div
-        class="h-banner flex items-center justify-around text-md 3xs:text-lg xs:text-xl"
+        class="flex justify-around items-center h-banner text-md 3xs:text-lg xs:text-xl"
       >
         <a
           href="mailto:eleanorholt97@gmail.com"
           target="_blank"
-          class="relative inline-flex items-center font-mono email-link group"
+          class="group inline-flex relative items-center font-mono email-link"
         >
           <span
-            class="brackets relative pr-[0.2em] text-[1.7em] font-semibold text-tang-500 transition-transform duration-300 ease-in group-hover:translate-x-1 group-hover:scale-90 leading-none"
+            class="relative pr-[0.2em] font-semibold text-[1.7em] text-tang-500 leading-none group-hover:scale-90 transition-transform group-hover:translate-x-1 duration-300 ease-in brackets"
             >&lcub;</span
           >
           <span
-            class="underline transition-all duration-300 ease-in group-hover:decoration-transparent"
+            class="group-hover:decoration-transparent underline transition-all duration-300 ease-in"
             ><span class="break-all">eleanorholt97</span>@gmail.com</span
           >
           <span
-            class="brackets relative pl-[0.2em] text-[1.7em] font-semibold text-tang-500 transition-transform duration-300 ease-in group-hover:-translate-x-1 group-hover:scale-90 leading-none"
+            class="relative pl-[0.2em] font-semibold text-[1.7em] text-tang-500 leading-none group-hover:scale-90 transition-transform group-hover:-translate-x-1 duration-300 ease-in brackets"
             >&rcub;</span
           >
         </a>
-        <div class="flex items-center gap-4 justify-evenly">
+        <div class="flex justify-evenly items-center gap-4">
           <p
-            class="font-mono text-xl lg:text-2xl xl:text-3xl hidden 2xs:inline"
+            class="hidden 2xs:inline font-mono text-xl lg:text-2xl xl:text-3xl"
           >
             Github
           </p>
@@ -63,10 +63,10 @@
 
     <!-- Expandable hero section -->
     <div
-      class="flex flex-col relative min-h-[calc(78vh_-_20px)] 3xs:min-h-[80vh] z-0"
+      class="z-0 relative flex flex-col min-h-[calc(78vh_-_20px)] 3xs:min-h-[80vh]"
     >
-      <!-- <div class="flex items-center gap-4 p-6 justify-evenly">
-        <p class="font-mono text-xl lg:text-2xl xl:text-3xl hidden 2xs:inline">
+      <!-- <div class="flex justify-evenly items-center gap-4 p-6">
+        <p class="hidden 2xs:inline font-mono text-xl lg:text-2xl xl:text-3xl">
           Github
         </p>
         <GitHubIcon
@@ -76,30 +76,30 @@
         />
       </div> -->
       <div
-        class="absolute bottom-0 left-0 right-0 top-auto flex flex-col justify-end items-center leading-none"
+        class="top-auto right-0 bottom-0 left-0 absolute flex flex-col justify-end items-center leading-none"
       >
         <a href="index.html">
           <h1
-            class="text-[26vw] text-shadow text-azure-200 white text-center 3xs:text-left 3xs:text-[13vw] lg:text-[12vw] xl:text-[11vw] font-bold row-start-1 col-start-1 col-span-2 leading-none"
+            class="col-span-2 col-start-1 row-start-1 text-shadow font-bold text-[26vw] text-azure-200 3xs:text-[13vw] lg:text-[12vw] xl:text-[11vw] 3xs:text-left text-center leading-none white"
           >
             Ellie Holt:
           </h1>
         </a>
         <h2
-          class="font-mono font-medium text-black row-start-2 col-span-2 leading-snug whitespace-nowrap"
+          class="col-span-2 row-start-2 font-mono font-medium text-black leading-snug whitespace-nowrap"
         >
           <span
-            class="text-[11vw] 4xs:text-[11.5vw] 3xs:text-[12vw] 2xs:text-[8.5vw] lg:text-[8vw] xl:text-[7.5vw] text-[#f27941] relative top-0.5 3xs:top-1 2xs:top-1.5 xs:top-2 lg:top-2.5 xl:top-3 left-5"
+            class="top-0.5 3xs:top-1 2xs:top-1.5 xs:top-2 lg:top-2.5 xl:top-3 left-3 md:left-5 relative text-[#f27941] text-[11vw] 4xs:text-[11.5vw] 3xs:text-[12vw] 2xs:text-[8.5vw] lg:text-[8vw] xl:text-[7.5vw]"
             >{`{`}</span
           >
           <span
             class="text-[7.7vw] 4xs:text-[8vw] 3xs:text-[8.5vw] 2xs:text-[5vw] lg:text-[4.5vw] xl:text-[4vw]"
-            ><span class="2xs:inline hidden">front-end</span>
+            ><span class="hidden 2xs:inline">front-end</span>
             web developer</span
           >
 
           <span
-            class="text-[11vw] 4xs:text-[11.5vw] 3xs:text-[12vw] 2xs:text-[8.5vw] lg:text-[8vw] xl:text-[7.5vw] text-[#f27941] relative top-0.5 3xs:top-1 2xs:top-1.5 xs:top-2 lg:top-2.5 xl:top-3 right-5"
+            class="top-0.5 3xs:top-1 2xs:top-1.5 xs:top-2 lg:top-2.5 xl:top-3 right-3 md:right-5 relative text-[#f27941] text-[11vw] 4xs:text-[11.5vw] 3xs:text-[12vw] 2xs:text-[8.5vw] lg:text-[8vw] xl:text-[7.5vw]"
             >{`}`}</span
           >
         </h2>
@@ -109,14 +109,14 @@
           <a href="#about" aria-label="Scroll down">
             <RoughArrow
               direction="down"
-              class="2xs:w-[150px] 2xs:h-[150px] w-[100px] h-[100px] group-hover:translate-y-2 transition-transform duration-300 ease-in-out [image-rendering:smooth]"
+              class="w-[100px] 2xs:w-[150px] h-[100px] 2xs:h-[150px] transition-transform group-hover:translate-y-2 duration-300 ease-in-out [image-rendering:smooth]"
             />
           </a>
         </div>
       </div>
     </div>
 
-    <!-- <div class="flex grayscale-25 max-h-[540px] element-border overflow-hidden">
+    <!-- <div class="flex grayscale-25 element-border max-h-[540px] overflow-hidden">
       <picture>
         <source srcset={me1080} media="(min-width: 1024px)" />
         <source srcset={me640} media="(min-width: 640px)" />
@@ -125,7 +125,7 @@
         <img
           src={me640}
           alt="Ellie Holt"
-          class="object-cover object-top-right w-[120%] h-[120%]"
+          class="w-[120%] h-[120%] object-cover object-top-right"
         />
       </picture>
     </div> -->

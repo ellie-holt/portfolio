@@ -35,7 +35,7 @@
       project={{
         title: "World Clock",
         description:
-          "A world clock with responsive CSS Grid and time-of-day theming.",
+          "A world clock with a responsive CSS Grid layout and time-of-day theming.",
         link: "https://findthetime.netlify.app/",
         stack: ["HTML/CSS", "JavaScript", "Moment.js"],
       }}
@@ -47,7 +47,7 @@
       project={{
         title: "AI Poet",
         description:
-          "A minimalist app that generates short poems from prompts via an AI API.",
+          "A fun little app that generates short poems from prompts via an AI API.",
         link: "https://aipoet.netlify.app/",
         stack: ["HTML/CSS", "JavaScript", "SheCodes AI API"],
       }}

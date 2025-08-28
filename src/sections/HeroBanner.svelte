@@ -7,33 +7,43 @@
     console.log("showHeroBanner:", bannerIsVisible); // Debugging
   });
 
+  const name = { fullName: "Ellie Holt:", firstName: "Ellie:" };
+
   import RoughArrow from "$lib/ui/Arrow/RoughArrow.svelte";
+  let viewportWidth = $state(0);
 </script>
+
+<svelte:window bind:innerWidth={viewportWidth} />
 
 <a href="#page-top">
   <div
-    class={`${bannerIsVisible ? "visible border-b" : "invisible"} group flex items-center justify-between md:justify-center sm:justify-between 3xs:justify-around pt-2 pb-3 sm:pl-6 xs:pl-4 2xs:pl-6 3xs:pl-2 pl-4 sm:pr-2 xs:pr-1 3xs:pr-0 pr-1 h-banner w-full hover:bg-aqua-100 bg-aqua-wash transition-colors duration-300 ease-in-out`}
+    class={`${bannerIsVisible ? "visible border-b" : "invisible"} group relative flex justify-start 3xs:justify-center sm:justify-start md:justify-center items-center bg-aqua-wash hover:bg-aqua-100 px-4 3xs:px-4 md:px-6 pt-2 pb-3 sm:pl-6 w-full h-banner transition-colors duration-300 ease-in-out`}
     transition:fade|global
   >
     <h1
-      class="text-xl 4xs:text-[1.35rem] 3xs:text-2xl font-extrabold hero-title font-mono leading-[-0.5em]"
+      class="font-mono font-extrabold 4xs:text-[1.35rem] text-xl 3xs:text-2xl leading-[-0.5em] hero-name"
     >
-      Ellie Holt<span class="-mr-2 3xs:-mr-3 xs:-mr-2 sm:mr-0">:</span>
-
+      <span class="-mr-2 md:mr-0">
+        {#if viewportWidth > 480}
+          {name.fullName}
+        {:else}
+          {name.firstName}
+        {/if}
+      </span>
       <span
-        class="text-xl font-medium leading-none 4xs:text-[1.35rem] 3xs:text-2xl font-mono-3 2xs:full"
+        class="font-mono-3 font-medium 4xs:text-[1.35rem] text-xl 3xs:text-2xl leading-none 2xs:full"
       >
         <span
-          class="brackets text-tang-500 font-semibold relative top-[0.06em] text-[1.5em]"
+          class="top-[0.06em] relative font-semibold text-[1.5em] text-tang-500 brackets"
           >&lcub;</span
         >
 
         <span
-          class="-mx-2 tracking-tight tagline sm:tracking-normal 3xs:-mx-2.5 2xs:-mx-2 md:mx-0"
+          class="-mx-2 3xs:-mx-2.5 2xs:-mx-2 md:mx-0 tracking-tight sm:tracking-normal tagline"
         ></span>
 
         <span
-          class="brackets text-tang-500 font-semibold relative top-[0.06em] text-[1.5em]"
+          class="top-[0.06em] relative font-semibold text-[1.5em] text-tang-500 brackets"
           >&rcub;</span
         >
       </span>
@@ -41,7 +51,7 @@
     <RoughArrow
       direction="up"
       strokeWidth={3}
-      class="relative top-0.5 w-11 h-11 3xs:h-13 group-hover:-translate-y-1 transition-transform duration-300 ease-in-out"
+      class="top-1 md:top-1.5 right-0 sm:right-1 md:right-2 absolute w-11 3xs:w-12 md:w-13 h-11 3xs:h-12 md:h-13 transition-transform group-hover:-translate-y-1 duration-300 ease-in-out"
     />
   </div>
 </a>
@@ -61,9 +71,9 @@
     }
   }
 
-  @media (max-width: 447px) {
+  /* @media (max-width: 447px) {
     .tagline::after {
       content: "web dev";
     }
-  }
+  } */
 </style>
