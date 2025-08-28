@@ -14,9 +14,9 @@
   function draw() {
     if (!canvas) return;
     const rect = canvas.getBoundingClientRect();
-    const dpr = window.devicePixelRatio || 1;
-    canvas.width = Math.max(1, Math.floor(rect.width * dpr));
-    canvas.height = Math.max(1, Math.floor(rect.height * dpr));
+    // const dpr = window.devicePixelRatio || 1;
+    canvas.width = Math.max(1, Math.floor(rect.width));
+    canvas.height = Math.max(1, Math.floor(rect.height));
 
     const rc = rough.canvas(canvas);
     const w = canvas.width;
@@ -53,7 +53,7 @@
 
     rc.line(x1, y1, x2, y2, {
       stroke,
-      strokeWidth: strokeWidth * (window.devicePixelRatio || 1),
+      strokeWidth,
     });
 
     theta = Math.atan2(y2 - y1, x2 - x1);
@@ -65,11 +65,11 @@
 
     rc.line(x2, y2, x3, y3, {
       stroke,
-      strokeWidth: strokeWidth * (window.devicePixelRatio || 1),
+      strokeWidth,
     });
     rc.line(x2, y2, x4, y4, {
       stroke,
-      strokeWidth: strokeWidth * (window.devicePixelRatio || 1),
+      strokeWidth,
     });
   }
 
