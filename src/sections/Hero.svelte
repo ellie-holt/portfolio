@@ -21,7 +21,7 @@
   let { arrowIsHidden = false } = $props();
 </script>
 
-<div class="mx-2.5 xs:mx-5 -mb-16 md:mx-6 lg:mx-6 xl:mx-6">
+<div class="mx-2.5 xs:mx-5 -mb-14 md:-mb-16 md:mx-6 lg:mx-6 xl:mx-6">
   <div class="relative collapse-border">
     <!-- top bar with links?  -->
     <div class="relative z-10">

@@ -12,7 +12,7 @@
 
 <a href="#page-top">
   <div
-    class={`${bannerIsVisible ? "visible" : "invisible"} group flex items-center justify-between md:justify-center sm:justify-between 3xs:justify-around pt-2 pb-3 sm:pl-6 xs:pl-4 2xs:pl-6 3xs:pl-2 pl-4 sm:pr-2 xs:pr-1 3xs:pr-0 pr-1 h-banner w-full hover:bg-aqua-100 bg-aqua-wash transition-colors duration-300 ease-in-out`}
+    class={`${bannerIsVisible ? "visible border-b " : "invisible"} group flex items-center justify-between md:justify-center sm:justify-between 3xs:justify-around pt-2 pb-3 sm:pl-6 xs:pl-4 2xs:pl-6 3xs:pl-2 pl-4 sm:pr-2 xs:pr-1 3xs:pr-0 pr-1 h-banner w-full hover:bg-aqua-100 bg-aqua-wash transition-colors duration-300 ease-in-out`}
     transition:fade|global
   >
     <h1

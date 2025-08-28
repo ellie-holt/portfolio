@@ -5,7 +5,7 @@
 
 <a
   href={link}
-  class="relative z-30 flex-1 cursor-pointer group shadow-border bg-none isolate"
+  class="relative z-30 flex-1 cursor-pointer group shadow-border bg-none isolate collapse-border-2"
 >
   <li class="relative w-full h-full flex items-center justify-center">
     <!-- <LinkButton href={link} capitalise class="lowercase">{text}</LinkButton> -->
