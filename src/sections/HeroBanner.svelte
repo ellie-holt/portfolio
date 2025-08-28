@@ -17,7 +17,7 @@
 
 <a href="#page-top">
   <div
-    class={`${bannerIsVisible ? "visible border-b" : "invisible"} group relative flex justify-start 3xs:justify-center sm:justify-start md:justify-center items-center bg-aqua-wash hover:bg-aqua-100 px-4 3xs:px-4 md:px-6 pt-2 pb-3 sm:pl-6 w-full h-banner transition-colors duration-300 ease-in-out`}
+    class={`${bannerIsVisible ? "visible border-b" : "invisible"} group relative flex justify-start 3xs:justify-center sm:justify-start md:justify-center items-center bg-aqua-wash hover:bg-aqua-100 px-6 3xs:px-4 md:px-6 pt-2 pb-3 sm:pl-6 w-full h-banner transition-colors duration-300 ease-in-out`}
     transition:fade|global
   >
     <h1

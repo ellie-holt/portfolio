@@ -58,7 +58,7 @@
 
   <!-- Footer rail -->
   <div class="">
-    <div class="bg-white flex items-center justify-between px-6 py-4">
+    <div class="bg-white hidden xs:flex items-center justify-between px-6 py-4">
       <span class="font-mono text-sm">// more on GitHub</span>
       <a
         href="https://github.com/ellie-holt"

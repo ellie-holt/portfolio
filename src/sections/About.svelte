@@ -9,15 +9,12 @@
 
   const content = {
     headline: "Hi, I'm Ellie — a front-end web developer.",
+
     subline:
       "I build accessible, responsive interfaces with strong layout systems and small, thoughtful details. I like turning designs into fast, tidy code that feels good to use.",
+
     chips: ["London, UK", "Open to junior roles and freelance projects"],
-    atAGlance: [
-      "Responsive layouts: CSS Grid, Flexbox, media queries",
-      "Accessibility first: semantic HTML, focus states, keyboard paths",
-      "Utility-first styling with design tokens & Tailwind",
-      "React, Svelte, modern JS",
-    ],
+
     tools: [
       { icon: "devicon-react-original", label: "React" },
       { icon: "devicon-svelte-plain", label: "Svelte" },
@@ -28,23 +25,41 @@
       { icon: "devicon-axios-plain", label: "Axios" },
       { icon: "devicon-git-plain", label: "Git & GitHub" },
       { icon: "devicon-figma-plain", label: "Figma" },
+      { icon: "devicon-storybook-plain", label: "Storybook" },
     ],
-    learning: [
-      { icon: "devicon-nextjs-plain", label: "Next.js" },
-      { icon: "devicon-mysql-plain", label: "Databases (MySQL, PostgreSQL)" },
-      { icon: "devicon-typescript-plain", label: "TypeScript" },
-    ],
+
     story: {
       photoAlt: "Ellie Holt portrait",
       caption: "Hi 👋",
       from: "A background in education: supporting learners in the classroom and leading online coding lessons",
       to: "Teaching myself front-end development: building creative, responsive websites from scratch.",
     },
-    nowNext: [
-      "Now: polishing this portfolio",
-      "Exploring: venturing into back-end development",
-      "Open to: junior roles & freelance opportunities",
+
+    atAGlance: [
+      {
+        tagline: "Responsive layouts:",
+        subline: "CSS Grid, Flexbox, media queries",
+      },
+      {
+        tagline: "Accessibility first:",
+        subline: "Semantic HTML,  WCAG 2.2, focus states, keyboard paths",
+      },
+      {
+        tagline: "Design systems and styling:",
+        subline: "Utility classes, Tailwind, typography, colour theory",
+      },
+      {
+        tagline: "Modern JavaScript + frameworks:",
+        subline: "React, Svelte, ES modules",
+      },
     ],
+
+    learning: [
+      { icon: "devicon-nextjs-plain", label: "Next.js" },
+      { icon: "devicon-mysql-plain", label: "Databases (MySQL, PostgreSQL)" },
+      { icon: "devicon-typescript-plain", label: "TypeScript" },
+    ],
+
     ctaText: "Get in touch →",
     ctaHref: "#contact",
   };
@@ -77,8 +92,8 @@
       <div class="mt-6 flex flex-wrap gap-2 text-sm">
         {#each content.chips as chip}
           <span
-            class="px-2 py-1 border border-[var(--color-shadow)] shadow-blocky-xs bg-azure-wash font-mono"
-            style="--color-shadow: var(--color-azure-500);">{chip}</span
+            class="px-2 py-1 border border-[var(--color-shadow)] shadow-blocky-xs bg-white font-mono"
+            style="--color-shadow: var(--color-tang-300);">{chip}</span
           >
         {/each}
       </div>
@@ -90,8 +105,8 @@
       <ul class="flex flex-wrap gap-3 text-sm">
         {#each content.tools as item}
           <li
-            class="inline-flex shadow-blocky-xs items-center gap-2 px-3 py-2 border bg-azure-wash border-[var(--color-shadow)]"
-            style="--color-shadow: var(--color-azure-500);"
+            class="inline-flex shadow-blocky-xs items-center gap-2 px-3 py-2 border bg-white border-[var(--color-shadow)]"
+            style="--color-shadow: var(--color-azure-300);"
           >
             {#if item.icon}
               <i class={item.icon} aria-hidden="true"></i>
@@ -115,7 +130,9 @@
         class="sm:hidden px-6 py-6 relative z-20 flex gap-32 flex-col -mb-12 sm:mb-0"
       >
         <!-- From -->
-        <div class="bg-white border p-2 self-start flex-1 w-2/3 xs:w-1/2">
+        <div
+          class="bg-white border-2 border-tang-200 p-2 self-start flex-1 w-2/3 xs:w-1/2"
+        >
           <h5 class="font-mono font-bold mb-2">From</h5>
           <p class="leading-relaxed">{content.story.from}</p>
         </div>
@@ -148,7 +165,9 @@
         {/if}
 
         <!-- To -->
-        <div class="bg-white border p-2 self-end w-2/3 xs:w-1/2">
+        <div
+          class="bg-white border-2 border-tang-200 p-2 self-end w-2/3 xs:w-1/2"
+        >
           <h5 class="font-mono font-bold mb-2">To</h5>
           <p class="leading-relaxed">{content.story.to}</p>
         </div>
@@ -180,7 +199,7 @@
       >
         <!-- From -->
         <div
-          class=" p-2 absolute left-6 top-6 md:right-6 lg:right-auto lg:left-6 md:left-auto 2xl:right-6 w-2/5 md:w-3/5 xl:w-1/3 2xl:w-auto bg-white border"
+          class=" p-2 absolute left-6 top-6 md:right-6 lg:right-auto lg:left-6 md:left-auto 2xl:right-6 w-2/5 md:w-3/5 xl:w-1/3 2xl:w-auto bg-white border-2 border-tang-200"
         >
           <h5 class="font-mono font-bold mb-2">From</h5>
           <p class="leading-relaxed">{content.story.from}</p>
@@ -268,7 +287,7 @@
         {/if}
         <!-- To -->
         <div
-          class="p-2 absolute right-6 bottom-6 md:right-auto md:left-6 lg:left-auto lg:right-6 2xl:left-6 w-2/5 md:w-3/5 xl:w-1/3 2xl:w-auto bg-white border"
+          class="p-2 absolute right-6 bottom-6 md:right-auto md:left-6 lg:left-auto lg:right-6 2xl:left-6 w-2/5 md:w-3/5 xl:w-1/3 2xl:w-auto bg-white border-2 border-tang-200"
         >
           <h5 class="font-mono font-bold mb-2">To</h5>
           <p class="leading-relaxed">{content.story.to}</p>
@@ -281,12 +300,13 @@
       class="sm:col-span-full lg:col-span-4 2xl:row-start-2 2xl:col-start-2 px-6 py-6"
     >
       <div class="flex flex-wrap xl:flex-nowrap gap-6">
-        {#each content.atAGlance as line}
+        {#each content.atAGlance as item}
           <div
-            class="flex-1 border border-[var(--color-shadow)] bg-azure-wash font-mono p-6"
-            style="--color-shadow: var(--color-azure-500);"
+            class="flex-1 border-2 border-[var(--color-shadow)] bg-azure-wash font-mono p-6"
+            style="--color-shadow: var(--color-azure-300);"
           >
-            {line}
+            <h5 class="font-bold mb-2">{item.tagline}</h5>
+            <p class="font-mono">{item.subline}</p>
           </div>
         {/each}
       </div>
@@ -298,8 +318,8 @@
       <ul class="flex flex-wrap gap-3 text-sm">
         {#each content.learning as item}
           <li
-            class="inline-flex shadow-blocky-xs items-center gap-2 px-3 py-2 border bg-azure-wash border-[var(--color-shadow)]"
-            style="--color-shadow: var(--color-azure-500);"
+            class="inline-flex shadow-blocky-xs items-center gap-2 px-3 py-2 border bg-white border-[var(--color-shadow)]"
+            style="--color-shadow: var(--color-azure-300);"
           >
             {#if item.icon}
               <i class={item.icon} aria-hidden="true"></i>
@@ -310,24 +330,11 @@
       </ul>
     </section>
 
-    <!-- Now / Next -->
-    <!-- <section class="md:col-span-4 px-6 py-6">
-      <h4 class="pb-3">Now / Next</h4>
-      <div class="flex flex-wrap gap-2 text-sm">
-        {#each content.nowNext as line}
-          <span
-            class="px-2 py-1 border shadow-blocky-xs border-[var(--color-shadow)] bg-azure-wash font-mono"
-            style="--color-shadow: var(--color-azure-500);">{line}</span
-          >
-        {/each}
-      </div>
-    </section> -->
-
-    <!-- CTA -->
+    <!-- Link -->
     <aside
       class="md:col-span-2 2xl:col-span-3 3xl:col-span-2 px-6 py-6 flex items-end justify-end"
     >
-      <LinkButton href={content.ctaHref} class="text-xl"
+      <LinkButton href={content.ctaHref} class="text-xl bg-white"
         >{content.ctaText}
       </LinkButton>
     </aside>

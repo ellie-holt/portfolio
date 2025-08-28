@@ -26,7 +26,7 @@
     <!-- top bar with links?  -->
     <div class="z-10 relative">
       <div
-        class="flex justify-around items-center h-banner text-md 3xs:text-lg xs:text-xl"
+        class="flex justify-center 2xs:justify-between 2xs:px-6 items-center h-banner text-lg 3xs:text-xl"
       >
         <a
           href="mailto:eleanorholt97@gmail.com"
@@ -38,7 +38,7 @@
             >&lcub;</span
           >
           <span
-            class="group-hover:decoration-transparent underline transition-all duration-300 ease-in"
+            class="group-hover:decoration-transparent transition-[text-decoration-color] underline duration-300 ease-in"
             ><span class="break-all">eleanorholt97</span>@gmail.com</span
           >
           <span
@@ -46,11 +46,9 @@
             >&rcub;</span
           >
         </a>
-        <div class="flex justify-evenly items-center gap-4">
-          <p
-            class="hidden 2xs:inline font-mono text-xl lg:text-2xl xl:text-3xl"
-          >
-            Github
+        <div class="hidden 2xs:flex justify-evenly items-center gap-4">
+          <p class="hidden sm:inline font-mono text-xl lg:text-2xl xl:text-3xl">
+            Github →
           </p>
           <GitHubIcon
             classes="min-w-6 xs:w-full max-w-9 3xs:max-w-10 md:max-w-12 lg:max-w-14 min-w-0 hover:rotate-10 transition-transform duration-300 ease-in-out"
@@ -65,22 +63,19 @@
     <div
       class="z-0 relative flex flex-col min-h-[calc(78vh_-_20px)] 3xs:min-h-[80vh]"
     >
-      <!-- <div class="flex justify-evenly items-center gap-4 p-6">
-        <p class="hidden 2xs:inline font-mono text-xl lg:text-2xl xl:text-3xl">
-          Github
-        </p>
+      <div class="flex 2xs:hidden justify-end p-6">
         <GitHubIcon
           classes="min-w-6 xs:w-full max-w-9 3xs:max-w-10 md:max-w-12 lg:max-w-14 min-w-0 hover:rotate-10 transition-transform duration-300 ease-in-out"
           link="https://github.com/ellie-holt"
-          fill="var(--color-tangerine-500)"
+          fill="var(--color-tang-500)"
         />
-      </div> -->
+      </div>
       <div
         class="top-auto right-0 bottom-0 left-0 absolute flex flex-col justify-end items-center leading-none"
       >
         <a href="index.html">
           <h1
-            class="col-span-2 col-start-1 row-start-1 text-shadow font-bold text-[26vw] text-azure-200 3xs:text-[13vw] lg:text-[12vw] xl:text-[11vw] 3xs:text-left text-center leading-none white"
+            class="col-span-2 col-start-1 row-start-1 text-shadow font-bold text-[26vw] text-white 3xs:text-[13vw] lg:text-[12vw] xl:text-[11vw] 3xs:text-left text-center leading-none white"
           >
             Ellie Holt:
           </h1>

@@ -4,41 +4,41 @@
 
 <section
   id="contact"
-  class="flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 3xs:scroll-m-14 2xs:scroll-m-0 scroll-m-15 collapse-border"
+  class="collapse-border flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-15 3xs:scroll-m-14 2xs:scroll-m-0"
 >
   <!-- Subheading band -->
   <div class="flex items-end h-[calc(var(--spacing-banner)_*_2)]">
-    <h3 class="md:py-4 py-3 px-6 md:text-3xl text-2xl font-semibold">
+    <h3 class="px-6 py-3 md:py-4 font-semibold text-2xl md:text-3xl">
       // contact
     </h3>
   </div>
 
   <!-- Big heading panel -->
-  <div class="h-[calc(var(--spacing-banner)_*_3)]">
-    <div class="h-full flex items-center justify-center px-6">
-      <h2
-        class="text-center text-[10vw] sm:text-[7vw] lg:text-[6vw] xl:text-[5.5vw] 2xl:text-[5vw]"
-      >
-        Let's get in touch!
-      </h2>
-    </div>
+  <div
+    class="hidden sm:flex justify-center items-end px-6 pb-8 xl:pb-6 h-[calc(var(--spacing-banner)_*_3)]"
+  >
+    <h2
+      class="text-[vw] xs:text-[10vw] sm:text-[7vw] lg:text-[6vw] 2xl:text-[5vw] xl:text-[5.5vw] text-center"
+    >
+      Let's get in touch!
+    </h2>
   </div>
 
-  <div class="flex flex-col w-full py-12">
+  <div class="flex flex-col w-full">
     <!-- Form wrapper -->
     <div
-      class="collapse-border w-full lg:w-2/3 xl:w-3/5 2xl:w-4/9 flex flex-col self-center"
+      class="collapse-border flex flex-col self-center w-full lg:w-2/3 2xl:w-4/9 xl:w-3/5 lg:mt-12"
     >
       <!-- Form header strip (panel) -->
       <div
-        class="xs:h-form collapse-border-2 h-[calc(var(--spacing-form)_*_1.5)]"
+        class="collapse-border-2 h-[calc(var(--spacing-form)_*_1.5)] xs:h-form"
       >
         <div
-          class="relative w-full h-full flex justify-center 3xs:justify-start items-center bg-azure-wash"
+          class="relative flex justify-center 3xs:justify-start items-end bg-azure-wash pb-4 3xs:pb-6 xs:pb-4 md:pb-6 w-full h-full"
         >
           <span class="accent-spine" style="--accent:var(--color-azure-500);"
           ></span>
-          <h4 class="px-6 xs:text-2xl text-2xl">
+          <h4 class="px-6 text-2xl xs:text-2xl">
             Drop me a message<span class="hidden 3xs:inline">...</span>
           </h4>
         </div>
@@ -52,7 +52,7 @@
         method="POST"
         action="/"
         data-netlify="true"
-        class="w-full font-mono text-lg leading-loose xs:text-xl collapse-border"
+        class="collapse-border w-full font-mono text-lg xs:text-xl leading-loose"
       >
         <input type="hidden" name="form-name" value="contact" />
         <p class="hidden">
@@ -67,11 +67,11 @@
 
         <!-- Name row -->
         <div
-          class="grid grid-cols-1 xs:grid-cols-2 xs:h-form collapse-border-2 gap-0"
+          class="collapse-border-2 gap-0 grid grid-cols-1 xs:grid-cols-2 xs:h-form"
         >
           <label
             for="name"
-            class="flex items-center px-6 font-sans font-bold uppercase bg-tang-100 h-form"
+            class="flex items-center bg-tang-100 px-6 h-form font-sans font-bold uppercase"
             >Name:</label
           >
           <input
@@ -81,17 +81,17 @@
             placeholder="Your Name"
             required
             autocomplete="name"
-            class="px-6 bg-tang-wash h-form"
+            class="bg-tang-wash px-6 h-form"
           />
         </div>
 
         <!-- Email row -->
         <div
-          class="grid grid-cols-1 xs:grid-cols-2 xs:h-form collapse-border-2"
+          class="collapse-border-2 grid grid-cols-1 xs:grid-cols-2 xs:h-form"
         >
           <label
             for="email"
-            class="flex items-center px-6 font-sans bg-tang-100 font-bold uppercase h-form"
+            class="flex items-center bg-tang-100 px-6 h-form font-sans font-bold uppercase"
             >Email:</label
           >
           <input
@@ -101,15 +101,15 @@
             placeholder="name@email.com"
             required
             autocomplete="email"
-            class="px-6 bg-tang-wash h-form"
+            class="bg-tang-wash px-6 h-form"
           />
         </div>
 
         <!-- Message row -->
-        <div class="grid grid-cols-1 xs:grid-cols-2 collapse-border-2">
+        <div class="collapse-border-2 grid grid-cols-1 xs:grid-cols-2">
           <label
             for="message"
-            class="flex bg-tang-100 items-center px-6 font-sans font-bold uppercase h-[calc(var(--spacing-form)_*_2)]"
+            class="flex items-center bg-tang-100 px-6 h-form xs:h-[calc(var(--spacing-form)_*_2)] font-sans font-bold uppercase"
             >Message:</label
           >
           <textarea
@@ -117,7 +117,7 @@
             id="message"
             placeholder="Type your message here..."
             required
-            class="px-6 pt-6 h-[calc(var(--spacing-form)_*_2)] leading-[1.7] text-md xs:text-lg bg-tang-wash"
+            class="bg-tang-wash px-6 pt-6 h-[calc(var(--spacing-form)_*_2)] text-md xs:text-lg leading-[1.7]"
           ></textarea>
         </div>
 
@@ -128,7 +128,7 @@
         form="contact-form"
         bar
         tone="azure"
-        class="h-form w-[calc(var(--spacing-form)_*_2)] mt-12 self-end bg-azure-wash"
+        class="self-center xs:self-end bg-azure-wash my-6 md:my-12 w-[calc(var(--spacing-form)_*_2)] h-form"
         >Send</Button
       >
     </div>

@@ -68,7 +68,7 @@
       ></div>
       <ul class="px-6 py-3 flex flex-wrap gap-2 text-sm font-mono">
         {#each project.stack as chip}
-          <li class="px-2 py-1 border border-black shadow-blocky-sm">
+          <li class="px-2 py-1 border border-black shadow-blocky-xs">
             {chip}
           </li>
         {/each}
@@ -90,7 +90,7 @@
 
   <!-- link -->
   <div
-    class="relative group/link w-full h-[calc(var(--spacing-banner)_*_1.5)] flex items-center overflow-hidden bg-white order-5 col-span-full md:col-span-1 md:col-start-2 sm:row-start-4 sm:h-full lg:h-[calc(var(--spacing-banner)_*_1.5)]"
+    class="relative group/link w-full h-[calc(var(--spacing-banner)_*_1.5)] flex items-center overflow-hidden bg-aqua-wash order-5 col-span-full md:col-span-1 md:col-start-2 sm:row-start-4 sm:h-full lg:h-[calc(var(--spacing-banner)_*_1.5)]"
   >
     <a
       href={project.link}
