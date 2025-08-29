@@ -1,10 +1,4 @@
 <script lang="js">
-  import { deprecation, getCanvasBoundingBox } from "pixi.js";
-
-  import me160 from "../assets/me-160.webp";
-  import me320 from "../assets/me-320.webp";
-  import me640 from "../assets/me-640.webp";
-  import me1080 from "../assets/me-1080.webp";
   import {
     isScrolled,
     scrollProgress,
@@ -75,7 +69,7 @@
       >
         <a href="index.html">
           <h1
-            class="col-span-2 col-start-1 row-start-1 text-shadow font-bold text-[26vw] text-white 3xs:text-[13vw] lg:text-[12vw] xl:text-[11vw] 3xs:text-left text-center leading-none white"
+            class="col-span-2 col-start-1 row-start-1 text-shadow font-bold text-[26vw] text-azure-200 3xs:text-[13vw] lg:text-[12vw] xl:text-[11vw] 3xs:text-left text-center leading-none white"
           >
             Ellie Holt:
           </h1>
@@ -110,20 +104,6 @@
         </div>
       </div>
     </div>
-
-    <!-- <div class="flex grayscale-25 element-border max-h-[540px] overflow-hidden">
-      <picture>
-        <source srcset={me1080} media="(min-width: 1024px)" />
-        <source srcset={me640} media="(min-width: 640px)" />
-        <source srcset={me320} media="(min-width: 320px)" />
-        <source srcset={me160} media="(min-width: 160px)" />
-        <img
-          src={me640}
-          alt="Ellie Holt"
-          class="w-[120%] h-[120%] object-cover object-top-right"
-        />
-      </picture>
-    </div> -->
   </div>
 </div>
 

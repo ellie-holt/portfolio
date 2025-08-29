@@ -11,7 +11,7 @@
     headline: "Hi, I'm Ellie — a front-end web developer.",
 
     subline:
-      "I build accessible, responsive interfaces with strong layout systems and small, thoughtful details. I like turning designs into fast, tidy code that feels good to use.",
+      "I make accessible, responsive websites with strong layout systems and small, thoughtful details. With a background in education, I bring creativity and a user-focused approach to everything I build.",
 
     chips: ["London, UK", "Open to junior roles and freelance projects"],
 
@@ -31,7 +31,7 @@
     story: {
       photoAlt: "Ellie Holt portrait",
       caption: "Hi 👋",
-      from: "A background in education: supporting learners in the classroom and leading online coding lessons",
+      from: "A background in education: supporting learners in the classroom and leading online coding lessons.",
       to: "Teaching myself front-end development: building creative, responsive websites from scratch.",
     },
 
@@ -46,7 +46,7 @@
       },
       {
         tagline: "Design systems and styling:",
-        subline: "Utility classes, Tailwind, typography, colour theory",
+        subline: "Utility classes, Tailwind, SCSS, colour theming",
       },
       {
         tagline: "Modern JavaScript + frameworks:",
@@ -58,6 +58,7 @@
       { icon: "devicon-nextjs-plain", label: "Next.js" },
       { icon: "devicon-mysql-plain", label: "Databases (MySQL, PostgreSQL)" },
       { icon: "devicon-typescript-plain", label: "TypeScript" },
+      { icon: "devicon-jest-plain", label: "Jest" },
     ],
 
     ctaText: "Get in touch →",
@@ -72,10 +73,11 @@
 
 <section
   id="about"
-  class="mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-15 3xs:scroll-m-14 2xs:scroll-m-0 collapse-border"
+  class="collapse-border mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-15 3xs:scroll-m-14 2xs:scroll-m-0"
 >
-  <div class="h-[calc(var(--spacing-banner)_*_2)] flex items-end">
-    <h3 class="md:py-4 py-3 px-6 md:text-3xl text-2xl font-semibold">
+  <!-- Section Subheading -->
+  <div class="flex items-end h-[calc(var(--spacing-banner)_*_2)]">
+    <h3 class="px-6 py-1 md:py-2 font-semibold text-2xl md:text-3xl">
       // about
     </h3>
   </div>
@@ -84,15 +86,15 @@
     <!-- Intro -->
     <section class="sm:col-span-full md:col-span-4 px-6 py-6">
       <h2
-        class="font-mono font-bold text-aquamarine-ink leading-tight text-[10vw] 3xs:text-[9vw] 2xs:text-[7.5vw] md:text-[4.25rem] xl:text-[4.5rem]"
+        class="font-mono font-bold text-[10vw] text-aquamarine-ink 3xs:text-[9vw] 2xs:text-[7.5vw] md:text-[4.25rem] xl:text-[4.5rem] leading-tight"
       >
         {content.headline}
       </h2>
-      <p class="leading-loose mt-4 text-balance">{content.subline}</p>
-      <div class="mt-6 flex flex-wrap gap-2 text-sm">
+      <p class="mt-4 text-balance leading-loose">{content.subline}</p>
+      <div class="flex flex-wrap gap-2 mt-6 text-sm">
         {#each content.chips as chip}
           <span
-            class="px-2 py-1 border border-[var(--color-shadow)] shadow-blocky-xs bg-white font-mono"
+            class="bg-white shadow-blocky-xs px-2 py-1 border border-[var(--color-shadow)] font-mono"
             style="--color-shadow: var(--color-tang-300);">{chip}</span
           >
         {/each}
@@ -100,12 +102,12 @@
     </section>
 
     <!-- Tools -->
-    <section class="sm:col-start-2 md:col-span-2 2xl:col-span-1 px-6 py-6">
+    <section class="md:col-span-2 2xl:col-span-1 sm:col-start-2 px-6 py-6">
       <h4 class="pb-3">Toolbox</h4>
       <ul class="flex flex-wrap gap-3 text-sm">
         {#each content.tools as item}
           <li
-            class="inline-flex shadow-blocky-xs items-center gap-2 px-3 py-2 border bg-white border-[var(--color-shadow)]"
+            class="inline-flex items-center gap-2 bg-white shadow-blocky-xs px-3 py-2 border border-[var(--color-shadow)]"
             style="--color-shadow: var(--color-azure-300);"
           >
             {#if item.icon}
@@ -119,28 +121,28 @@
 
     <!-- Photo -->
     <section
-      class="relative md:col-span-2 sm:row-start-2 col-start-1 2xl:col-end-2 lg:row-span-2 xl:row-span-3 2xl:col-span-1 2xl:row-span-2 p-[1px] flex flex-col justify-end"
+      class="relative flex flex-col justify-end md:col-span-2 2xl:col-span-1 col-start-1 2xl:col-end-2 lg:row-span-2 2xl:row-span-2 xl:row-span-3 sm:row-start-2 p-[1px]"
     >
       <div
-        class="photo-gradient flex-1 absolute top-[1px] left-[1px] right-[1px] bottom-[30%]"
+        class="top-[1px] right-[1px] bottom-[30%] left-[1px] absolute flex-1 photo-gradient"
       ></div>
 
       <!-- Story overlay on small screens -->
       <article
-        class="sm:hidden px-6 py-6 relative z-20 flex gap-32 flex-col -mb-12 sm:mb-0"
+        class="sm:hidden z-20 relative flex flex-col gap-32 -mb-12 sm:mb-0 px-6 py-6"
       >
         <!-- From -->
         <div
-          class="bg-white border-2 border-tang-200 p-2 self-start flex-1 w-2/3 xs:w-1/2"
+          class="flex-1 self-start bg-white p-2 border-2 border-tang-200 w-2/3 xs:w-1/2"
         >
-          <h5 class="font-mono font-bold mb-2">From</h5>
+          <h5 class="mb-2 font-mono font-bold">From</h5>
           <p class="leading-relaxed">{content.story.from}</p>
         </div>
 
         <!-- Arrow -->
         {#if viewportWidth >= 576}
           <RoughJourneyArrow
-            class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 h-30 w-75"
+            class="top-1/2 left-1/2 absolute w-75 h-30 -translate-x-1/2 -translate-y-1/2"
             wiggles={1}
             amplitude={0.4}
             stroke="#f27941"
@@ -152,7 +154,7 @@
           />
         {:else}
           <RoughJourneyArrow
-            class="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 h-30 w-45"
+            class="top-1/2 left-1/2 absolute w-45 h-30 -translate-x-1/2 -translate-y-1/2"
             wiggles={1}
             amplitude={0.4}
             stroke="#f27941"
@@ -166,15 +168,15 @@
 
         <!-- To -->
         <div
-          class="bg-white border-2 border-tang-200 p-2 self-end w-2/3 xs:w-1/2"
+          class="self-end bg-white p-2 border-2 border-tang-200 w-2/3 xs:w-1/2"
         >
-          <h5 class="font-mono font-bold mb-2">To</h5>
+          <h5 class="mb-2 font-mono font-bold">To</h5>
           <p class="leading-relaxed">{content.story.to}</p>
         </div>
       </article>
 
       <div
-        class="relative z-10 mix-blend-darken grayscale-25 max-h-[540px] overflow-hidden"
+        class="z-10 relative grayscale-25 max-h-[540px] overflow-hidden mix-blend-darken"
       >
         <picture>
           <source srcset={me1080} media="(min-width: 1024px)" />
@@ -183,7 +185,7 @@
           <img
             src={me640}
             alt="Ellie Holt"
-            class="object-cover object-top-right w-full h-full"
+            class="w-full h-full object-cover object-top-right"
             loading="lazy"
           />
         </picture>
@@ -192,16 +194,16 @@
 
     <!-- Story -->
     <section
-      class="hidden sm:block sm:col-span-full md:col-span-4 2xl:col-end-7 2xl:col-span-1 2xl:row-start-1 2xl:row-end-3 3xl:row-end-4"
+      class="hidden sm:block sm:col-span-full md:col-span-4 2xl:col-span-1 2xl:col-end-7 2xl:row-start-1 2xl:row-end-3 3xl:row-end-4"
     >
       <article
-        class="px-6 py-6 h-full sm:min-h-72 md:min-h-88 lg:min-h-112 xl:min-h-84 relative z-10 flex items-center justify-center"
+        class="z-10 relative flex justify-center items-center px-6 py-6 h-full sm:min-h-72 md:min-h-88 lg:min-h-112 xl:min-h-84"
       >
         <!-- From -->
         <div
-          class=" p-2 absolute left-6 top-6 md:right-6 lg:right-auto lg:left-6 md:left-auto 2xl:right-6 w-2/5 md:w-3/5 xl:w-1/3 2xl:w-auto bg-white border-2 border-tang-200"
+          class="top-6 md:right-6 lg:right-auto 2xl:right-6 left-6 md:left-auto lg:left-6 absolute bg-white p-2 border-2 border-tang-300 w-2/5 md:w-3/5 2xl:w-auto xl:w-1/3"
         >
-          <h5 class="font-mono font-bold mb-2">From</h5>
+          <h5 class="mb-2 font-mono font-bold">From</h5>
           <p class="leading-relaxed">{content.story.from}</p>
         </div>
 
@@ -209,7 +211,7 @@
         {#if viewportWidth >= 1792}
           <!-- 2xl-3xl -->
           <RoughJourneyArrow
-            class="relative z-10 w-80 h-80"
+            class="z-10 relative w-80 h-80"
             wiggles={1.5}
             amplitude={0.18}
             stroke="#f27941"
@@ -222,7 +224,7 @@
         {:else if viewportWidth >= 1536}
           <!-- 2xl-3xl -->
           <RoughJourneyArrow
-            class="relative z-10 w-55 h-55"
+            class="z-10 relative w-55 h-55"
             wiggles={1}
             amplitude={0.2}
             stroke="#f27941"
@@ -235,7 +237,7 @@
         {:else if viewportWidth >= 1280}
           <!-- xl-2xl -->
           <RoughJourneyArrow
-            class="relative z-10 w-90 h-70"
+            class="z-10 relative w-90 h-70"
             wiggles={1}
             amplitude={0.3}
             stroke="#f27941"
@@ -248,7 +250,7 @@
         {:else if viewportWidth >= 1024}
           <!-- lg-xl -->
           <RoughJourneyArrow
-            class="relative z-10 sm:h-72 sm:w-75 md:h-110 h-30 w-80 md:w-120 lg:h-70 lg:w-110"
+            class="z-10 relative w-110 h-70"
             wiggles={2}
             amplitude={0.2}
             stroke="#f27941"
@@ -261,7 +263,7 @@
         {:else if viewportWidth >= 768}
           <!-- md-lg -->
           <RoughJourneyArrow
-            class="relative z-10 md:h-110 h-30 w-80 md:w-120  "
+            class="z-10 relative w-120 h-110"
             wiggles={1}
             amplitude={0.4}
             stroke="#f27941"
@@ -274,7 +276,7 @@
         {:else}
           <!-- sm-md -->
           <RoughJourneyArrow
-            class="relative z-10 sm:h-72 sm:w-75 h-30 w-80 md:w-90"
+            class="z-10 relative w-75 h-72"
             wiggles={1}
             amplitude={0.3}
             stroke="#f27941"
@@ -287,9 +289,9 @@
         {/if}
         <!-- To -->
         <div
-          class="p-2 absolute right-6 bottom-6 md:right-auto md:left-6 lg:left-auto lg:right-6 2xl:left-6 w-2/5 md:w-3/5 xl:w-1/3 2xl:w-auto bg-white border-2 border-tang-200"
+          class="right-6 md:right-auto lg:right-6 bottom-6 md:left-6 lg:left-auto 2xl:left-6 absolute bg-white p-2 border-2 border-tang-300 w-2/5 md:w-3/5 2xl:w-auto xl:w-1/3"
         >
-          <h5 class="font-mono font-bold mb-2">To</h5>
+          <h5 class="mb-2 font-mono font-bold">To</h5>
           <p class="leading-relaxed">{content.story.to}</p>
         </div>
       </article>
@@ -297,15 +299,15 @@
 
     <!-- At a glance -->
     <aside
-      class="sm:col-span-full lg:col-span-4 2xl:row-start-2 2xl:col-start-2 px-6 py-6"
+      class="sm:col-span-full lg:col-span-4 2xl:col-start-2 2xl:row-start-2 px-6 py-6"
     >
       <div class="flex flex-wrap xl:flex-nowrap gap-6">
         {#each content.atAGlance as item}
           <div
-            class="flex-1 border-2 border-[var(--color-shadow)] bg-azure-wash font-mono p-6"
+            class="flex-1 bg-azure-wash p-6 border-[var(--color-shadow)] border-2 font-mono"
             style="--color-shadow: var(--color-azure-300);"
           >
-            <h5 class="font-bold mb-2">{item.tagline}</h5>
+            <h5 class="mb-2 font-bold">{item.tagline}</h5>
             <p class="font-mono">{item.subline}</p>
           </div>
         {/each}
@@ -318,7 +320,7 @@
       <ul class="flex flex-wrap gap-3 text-sm">
         {#each content.learning as item}
           <li
-            class="inline-flex shadow-blocky-xs items-center gap-2 px-3 py-2 border bg-white border-[var(--color-shadow)]"
+            class="inline-flex items-center gap-2 bg-white shadow-blocky-xs px-3 py-2 border border-[var(--color-shadow)]"
             style="--color-shadow: var(--color-azure-300);"
           >
             {#if item.icon}
@@ -332,9 +334,9 @@
 
     <!-- Link -->
     <aside
-      class="md:col-span-2 2xl:col-span-3 3xl:col-span-2 px-6 py-6 flex items-end justify-end"
+      class="flex justify-end items-end md:col-span-2 2xl:col-span-3 3xl:col-span-2 px-6 py-6"
     >
-      <LinkButton href={content.ctaHref} class="text-xl bg-white"
+      <LinkButton href={content.ctaHref} class="bg-white text-xl"
         >{content.ctaText}
       </LinkButton>
     </aside>

@@ -6,14 +6,14 @@
   id="contact"
   class="collapse-border flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-15 3xs:scroll-m-14 2xs:scroll-m-0"
 >
-  <!-- Subheading band -->
+  <!-- Section Subheading -->
   <div class="flex items-end h-[calc(var(--spacing-banner)_*_2)]">
-    <h3 class="px-6 py-3 md:py-4 font-semibold text-2xl md:text-3xl">
+    <h3 class="px-6 py-1 md:py-2 font-semibold text-2xl md:text-3xl">
       // contact
     </h3>
   </div>
 
-  <!-- Big heading panel -->
+  <!-- Big Heading Panel -->
   <div
     class="hidden sm:flex justify-center items-end px-6 pb-8 xl:pb-6 h-[calc(var(--spacing-banner)_*_3)]"
   >
@@ -24,12 +24,13 @@
     </h2>
   </div>
 
+  <!-- Form Container (helps borders) -->
   <div class="flex flex-col w-full">
-    <!-- Form wrapper -->
+    <!-- Form Wrapper (responsiveness and button alignment) -->
     <div
-      class="collapse-border flex flex-col self-center w-full lg:w-2/3 2xl:w-4/9 xl:w-3/5 lg:mt-12"
+      class="collapse-border flex flex-col self-center lg:mt-12 w-full lg:w-2/3 2xl:w-4/9 xl:w-3/5"
     >
-      <!-- Form header strip (panel) -->
+      <!-- Form Header Strip -->
       <div
         class="collapse-border-2 h-[calc(var(--spacing-form)_*_1.5)] xs:h-form"
       >
@@ -44,8 +45,7 @@
         </div>
       </div>
 
-      <!-- Form -->
-
+      <!-- Contact Form -->
       <form
         id="contact-form"
         name="contact"
@@ -120,9 +120,9 @@
             class="bg-tang-wash px-6 pt-6 h-[calc(var(--spacing-form)_*_2)] text-md xs:text-lg leading-[1.7]"
           ></textarea>
         </div>
-
-        <!-- Submit -->
       </form>
+
+      <!-- Submit Button -->
       <Button
         type="submit"
         form="contact-form"

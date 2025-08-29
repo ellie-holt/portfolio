@@ -8,17 +8,17 @@
 
 <section
   id="work"
-  class="flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-15 3xs:scroll-m-14 2xs:scroll-m-0 collapse-border"
+  class="collapse-border flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-15 3xs:scroll-m-14 2xs:scroll-m-0"
   style=" --media-h: clamp(260px, 28vw, 380px);"
 >
-  <!-- subheading band -->
-  <div class="h-[calc(var(--spacing-banner)_*_2)] flex items-end">
-    <h3 class="md:py-4 py-3 px-6 md:text-3xl text-2xl font-semibold">
+  <!-- Section Subheading -->
+  <div class="flex items-end h-[calc(var(--spacing-banner)_*_2)]">
+    <h3 class="px-6 py-1 md:py-2 font-semibold text-2xl md:text-3xl">
       // work
     </h3>
   </div>
 
-  <section class="grid lg:grid-cols-3 grid-cols-1">
+  <section class="grid grid-cols-1 lg:grid-cols-3">
     <Project
       project={{
         title: "Weather App",
@@ -58,13 +58,13 @@
 
   <!-- Footer rail -->
   <div class="">
-    <div class="bg-white hidden xs:flex items-center justify-between px-6 py-4">
+    <div class="hidden xs:flex justify-between items-center bg-white px-6 py-4">
       <span class="font-mono text-sm">// more on GitHub</span>
       <a
         href="https://github.com/ellie-holt"
         target="_blank"
         rel="noopener noreferrer"
-        class="underline decoration-1 hover:decoration-transparent transition-all font-mono"
+        class="font-mono decoration-1 hover:decoration-transparent underline transition-all"
       >
         browse repos →
       </a>

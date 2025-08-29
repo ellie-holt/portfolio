@@ -50,15 +50,13 @@
 <div
   class="relative inset-0 z-0 w-full min-h-screen pointer-events-auto wrapper"
 >
+  <!-- For page top link-->
   <div id="page-top" class="absolute top-0 left-0 w-full h-0"></div>
 
   <!-- MESH BG -->
-  <div class="fixed mesh-gradient inset-0 pointer-events-none z-0"></div>
+  <div class="fixed mesh-gradient-2 inset-0 pointer-events-none z-0"></div>
 
   <!-- <BackgroundLayer /> -->
-  <!-- <div
-    class="fixed inset-0 grid-overlay pointer-events-none opacity-20 z-0"
-  ></div> -->
 
   <!-- HEADER: BIG HERO-->
   <header class="relative z-30">
@@ -368,65 +366,99 @@
   }
 
   .mesh-gradient {
-    background-color: hsla(165, 0%, 100%, 1);
+    background-color: #f2fffb;
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 962 962' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"),
       radial-gradient(
         circle at 0% 0%,
-        hsla(256, 82%, 77%, 0.35) 3.1210986267166043%,
+        #e1fdf4 3.1210986267166043%,
         transparent 40%
       ),
       radial-gradient(
         circle at 20% 0%,
-        hsla(197, 77%, 74%, 0.35) 3.1210986267166043%,
+        #9fbbfc 3.1210986267166043%,
         transparent 40%
       ),
       radial-gradient(
         circle at 40% 0%,
-        hsla(147, 77%, 74%, 0.35) 3.1210986267166043%,
+        #ffefe8 3.1210986267166043%,
         transparent 40%
       ),
       radial-gradient(
         circle at 60% 0%,
-        hsla(88, 77%, 74%, 0.35) 3.1210986267166043%,
+        #bcfbe6 3.1210986267166043%,
         transparent 40%
       ),
       radial-gradient(
         circle at 80% 0%,
-        hsla(23, 77%, 74%, 0.35) 3.1210986267166043%,
+        #ffefe8 3.1210986267166043%,
+        transparent 40%
+      ),
+      radial-gradient(circle at 100% 0%, #ff935f 3%, transparent 40%);
+    background-blend-mode: overlay, normal, normal, normal, normal, normal,
+      normal;
+  }
+
+  .mesh-gradient-2 {
+    background-color: hsla(165, 0%, 100%, 1);
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 962 962' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"),
+      radial-gradient(
+        circle at 0% 0%,
+        hsla(222.04724409448818, 65%, 62%, 0.35) 3.1210986267166043%,
+        transparent 40%
+      ),
+      radial-gradient(
+        circle at 20% 0%,
+        hsla(221.86046511627907, 100%, 74%, 0.35) 3.1210986267166043%,
+        transparent 40%
+      ),
+      radial-gradient(
+        circle at 40% 0%,
+        hsla(159.8230088495575, 86%, 74%, 0.35) 3.1210986267166043%,
+        transparent 40%
+      ),
+      radial-gradient(
+        circle at 60% 0%,
+        hsla(160, 88%, 86%, 0.35) 3.1210986267166043%,
+        transparent 40%
+      ),
+      radial-gradient(
+        circle at 80% 0%,
+        hsla(18.688524590163933, 100%, 76%, 0.35) 3.1210986267166043%,
         transparent 40%
       ),
       radial-gradient(
         circle at 100% 0%,
-        hsla(234.26470588235304, 100%, 50%, 0.35) 3%,
+        hsla(19.509202453987726, 100%, 68%, 0.35) 3%,
         transparent 40%
       );
     background-blend-mode: overlay, normal, normal, normal, normal, normal,
       normal;
   }
 
-  .mesh-gradient-2 {
-    background-color: hsla(250.1470588235294, 44%, 63%, 1);
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1227 1227' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"),
+  .mesh-gradient-3 {
+    background-color: #7ea5ff;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 1823 1823' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"),
       radial-gradient(
-        circle at 98% 97%,
-        hsla(59, 85%, 86%, 1) 15%,
-        transparent 50.28756377877879%
+        circle at 55% 88%,
+        #e1fdf4 19%,
+        transparent 86.73008439094286%
       ),
       radial-gradient(
-        circle at 43% 92%,
-        hsla(238, 38%, 78%, 1) 30.780839988590987%,
-        transparent 69%
+        circle at 89% 86%,
+        #9fbbfc 3.5419327141440644%,
+        transparent 86.60640420591575%
       ),
       radial-gradient(
-        circle at 95% 18%,
-        hsla(1.0000000000000089, 81%, 89%, 1) 20%,
-        transparent 80%
+        circle at 5% 94%,
+        #ffab85 7.316071150124744%,
+        transparent 46.1130789656234%
       ),
+      radial-gradient(circle at 48% 34%, #a63a08 18%, transparent 52%),
       radial-gradient(
-        circle at 72% 71%,
-        hsla(197, 79%, 67%, 1) 11%,
-        transparent 69%
+        circle at 64% 73%,
+        #52ebb7 3.5419327141440644%,
+        transparent 60.78034528031442%
       );
-    background-blend-mode: overlay, normal, normal, normal, normal;
+    background-blend-mode: overlay, overlay, normal, normal, hue, normal;
   }
 </style>
