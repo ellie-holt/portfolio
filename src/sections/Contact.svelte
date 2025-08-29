@@ -1,6 +1,10 @@
 <script lang="js">
   import Button from "$lib/ui/Button/Button.svelte";
 
+  let sending = false;
+  let successText = "";
+  let errorText = "";
+
   function onSubmit(event) {
     const form = event.currentTarget;
 
@@ -12,20 +16,39 @@
 
     event.preventDefault();
 
+    // URL-encode
+    const formData = new FormData(form);
+    const body = new URLSearchParams();
+    formData.forEach((value, key) => body.append(key, String(value)));
+
+    sending = true;
+    successText = "";
+    errorText = "";
+
     fetch(form.action || "/", {
       method: form.method || "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new FormData(form),
+      body: body.toString(),
     })
       .then((response) => {
         if (response.ok) {
           form.reset();
-          alert("Thank you for your message! I'll get back to you soon.");
+          successText = "Message sent. Thank you!";
+          queueMicrotask(() =>
+            document.getElementById("success-note")?.focus()
+          );
         } else {
-          form.submit();
+          errorText = "Sorry, something went wrong. Please try again.";
+          queueMicrotask(() => document.getElementById("error-note")?.focus());
         }
       })
-      .catch(() => form.submit());
+      .catch(() => {
+        errorText = "Network error. Please try again.";
+        queueMicrotask(() => document.getElementById("error-note")?.focus());
+      })
+      .finally(() => {
+        sending = false;
+      });
   }
 </script>
 
@@ -176,6 +199,30 @@
         class="self-center xs:self-end bg-azure-wash my-6 md:my-12 w-[calc(var(--spacing-form)_*_2)] h-form"
         >Send</Button
       >
+
+      {#if successText}
+        <p
+          id="success-note"
+          role="status"
+          aria-live="polite"
+          tabindex="-1"
+          class="px-6 text-sm mt-2 self-center xs:self-end"
+        >
+          {successText}
+        </p>
+      {/if}
+
+      {#if errorText}
+        <p
+          id="error-note"
+          role="alert"
+          aria-live="assertive"
+          tabindex="-1"
+          class="px-6 text-sm mt-2 self-center xs:self-end"
+        >
+          {errorText}
+        </p>
+      {/if}
     </div>
   </div>
 </section>
