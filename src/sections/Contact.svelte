@@ -1,47 +1,83 @@
 <script lang="js">
   import Button from "$lib/ui/Button/Button.svelte";
+
+  function onSubmit(event) {
+    const form = event.currentTarget;
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      form.querySelector(":invalid")?.focus();
+      return; // browser blocks invalid submit
+    }
+
+    event.preventDefault();
+
+    fetch(form.action || "/", {
+      method: form.method || "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new FormData(form),
+    })
+      .then((response) => {
+        if (response.ok) {
+          form.reset();
+          alert("Thank you for your message! I'll get back to you soon.");
+        } else {
+          form.submit();
+        }
+      })
+      .catch(() => form.submit());
+  }
 </script>
 
 <section
   id="contact"
+  aria-labelledby="contact-subheading"
   class="collapse-border flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-15 3xs:scroll-m-14 2xs:scroll-m-0"
 >
   <!-- Section Subheading -->
   <div class="flex items-end h-[calc(var(--spacing-banner)_*_2)]">
-    <h3 class="px-6 py-1 md:py-2 font-semibold text-2xl md:text-3xl">
-      // contact
-    </h3>
-  </div>
-
-  <!-- Big Heading Panel -->
-  <div
-    class="hidden sm:flex justify-center items-end px-6 pb-8 xl:pb-6 h-[calc(var(--spacing-banner)_*_3)]"
-  >
     <h2
-      class="text-[vw] xs:text-[10vw] sm:text-[7vw] lg:text-[6vw] 2xl:text-[5vw] xl:text-[5.5vw] text-center"
+      id="contact-subheading"
+      class="px-6 py-1 font-semibold text-2xl md:text-3xl subheading"
     >
-      Let's get in touch!
+      <span aria-hidden="true">//{" "}</span>contact
     </h2>
   </div>
 
-  <!-- Form Container (helps borders) -->
+  <!-- Display text for wider screens -->
+  <div
+    class="hidden sm:flex justify-center items-end px-6 pb-8 xl:pb-6 h-[calc(var(--spacing-banner)_*_3)]"
+  >
+    <p
+      class="mb-3 font-mono font-bold text-[vw] xs:text-[10vw] sm:text-[7vw] lg:text-[6vw] 2xl:text-[5vw] xl:text-[5.5vw] text-center"
+    >
+      Let's get in touch!
+    </p>
+  </div>
+
+  <!-- Form container (helps borders) -->
   <div class="flex flex-col w-full">
-    <!-- Form Wrapper (responsiveness and button alignment) -->
+    <!-- Form wrapper (responsiveness and button alignment) -->
     <div
       class="collapse-border flex flex-col self-center lg:mt-12 w-full lg:w-2/3 2xl:w-4/9 xl:w-3/5"
     >
-      <!-- Form Header Strip -->
+      <!-- Form header strip -->
       <div
         class="collapse-border-2 h-[calc(var(--spacing-form)_*_1.5)] xs:h-form"
       >
         <div
           class="relative flex justify-center 3xs:justify-start items-end bg-azure-wash pb-4 3xs:pb-6 xs:pb-4 md:pb-6 w-full h-full"
         >
-          <span class="accent-spine" style="--accent:var(--color-azure-500);"
+          <span
+            aria-hidden="true"
+            class="accent-spine"
+            style="--accent:var(--color-azure-500);"
           ></span>
-          <h4 class="px-6 text-2xl xs:text-2xl">
-            Drop me a message<span class="hidden 3xs:inline">...</span>
-          </h4>
+          <h3 class="px-6 font-bold text-2xl xs:text-2xl uppercase">
+            Drop me a message<span aria-hidden="true" class="hidden 3xs:inline"
+              >...</span
+            >
+          </h3>
         </div>
       </div>
 
@@ -52,10 +88,13 @@
         method="POST"
         action="/"
         data-netlify="true"
+        onsubmit={onSubmit}
         class="collapse-border w-full font-mono text-lg xs:text-xl leading-loose"
       >
         <input type="hidden" name="form-name" value="contact" />
-        <p class="hidden">
+
+        <!-- Netlify honeypot-->
+        <p class="hidden aria-hidden">
           <label
             >Don't fill this out if you're human: <input
               name="bot-field"
@@ -81,6 +120,8 @@
             placeholder="Your Name"
             required
             autocomplete="name"
+            spellcheck="false"
+            autocapitalize="words"
             class="bg-tang-wash px-6 h-form"
           />
         </div>
@@ -101,6 +142,8 @@
             placeholder="name@email.com"
             required
             autocomplete="email"
+            spellcheck="false"
+            autocapitalize="none"
             class="bg-tang-wash px-6 h-form"
           />
         </div>
@@ -117,6 +160,8 @@
             id="message"
             placeholder="Type your message here..."
             required
+            spellcheck="true"
+            autocapitalize="sentences"
             class="bg-tang-wash px-6 pt-6 h-[calc(var(--spacing-form)_*_2)] text-md xs:text-lg leading-[1.7]"
           ></textarea>
         </div>

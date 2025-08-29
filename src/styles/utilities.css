@@ -170,6 +170,12 @@
     box-shadow: var(--shadow-blocky-lg) var(--color-shadow, var(--color-black));
   }
 
+  .subheading {
+    @apply font-mono font-semibold mb-2;
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    color: var(--color-aqua-ink);
+  }
+
   /* Brutalist border */
   .brutal-border {
     @apply border-2 border-black;

@@ -8,14 +8,18 @@
 
 <section
   id="work"
+  aria-labelledby="work-subheading"
   class="collapse-border flex flex-col mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-15 3xs:scroll-m-14 2xs:scroll-m-0"
   style=" --media-h: clamp(260px, 28vw, 380px);"
 >
   <!-- Section Subheading -->
   <div class="flex items-end h-[calc(var(--spacing-banner)_*_2)]">
-    <h3 class="px-6 py-1 md:py-2 font-semibold text-2xl md:text-3xl">
-      // work
-    </h3>
+    <h2
+      id="work-subheading"
+      class="subheading px-6 py-1 font-semibold text-2xl md:text-3xl"
+    >
+      <span aria-hidden="true">//{" "}</span>work
+    </h2>
   </div>
 
   <section class="grid grid-cols-1 lg:grid-cols-3">

@@ -81,9 +81,9 @@
     class="static sm:relative lg:static bg-white px-6 py-6 leading-relaxed order-4 col-span-2 sm:col-span-1 sm:col-start-2 sm:row-start-3 lg:grow"
   >
     <div
+      aria-hidden="true"
       class="accent-spine hidden sm:block lg:hidden"
       style={`--accent:${accent}`}
-      aria-hidden="true"
     ></div>
     <p>{project.description}</p>
   </section>

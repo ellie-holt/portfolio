@@ -73,13 +73,17 @@
 
 <section
   id="about"
+  aria-labelledby="about-subheading"
   class="collapse-border mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 scroll-m-15 3xs:scroll-m-14 2xs:scroll-m-0"
 >
   <!-- Section Subheading -->
   <div class="flex items-end h-[calc(var(--spacing-banner)_*_2)]">
-    <h3 class="px-6 py-1 md:py-2 font-semibold text-2xl md:text-3xl">
-      // about
-    </h3>
+    <h2
+      id="about-subheading"
+      class="subheading px-6 py-1 font-semibold text-2xl md:text-3xl"
+    >
+      <span aria-hidden="true">//{" "}</span>about
+    </h2>
   </div>
 
   <div class="collapse-border grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6">
