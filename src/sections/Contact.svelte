@@ -193,39 +193,44 @@
         </div>
       </form>
 
-      <!-- Submit Button -->
-      <Button
-        type="submit"
-        form="contact-form"
-        bar
-        tone="azure"
-        class="self-center xs:self-end bg-azure-wash my-6 md:my-12 w-[calc(var(--spacing-form)_*_2)] h-form"
-        >Send</Button
+      <div
+        class="flex flex-col xs:flex-row items-center justify-center xs:justify-end !shadow-none"
       >
-
-      {#if successText}
-        <p
-          id="success-note"
-          role="status"
-          aria-live="polite"
-          tabindex="-1"
-          class="px-6 text-sm mt-2 self-center xs:self-end"
+        <!-- Submit Button  -->
+        <Button
+          type="submit"
+          form="contact-form"
+          bar
+          tone="azure"
+          class="self-center xs:self-end bg-azure-wash my-6 md:my-12 w-[calc(var(--spacing-form)_*_2)] h-form xs:order-2"
+          >Send</Button
         >
-          {successText}
-        </p>
-      {/if}
 
-      {#if errorText}
-        <p
-          id="error-note"
-          role="alert"
-          aria-live="assertive"
-          tabindex="-1"
-          class="px-6 text-sm mt-2 self-center xs:self-end"
-        >
-          {errorText}
-        </p>
-      {/if}
+        <!-- Success / Error message -->
+        {#if successText}
+          <p
+            id="success-note"
+            role="status"
+            aria-live="polite"
+            tabindex="-1"
+            class="px-6 text-md my-2 xs:order-1"
+          >
+            {successText}
+          </p>
+        {/if}
+
+        {#if errorText}
+          <p
+            id="error-note"
+            role="alert"
+            aria-live="assertive"
+            tabindex="-1"
+            class="px-6 text-md my-2 xs:order-1"
+          >
+            {errorText}
+          </p>
+        {/if}
+      </div>
     </div>
   </div>
 </section>
