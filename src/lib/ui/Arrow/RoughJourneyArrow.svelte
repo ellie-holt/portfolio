@@ -1,4 +1,4 @@
-<!-- src/lib/ui/Arrow/RoughJourneyArrow.svelte -->
+<!-- FILE: src/lib/ui/Arrow/RoughJourneyArrow.svelte -->
 
 <script>
   import rough from "roughjs";

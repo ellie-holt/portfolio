@@ -1,4 +1,4 @@
-<!-- src/lib/ui/Arrow/RoughArrow.stories.svelte -->
+<!-- FILE: src/lib/ui/Arrow/RoughArrow.stories.svelte -->
 
 <script module>
   import { defineMeta } from "@storybook/addon-svelte-csf";

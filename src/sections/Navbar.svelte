@@ -1,3 +1,5 @@
+<!-- FILE: src/sections/Navbar.svelte -->
+
 <script>
   import {
     scrollY,

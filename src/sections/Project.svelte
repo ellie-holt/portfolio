@@ -1,3 +1,5 @@
+<!-- FILE: src/sections/Project.svelte -->
+
 <script lang="js">
   import RoughArrow from "$lib/ui/Arrow/RoughArrow.svelte";
 
@@ -11,64 +13,84 @@
     image = { src: "", alt: "" },
     accent = "var(--color-tang-500)",
   } = $props();
+
+  // Generate stable, readable ids for a11y relationships
+  function slugify(str) {
+    return (str || "project")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-|-$/g, "");
+  }
+  const slug = slugify(project.title);
+  const titleId = `project-title-${slug}`;
+  const descId = `project-desc-${slug}`;
 </script>
 
 <article
-  class="group relative bg-white grid grid-cols-[5fr_1fr] xs:grid-cols-[4fr_1fr] sm:grid-cols-2 lg:flex lg:flex-col collapse-border-2 not-last:mb-12 lg:not-last:mb-0"
+  aria-labelledby={titleId}
+  class="group collapse-border-2 relative lg:flex lg:flex-col grid grid-cols-[5fr_1fr] xs:grid-cols-[4fr_1fr] sm:grid-cols-2 bg-white lg:not-last:mb-0 not-last:mb-12"
   style={`--accent:${accent};`}
 >
+  <!-- SR-only source-of-truth heading to avoid repitition -->
+  <h3 id={titleId} class="sr-only">{project.title}</h3>
   <!-- accent spine -->
   <div
-    class="accent-spine md:hidden lg:block"
+    class="md:hidden lg:block accent-spine"
     style={`--accent:${accent}`}
     aria-hidden="true"
   ></div>
 
   <!-- image -->
   <figure
-    class="group relative overflow-hidden sm:row-span-3 md:row-span-4 order-1 bg-white"
+    class="group relative order-1 sm:row-span-3 md:row-span-4 bg-white overflow-hidden"
   >
+    <!-- Visual overlay title on large screens; hidden from ARIA to avoid duplication -->
     <figcaption
-      class="absolute left-6 right-6 top-6 z-10 bg-white border-2 opacity-100 transition-opacity duration-300 ease--out group-hover:opacity-0 group-hover:z-0 justify-center hidden lg:block"
+      class="hidden lg:block top-6 right-6 left-6 z-10 group-hover:z-0 absolute justify-center bg-white opacity-100 group-hover:opacity-0 border-2 transition-opacity duration-300 ease--out"
     >
-      <h2
-        class="text-center py-2 text-4xl mb-1 xs:text-5xl sm:text-6xl md:text-[4vw]"
+      <span
+        aria-hidden="true"
+        class="mb-1 py-2 md:text-[4vw] text-4xl xs:text-5xl sm:text-6xl visual-heading"
       >
         {project.title}
-      </h2>
+      </span>
     </figcaption>
     <img
       src={image.src}
       alt={image.alt}
-      class="w-full h-full object-cover md:aspect-auto lg:aspect-auto lg:opacity-75 lg:hover:opacity-100 transition-all duration-300 ease-out hover:scale-[1.015]"
+      class="lg:hover:opacity-100 lg:opacity-75 w-full h-full object-cover md:aspect-auto lg:aspect-auto hover:scale-[1.015] transition-all duration-300 ease-out"
       loading="lazy"
     />
   </figure>
 
-  <!-- title -->
+  <!-- Visual title for smaller screens; also hidden from ARIA -->
   <header
-    class=" order-2 flex items-center justify-center px-2 sm:px-4 bg-white sm:col-start-2 md:row-start-1"
+    class="flex justify-center items-center order-2 sm:col-start-2 md:row-start-1 bg-white px-2 sm:px-4"
   >
-    <h2
-      class="py-3 xs:py-6 px-2 text-4xl xs:text-5xl sm:text-4xl md:text-5xl md:whitespace-nowrap lg:text-[2.2rem] xl:text-[2.6rem] leading-tight sm:leading-normal sm:mb-1 [writing-mode:vertical-rl] lg:hidden sm:[writing-mode:horizontal-tb]"
+    <span
+      id={titleId}
+      class="visual-heading lg:hidden sm:mb-1 px-2 py-3 xs:py-6 lg:text-[2.2rem] xl:text-[2.6rem] text-4xl sm:text-4xl xs:text-5xl md:text-5xl leading-tight sm:leading-normal md:whitespace-nowrap [writing-mode:vertical-rl] sm:[writing-mode:horizontal-tb]"
     >
       {project.title}
-    </h2>
+    </span>
   </header>
 
-  <!-- stack chips (optional) -->
+  <!-- Stack chips (optional) -->
   {#if project.stack?.length}
     <div
-      class="static sm:relative lg:static order-3 col-span-2 sm:col-span-1 sm:col-start-2 sm:row-start-2 bg-white flex items-center"
+      class="static lg:static sm:relative flex items-center order-3 col-span-2 sm:col-span-1 sm:col-start-2 sm:row-start-2 bg-white"
     >
       <div
-        class="accent-spine hidden sm:block lg:hidden"
+        class="hidden lg:hidden sm:block accent-spine"
         style={`--accent:${accent}`}
         aria-hidden="true"
       ></div>
-      <ul class="px-6 py-3 flex flex-wrap gap-2 text-sm font-mono">
+      <ul
+        aria-label="Technologies used"
+        class="flex flex-wrap gap-2 px-6 py-3 font-mono text-sm"
+      >
         {#each project.stack as chip}
-          <li class="px-2 py-1 border border-black shadow-blocky-xs">
+          <li class="shadow-blocky-xs px-2 py-1 border border-black">
             {chip}
           </li>
         {/each}
@@ -76,27 +98,29 @@
     </div>
   {/if}
 
-  <!-- description -->
-  <section
-    class="static sm:relative lg:static bg-white px-6 py-6 leading-relaxed order-4 col-span-2 sm:col-span-1 sm:col-start-2 sm:row-start-3 lg:grow"
+  <!-- Description -->
+  <div
+    class="static lg:static sm:relative order-4 col-span-2 sm:col-span-1 sm:col-start-2 sm:row-start-3 bg-white px-6 py-6 leading-relaxed lg:grow"
   >
     <div
       aria-hidden="true"
-      class="accent-spine hidden sm:block lg:hidden"
+      class="hidden lg:hidden sm:block accent-spine"
       style={`--accent:${accent}`}
     ></div>
-    <p>{project.description}</p>
-  </section>
+    <p id={descId}>{project.description}</p>
+  </div>
 
-  <!-- link -->
+  <!-- Link -->
   <div
-    class="relative group/link w-full h-[calc(var(--spacing-banner)_*_1.5)] flex items-center overflow-hidden bg-aqua-wash order-5 col-span-full md:col-span-1 md:col-start-2 sm:row-start-4 sm:h-full lg:h-[calc(var(--spacing-banner)_*_1.5)]"
+    class="group/link relative flex items-center order-5 col-span-full md:col-span-1 md:col-start-2 sm:row-start-4 bg-aqua-wash w-full h-[calc(var(--spacing-banner)_*_1.5)] sm:h-full lg:h-[calc(var(--spacing-banner)_*_1.5)] overflow-hidden"
   >
     <a
       href={project.link}
       target="_blank"
       rel="noopener noreferrer"
-      class="relative group z-10 ml-auto mr-0 pl-6 pr-6 lg:pr-3 xl:pr-6 py-3 font-semibold flex items-center gap-4 underline decoration-1 hover:decoration-transparent transition-all"
+      aria-labelledby={titleId}
+      aria-describedby={descId}
+      class="group z-10 relative flex items-center gap-4 mr-0 ml-auto py-3 pr-6 lg:pr-3 xl:pr-6 pl-6 font-semibold decoration-1 hover:decoration-transparent underline transition-all"
     >
       <span class="text-2xl md:text-2xl lg:text-2xl xl:text-3xl lowercase"
         >view project</span
@@ -105,8 +129,9 @@
         direction="right"
         stroke="#f27941"
         strokeWidth={3}
-        class="w-20 h-10 md:w-24 md:h-12 group-hover/link:translate-x-2 transition-transform duration-300 ease-out"
+        class="w-20 md:w-24 h-10 md:h-12 transition-transform group-hover/link:translate-x-2 duration-300 ease-out"
       />
+      <span class="sr-only"> — {project.title} - opens in a new tab</span>
     </a>
   </div>
 </article>

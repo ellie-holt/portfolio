@@ -1,4 +1,5 @@
-<!-- FILE: src/components/Work.svelte -->
+<!-- FILE: src/sections/Work.svelte -->
+
 <script lang="js">
   import Project from "./Project.svelte";
   import weatherAppImage from "../assets/weather-app-square.png";
@@ -22,7 +23,12 @@
     </h2>
   </div>
 
-  <section class="grid grid-cols-1 lg:grid-cols-3">
+  <!-- Projects grid -->
+  <section
+    aria-labelledby="project-grid-heading"
+    class="grid grid-cols-1 lg:grid-cols-3"
+  >
+    <h3 id="project-grid-heading" class="sr-only">Selected projects</h3>
     <Project
       project={{
         title: "Weather App",
@@ -31,7 +37,7 @@
         link: "https://herecomestherainagain.netlify.app/",
         stack: ["React", "Tailwind", "SCSS", "OpenWeatherMap API"],
       }}
-      image={{ src: weatherAppImage, alt: "Weather App" }}
+      image={{ src: weatherAppImage, alt: "Weather App interface screenshot" }}
       accent="var(--color-tang-500)"
     />
 
@@ -43,7 +49,7 @@
         link: "https://findthetime.netlify.app/",
         stack: ["HTML/CSS", "JavaScript", "Moment.js"],
       }}
-      image={{ src: worldClockImage, alt: "World Clock" }}
+      image={{ src: worldClockImage, alt: "World Clock interface screenshot" }}
       accent="var(--color-aqua-500)"
     />
 
@@ -55,7 +61,7 @@
         link: "https://aipoet.netlify.app/",
         stack: ["HTML/CSS", "JavaScript", "SheCodes AI API"],
       }}
-      image={{ src: aiPoetImage, alt: "AI Poet" }}
+      image={{ src: aiPoetImage, alt: "AI Poet interface screenshot" }}
       accent="var(--color-azure-500)"
     />
   </section>
@@ -70,7 +76,7 @@
         rel="noopener noreferrer"
         class="font-mono decoration-1 hover:decoration-transparent underline transition-all"
       >
-        browse repos →
+        browse repos →<span class="sr-only"> opens in a new tab</span>
       </a>
     </div>
   </div>

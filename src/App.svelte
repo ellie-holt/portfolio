@@ -1,3 +1,5 @@
+<!-- FILE: src/App.svelte -->
+
 <script lang="js">
   import Hero from "./sections/Hero.svelte";
   import HeroBanner from "./sections/HeroBanner.svelte";

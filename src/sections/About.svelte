@@ -1,8 +1,8 @@
-<!-- FILE: src/components/About.svelte -->
+<!-- FILE: src/sections/About.svelte -->
+
 <script lang="js">
   import RoughJourneyArrow from "$lib/ui/Arrow/RoughJourneyArrow.svelte";
   import LinkButton from "$lib/ui/Button/LinkButton.svelte";
-  import me160 from "../assets/me-160.webp";
   import me320 from "../assets/me-320.webp";
   import me640 from "../assets/me-640.webp";
   import me1080 from "../assets/me-1080.webp";
@@ -29,7 +29,7 @@
     ],
 
     story: {
-      photoAlt: "Ellie Holt portrait",
+      photoAlt: "Photo of Ellie Holt smiling",
       caption: "Hi 👋",
       from: "A background in education: supporting learners in the classroom and leading online coding lessons.",
       to: "Teaching myself front-end development: building creative, responsive websites from scratch.",
@@ -89,25 +89,27 @@
   <div class="collapse-border grid grid-cols-1 sm:grid-cols-2 md:grid-cols-6">
     <!-- Intro -->
     <section class="sm:col-span-full md:col-span-4 px-6 py-6">
-      <h2
+      <h3
         class="font-mono font-bold text-[10vw] text-aquamarine-ink 3xs:text-[9vw] 2xs:text-[7.5vw] md:text-[4.25rem] xl:text-[4.5rem] leading-tight"
       >
         {content.headline}
-      </h2>
+      </h3>
       <p class="mt-4 text-balance leading-loose">{content.subline}</p>
-      <div class="flex flex-wrap gap-2 mt-6 text-sm">
+      <ul role="list" class="flex flex-wrap gap-2 mt-6 text-sm">
         {#each content.chips as chip}
-          <span
-            class="bg-white shadow-blocky-xs px-2 py-1 border border-[var(--color-shadow)] font-mono"
-            style="--color-shadow: var(--color-tang-300);">{chip}</span
-          >
+          <li>
+            <span
+              class="bg-white shadow-blocky-xs px-2 py-1 border border-[var(--color-shadow)] font-mono"
+              style="--color-shadow: var(--color-tang-300);">{chip}</span
+            >
+          </li>
         {/each}
-      </div>
+      </ul>
     </section>
 
     <!-- Tools -->
     <section class="md:col-span-2 2xl:col-span-1 sm:col-start-2 px-6 py-6">
-      <h4 class="pb-3">Toolbox</h4>
+      <h3 class="pb-3">Toolbox</h3>
       <ul class="flex flex-wrap gap-3 text-sm">
         {#each content.tools as item}
           <li
@@ -123,23 +125,26 @@
       </ul>
     </section>
 
-    <!-- Photo -->
-    <section
+    <!-- Portrait -->
+    <figure
       class="relative flex flex-col justify-end md:col-span-2 2xl:col-span-1 col-start-1 2xl:col-end-2 lg:row-span-2 2xl:row-span-2 xl:row-span-3 sm:row-start-2 p-[1px]"
     >
+      <figcaption class="sr-only">Portrait of Ellie Holt</figcaption>
       <div
         class="top-[1px] right-[1px] bottom-[30%] left-[1px] absolute flex-1 photo-gradient"
       ></div>
 
       <!-- Story overlay on small screens -->
-      <article
+      <section
         class="sm:hidden z-20 relative flex flex-col gap-32 -mb-12 sm:mb-0 px-6 py-6"
+        aria-labelledby="story-small-heading"
       >
+        <h3 id="story-small-heading" class="sr-only">Background and journey</h3>
         <!-- From -->
         <div
           class="flex-1 self-start bg-white p-2 border-2 border-tang-200 w-2/3 xs:w-1/2"
         >
-          <h5 class="mb-2 font-mono font-bold">From</h5>
+          <p class="mb-2 font-mono font-bold">From</p>
           <p class="leading-relaxed">{content.story.from}</p>
         </div>
 
@@ -174,10 +179,10 @@
         <div
           class="self-end bg-white p-2 border-2 border-tang-200 w-2/3 xs:w-1/2"
         >
-          <h5 class="mb-2 font-mono font-bold">To</h5>
+          <p class="mb-2 font-mono font-bold">To</p>
           <p class="leading-relaxed">{content.story.to}</p>
         </div>
-      </article>
+      </section>
 
       <div
         class="z-10 relative grayscale-25 max-h-[540px] overflow-hidden mix-blend-darken"
@@ -188,26 +193,29 @@
           <source srcset={me320} media="(min-width: 160px)" />
           <img
             src={me640}
-            alt="Ellie Holt"
+            alt={content.story.photoAlt}
             class="w-full h-full object-cover object-top-right"
             loading="lazy"
+            decoding="async"
           />
         </picture>
       </div>
-    </section>
+    </figure>
 
     <!-- Story -->
     <section
       class="hidden sm:block sm:col-span-full md:col-span-4 2xl:col-span-1 2xl:col-end-7 2xl:row-start-1 2xl:row-end-3 3xl:row-end-4"
+      aria-labelledby="story-heading"
     >
-      <article
+      <h3 id="story-heading" class="sr-only">Background and journey</h3>
+      <div
         class="z-10 relative flex justify-center items-center px-6 py-6 h-full sm:min-h-72 md:min-h-88 lg:min-h-112 xl:min-h-84"
       >
         <!-- From -->
         <div
           class="top-6 md:right-6 lg:right-auto 2xl:right-6 left-6 md:left-auto lg:left-6 absolute bg-white p-2 border-2 border-tang-300 w-2/5 md:w-3/5 2xl:w-auto xl:w-1/3"
         >
-          <h5 class="mb-2 font-mono font-bold">From</h5>
+          <p class="mb-2 font-mono font-bold">From</p>
           <p class="leading-relaxed">{content.story.from}</p>
         </div>
 
@@ -295,23 +303,25 @@
         <div
           class="right-6 md:right-auto lg:right-6 bottom-6 md:left-6 lg:left-auto 2xl:left-6 absolute bg-white p-2 border-2 border-tang-300 w-2/5 md:w-3/5 2xl:w-auto xl:w-1/3"
         >
-          <h5 class="mb-2 font-mono font-bold">To</h5>
+          <p class="mb-2 font-mono font-bold">To</p>
           <p class="leading-relaxed">{content.story.to}</p>
         </div>
-      </article>
+      </div>
     </section>
 
     <!-- At a glance -->
     <aside
       class="sm:col-span-full lg:col-span-4 2xl:col-start-2 2xl:row-start-2 px-6 py-6"
+      aria-labelledby="aside-heading"
     >
+      <h3 id="aside-heading" class="sr-only">Skills snapshot</h3>
       <div class="flex flex-wrap xl:flex-nowrap gap-6">
         {#each content.atAGlance as item}
           <div
             class="flex-1 bg-azure-wash p-6 border-[var(--color-shadow)] border-2 font-mono"
             style="--color-shadow: var(--color-azure-300);"
           >
-            <h5 class="mb-2 font-bold">{item.tagline}</h5>
+            <p class="mb-2 font-bold font-mono">{item.tagline}</p>
             <p class="font-mono">{item.subline}</p>
           </div>
         {/each}
@@ -320,7 +330,7 @@
 
     <!-- Learning -->
     <section class="md:col-span-4 xl:col-span-2 px-6 py-6">
-      <h4 class="pb-3">Levelling up</h4>
+      <h3 class="pb-3">Currently learning</h3>
       <ul class="flex flex-wrap gap-3 text-sm">
         {#each content.learning as item}
           <li
@@ -339,6 +349,7 @@
     <!-- Link -->
     <aside
       class="flex justify-end items-end md:col-span-2 2xl:col-span-3 3xl:col-span-2 px-6 py-6"
+      aria-label="Contact Ellie Holt"
     >
       <LinkButton href={content.ctaHref} class="bg-white text-xl"
         >{content.ctaText}

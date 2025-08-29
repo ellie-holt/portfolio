@@ -1,4 +1,4 @@
-<!-- src/lib/ui/Button/LinkButton.svelte -->
+<!-- FILE: src/lib/ui/Button/LinkButton.svelte -->
 
 <script lang="js">
   /** @typedef {import('svelte').Snippet} Snippet */

@@ -1,4 +1,4 @@
-<!-- src/lib/ui/Button/Button.stories.svelte -->
+<!-- FILE: src/lib/ui/Button/Button.stories.svelte -->
 
 <script module>
   import { defineMeta } from "@storybook/addon-svelte-csf";

@@ -1,3 +1,5 @@
+<!-- FILE: src/sections/Contact.svelte -->
+
 <script lang="js">
   import Button from "$lib/ui/Button/Button.svelte";
 

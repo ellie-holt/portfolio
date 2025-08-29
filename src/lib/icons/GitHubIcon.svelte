@@ -1,3 +1,5 @@
+<!-- FILE: src/lib/icons/GitHubIcon.svelte -->
+
 <script>
   let { classes = "", link = "", fill = "" } = $props();
 </script>

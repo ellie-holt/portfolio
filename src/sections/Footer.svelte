@@ -1,5 +1,4 @@
-<script lang="js">
-</script>
+<!-- FILE: src/sections/Footer.svelte -->
 
 <footer
   class="collapse-border flex flex-col bg-transparent mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 footer"
@@ -8,11 +7,11 @@
     <div
       class="flex justify-center sm:justify-end items-end pb-6 w-full h-full xs:min-h-[28vh] sm:min-h-[34vh] md:min-h-[24vh]"
     >
-      <!-- contact links -->
+      <!-- Contact links -->
       <div
         class="flex flex-col justify-center items-end gap-6 mt-12 sm:mt-6 px-2 sm:px-6 text-lg 3xs:text-xl 2xs:text-2xl"
       >
-        <!-- email -->
+        <!-- Email link -->
         <div class="flex justify-center items-center gap-4">
           <span class="hidden xs:inline top-[1px] relative font-bold"
             >email:</span
@@ -24,6 +23,8 @@
             class="group inline-flex relative items-center font-mono email-link"
           >
             <span
+              aria-hidden="true"
+              role="presentation"
               class="relative pr-[0.2em] font-semibold text-[1.7em] text-tang-500 leading-none group-hover:scale-90 transition-transform group-hover:translate-x-1 duration-300 ease-in brackets"
               >&lcub;</span
             >
@@ -32,13 +33,15 @@
               ><span class="break-all">eleanorholt97</span>@gmail.com</span
             >
             <span
+              aria-hidden="true"
+              role="presentation"
               class="relative pl-[0.2em] font-semibold text-[1.7em] text-tang-500 leading-none group-hover:scale-90 transition-transform group-hover:-translate-x-1 duration-300 ease-in brackets"
               >&rcub;</span
             >
           </a>
         </div>
 
-        <!-- github -->
+        <!-- Github link -->
         <div class="flex justify-center items-center gap-4">
           <span class="hidden xs:inline relative font-bold">github:</span>
 
@@ -48,6 +51,8 @@
             class="group inline-flex relative items-center font-mono email-link"
           >
             <span
+              aria-hidden="true"
+              role="presentation"
               class="relative pr-[0.55em] font-semibold text-[1.7em] text-tang-500 leading-none group-hover:scale-90 transition-transform group-hover:translate-x-1 duration-300 ease-in brackets"
               >&lcub;</span
             >
@@ -58,6 +63,8 @@
               ></span
             >
             <span
+              aria-hidden="true"
+              role="presentation"
               class="relative pl-[0.55em] font-semibold text-[1.7em] text-tang-500 leading-none group-hover:scale-90 transition-transform group-hover:-translate-x-1 duration-300 ease-in brackets"
               >&rcub;</span
             ></a
@@ -76,6 +83,7 @@
       Open source <a
         href="https://github.com/ellie-holt/portfolio"
         target="_blank"
+        rel="noopener noreferrer"
         class="hover:decoration-transparent underline transition-all duration-300 ease-in"
         >code</a
       >.
