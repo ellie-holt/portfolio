@@ -99,7 +99,7 @@
         {#each content.chips as chip}
           <li>
             <span
-              class="bg-white shadow-blocky-xs px-2 py-1 border border-[var(--color-shadow)] font-mono"
+              class="bg-white shadow-blocky-xs px-2 py-1 border font-mono"
               style="--color-shadow: var(--color-tang-300);">{chip}</span
             >
           </li>
@@ -109,11 +109,11 @@
 
     <!-- Tools -->
     <section class="md:col-span-2 2xl:col-span-1 sm:col-start-2 px-6 py-6">
-      <h3 class="pb-3">Toolbox</h3>
+      <h3 class="pb-3 text-3xl">Toolbox</h3>
       <ul class="flex flex-wrap gap-3 text-sm">
         {#each content.tools as item}
           <li
-            class="inline-flex items-center gap-2 bg-white shadow-blocky-xs px-3 py-2 border border-[var(--color-shadow)]"
+            class="inline-flex items-center gap-2 bg-white shadow-blocky-xs px-3 py-2 border"
             style="--color-shadow: var(--color-azure-300);"
           >
             {#if item.icon}
@@ -330,11 +330,11 @@
 
     <!-- Learning -->
     <section class="md:col-span-4 xl:col-span-2 px-6 py-6">
-      <h3 class="pb-3">Currently learning</h3>
+      <h3 class="pb-3 text-3xl">Currently learning</h3>
       <ul class="flex flex-wrap gap-3 text-sm">
         {#each content.learning as item}
           <li
-            class="inline-flex items-center gap-2 bg-white shadow-blocky-xs px-3 py-2 border border-[var(--color-shadow)]"
+            class="inline-flex items-center gap-2 bg-white shadow-blocky-xs px-3 py-2 border"
             style="--color-shadow: var(--color-azure-300);"
           >
             {#if item.icon}
