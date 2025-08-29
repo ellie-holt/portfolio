@@ -1,9 +1,9 @@
 <script lang="js">
   import Button from "$lib/ui/Button/Button.svelte";
 
-  let sending = false;
-  let successText = "";
-  let errorText = "";
+  let sending = $state(false);
+  let successText = $state("");
+  let errorText = $state("");
 
   function onSubmit(event) {
     const form = event.currentTarget;
@@ -27,7 +27,10 @@
 
     fetch(form.action || "/", {
       method: form.method || "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        Accept: "application/json",
+      },
       body: body.toString(),
     })
       .then((response) => {
