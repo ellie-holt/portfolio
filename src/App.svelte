@@ -10,7 +10,6 @@
   import Footer from "./sections/Footer.svelte";
 
   import { onMount, tick } from "svelte";
-  import { initScrollTracking } from "$lib/state/ScrollState.svelte.js";
 
   // Sticky container reference; revealed when this hits top of viewport
   let stickyElement = $state(null);

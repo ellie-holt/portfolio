@@ -69,14 +69,16 @@
   <!-- Footer rail -->
   <div class="">
     <div class="hidden xs:flex justify-between items-center bg-white px-6 py-4">
-      <span class="font-mono text-sm">// more on GitHub</span>
+      <span class="font-mono text-sm" aria-hidden="true">// more on GitHub</span
+      >
       <a
         href="https://github.com/ellie-holt"
         target="_blank"
         rel="noopener noreferrer"
         class="font-mono decoration-1 hover:decoration-transparent underline transition-all"
+        aria-label="Browse Ellie Holt's GitHub repositories (opens in a new tab)"
       >
-        browse repos →<span class="sr-only"> opens in a new tab</span>
+        browse repos →
       </a>
     </div>
   </div>

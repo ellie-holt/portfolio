@@ -46,10 +46,10 @@
   >
     <!-- Visual overlay title on large screens; hidden from ARIA to avoid duplication -->
     <figcaption
-      class="hidden lg:block top-6 right-6 left-6 z-10 group-hover:z-0 absolute justify-center bg-white opacity-100 group-hover:opacity-0 border-2 transition-opacity duration-300 ease--out"
+      aria-hidden="true"
+      class="hidden lg:block top-6 right-6 left-6 z-10 group-hover:z-0 absolute justify-center bg-white opacity-100 group-hover:opacity-0 border-2 transition-opacity duration-300 ease-out"
     >
       <span
-        aria-hidden="true"
         class="mb-1 py-2 md:text-[4vw] text-4xl xs:text-5xl sm:text-6xl visual-heading"
       >
         {project.title}
