@@ -99,7 +99,7 @@
         {#each content.chips as chip}
           <li>
             <span
-              class="bg-white shadow-blocky-xs px-2 py-1 border font-mono"
+              class="bg-white shadow-blocky-xs px-2 py-1 border font-mono block"
               style="--color-shadow: var(--color-tang-300);">{chip}</span
             >
           </li>
