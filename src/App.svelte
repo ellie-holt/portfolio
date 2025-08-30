@@ -9,68 +9,100 @@
   import Contact from "./sections/Contact.svelte";
   import Footer from "./sections/Footer.svelte";
 
-  import { onMount } from "svelte";
+  import { onMount, tick } from "svelte";
   import { initScrollTracking } from "$lib/state/ScrollState.svelte.js";
+
+  // Sticky container reference; revealed when this hits top of viewport
+  let stickyElement = $state(null);
 
   let bannerTrigger = $state(null);
   let showHeroBanner = $state(false);
   let changeNavbarStyles = $state(false);
   let hideArrow = $state(false);
 
+  // Compute reveal state based on sticky element position
+  function syncBannerReveal() {
+    if (!stickyElement) return;
+    const { top } = stickyElement.getBoundingClientRect();
+    const BUFFER = 0;
+    const reveal = top <= BUFFER; // Trigger when top is at or above viewport top
+    showHeroBanner = reveal;
+    changeNavbarStyles = reveal;
+    hideArrow = reveal;
+  }
+
+  // IntersectionObserver detects when sticky element enters/exits viewport - used as nudge for syncBannerReveal
   $effect(() => {
-    if (!bannerTrigger) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        showHeroBanner = entry.isIntersecting;
-        changeNavbarStyles =
-          entry.isIntersecting && entry.boundingClientRect.top === 0;
-        hideArrow = entry.isIntersecting;
-      },
-      {
-        root: null,
-        rootMargin: "0px 0px -100% 0px",
-        threshold: 1.0,
-      }
-    );
-    observer.observe(bannerTrigger);
-    return () => observer.disconnect();
+    if (!stickyElement) return;
+    const io = new IntersectionObserver(() => syncBannerReveal(), {
+      threshold: [0, 1],
+    });
+    io.observe(stickyElement);
+    return () => io.disconnect();
   });
 
   onMount(() => {
-    const cleanup = initScrollTracking();
-    return cleanup;
+    // Recompute after mount, hash jump, and late layout shifts
+    tick().then(() => {
+      requestAnimationFrame(() => {
+        syncBannerReveal();
+        requestAnimationFrame(syncBannerReveal);
+      });
+    });
+
+    const run = () => syncBannerReveal();
+    window.addEventListener("scroll", run, { passive: true });
+    window.addEventListener("resize", run, { passive: true });
+    window.addEventListener("hashchange", run, { passive: true });
+    window.addEventListener("load", run, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", run);
+      window.removeEventListener("resize", run);
+      window.removeEventListener("hashchange", run);
+      window.removeEventListener("load", run);
+    };
   });
 </script>
 
+<!-- Main wrapper to contain the entire app -->
 <div
   class="relative inset-0 z-0 w-full min-h-screen pointer-events-auto wrapper"
 >
-  <!-- For page top link-->
-  <div id="page-top" class="absolute top-0 left-0 w-full h-0"></div>
+  <!-- Invisible anchor for page top link-->
+  <div
+    id="page-top"
+    aria-hidden="true"
+    class="absolute top-0 left-0 w-full h-0"
+  ></div>
 
   <!-- Mesh gradient background -->
-  <div class="fixed mesh-gradient inset-0 pointer-events-none z-0"></div>
+  <div
+    aria-hidden="true"
+    class="fixed mesh-gradient inset-0 pointer-events-none z-0"
+  ></div>
 
-  <!-- HEADER: BIG HERO-->
+  <!-- Site header / big shero -->
   <header class="relative z-30">
-    <section id="hero" class="top-0 w-full pt-2.5 xs:pt-5 border-black hero">
+    <div id="hero" class="top-0 w-full pt-2.5 xs:pt-5 border-black hero">
       <Hero arrowIsHidden={hideArrow} />
-    </section>
+    </div>
   </header>
 
-  <!-- sticky hero banner and navbar -->
-  <section
+  <!-- Sticky container: holds hero banner and navbar; reveal when this hits top -->
+  <div
+    bind:this={stickyElement}
     class={`sticky left-0 right-0 top-0 ${showHeroBanner ? "z-40" : "z-20"} grid grid-cols-1 grid-rows-[auto_1fr] `}
   >
     <div
       bind:this={bannerTrigger}
+      aria-hidden="true"
       class="absolute top-0 left-0 z-0 h-0 pointer-events-none hero-trigger"
     ></div>
 
     <HeroBanner bannerIsVisible={showHeroBanner} />
 
     <Navbar navbarIsScrolled={changeNavbarStyles} />
-  </section>
+  </div>
 
   <!-- MAIN CONTENT -->
   <div class={`content relative z-10`}>

@@ -86,9 +86,9 @@
   }
 
   .text-shadow {
-    text-shadow: 2px 1px var(--color-azure-ink),
-      -1px -1px var(--color-azure-ink), 2px -1px var(--color-azure-ink),
-      -1px 2px var(--color-azure-ink), 5px 5px 0px var(--color-tang-300);
+    text-shadow: 3px 2px var(--color-azure-ink),
+      -2px -2px var(--color-azure-ink), 3px -2px var(--color-azure-ink),
+      -2px 3px var(--color-azure-ink), 5px 5px 0px var(--color-tang-300);
   }
 
   .no-double-border > *:not(:first-child) {

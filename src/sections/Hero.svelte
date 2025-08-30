@@ -7,7 +7,7 @@
   let { arrowIsHidden = false } = $props();
 </script>
 
-<header
+<div
   aria-labelledby="site-title site-tagline"
   class="mx-2.5 xs:mx-5 md:mx-6 lg:mx-6 xl:mx-6 -mb-14 md:-mb-16"
 >
@@ -108,7 +108,7 @@
       </div>
     </div>
   </div>
-</header>
+</div>
 
 <style>
   :root {
