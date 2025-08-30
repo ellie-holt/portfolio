@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-A responsive, accessible front‑end web development portfolio built with Svelte 5, Vite, and Tailwind CSS v4. It showcases selected work and includes a short bio with a Netlify‑powered contact form. The interface blends neo-brutalist styling with hand-drawn Rough.js arrows, built on a clean Grid/Flexbox layout guided by spacing tokens, plus clear focus rings for reliable keyboard navigation.
+A responsive, accessible front‑end web development portfolio built with Svelte 5, Vite, and Tailwind CSS v4. It showcases selected work and includes a short bio with a Netlify‑powered contact form. The interface blends neo-brutalist styling with hand-drawn Rough.js arrows, and is built on a clean Grid/Flexbox layout with clear focus rings for reliable keyboard navigation.
 
 ---
 
@@ -15,9 +15,9 @@ You can view the live site here: [Ellie Holt | Portfolio](https://ellieholt.dev/
 - Responsive, grid‑based layout across multiple breakpoints
 - Accessible UI: semantic headings, strong focus rings, keyboard paths, labelled controls
 - Sticky hero banner that reveals on scroll
-- Animated, hand‑drawn arrows using RoughJS
+- Animated, hand‑drawn arrows using Rough.js
 - Contact form with Netlify Forms + honeypot and client‑side validation
-  SEO & PWA touches: meta tags, Open Graph/Twitter tags, canonical URL, web manifest & favicons
+- SEO & PWA touches: meta tags, Open Graph/Twitter tags, canonical URL, web manifest & favicons
 - Component library powered by Storybook
 
 ---
@@ -33,7 +33,7 @@ You can view the live site here: [Ellie Holt | Portfolio](https://ellieholt.dev/
 - [Tailwind CSS v4](https://tailwindcss.com/)
 - [IBM Plex](https://www.ibm.com/plex/) font family ([Google fonts](https://fonts.google.com/))
 
-## UI & Media
+### UI & Media
 
 - [Rough.js](https://roughjs.com/) for sketchy arrows
 - [Devicon](https://devicon.dev/) icon set (toolbox badges)
@@ -72,6 +72,7 @@ npm run preview
 
 # Storybook (component docs)
 npm run storybook
+
 # Static Storybook export
 npm run build-storybook
 ```
@@ -92,6 +93,14 @@ npm run build-storybook
 ├─ vite.config.js          # Vite + Svelte + Tailwind plugins
 └─ svelte.config.js        # Svelte (runes enabled outside node_modules)
 ```
+
+---
+
+## Accessibility Notes
+
+- **Keyboard & focus**: clear, high‑contrast focus outlines; logical tab order
+- **ARIA**: labelled interactive elements; `aria-hidden` used to avoid duplicate headings and to hide purely decorative elements
+- **Forms**: semantic labels and validation
 
 ---
 
