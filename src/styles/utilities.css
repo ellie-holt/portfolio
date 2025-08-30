@@ -1,69 +1,7 @@
 /* src/styles/utilities.css */
 
 @layer utilities {
-  /* Background gradient */
-  .bg-mesh-soft {
-    background-image: var(--bg-mesh-soft);
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-  /* Static noise */
-  .bg-noise {
-    background-image: url("data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 700' width='700' height='700'%3E%3Cdefs%3E%3Cfilter id='noise' x='-20%25' y='-20%25' width='140%25' height='140%25' filterUnits='objectBoundingBox' primitiveUnits='userSpaceOnUse'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch' /%3E%3C/filter%3E%3C/defs%3E%3Crect width='700' height='700' fill='%23fff' filter='url(%23noise)' opacity='0.08' /%3E%3C/svg%3E");
-    background-size: 200px 200px;
-    background-repeat: repeat;
-    mix-blend-mode: multiply;
-    opacity: 0.25;
-  }
-
-  /* Grid overlay */
-  .grid-overlay {
-    background-image: linear-gradient(
-        rgba(167, 192, 205, 0.6) 1px,
-        transparent 1px
-      ),
-      linear-gradient(90deg, rgba(167, 192, 205, 0.6) 1px, transparent 1px);
-    background-size: 10px 10px;
-  }
-
-  /* Flexible divider */
-  .divider {
-    --line: var(--color-azure-ink); /* line colour */
-    --thick: 1px; /* line thickness */
-    --item-bg: #fff; /* panel background */
-
-    background-color: var(--line); /* gap + padding reveal the lines */
-  }
-  .divider > * {
-    background: var(--item-bg);
-  }
-
-  .divider-rail {
-    padding: var(--thick);
-  }
-  .divider-gap {
-    gap: var(--thick);
-  }
-  .divider-x {
-    column-gap: var(--thick);
-    padding-left: var(--thick);
-    padding-right: var(--thick);
-  }
-  .divider-y {
-    row-gap: var(--thick);
-    padding-top: var(--thick);
-    padding-bottom: var(--thick);
-  }
-  .divider-inherit {
-    --thick: inherit;
-    --line: inherit;
-    --item-bg: inherit;
-  }
-
-  .divider-inset {
-    padding: 0;
-  }
-
+  /* BORDER */
   .shadow-border {
     box-shadow: 0 0 0 1px rgb(0, 0, 0);
   }
@@ -71,89 +9,18 @@
   .collapse-border {
     padding: 0;
   }
-
   .collapse-border > * {
     box-shadow: 0 0 0 1px rgb(0, 0, 0);
   }
-
   .collapse-border-2 {
     padding: 1px;
     gap: 1px;
   }
-
   .collapse-border-2 > *:not(.accent-spine) {
     box-shadow: 0 0 0 2px rgb(0, 0, 0);
   }
 
-  .text-shadow {
-    text-shadow: 3px 2px var(--color-azure-ink),
-      -2px -2px var(--color-azure-ink), 3px -2px var(--color-azure-ink),
-      -2px 3px var(--color-azure-ink), 5px 5px 0px var(--color-tang-300);
-  }
-
-  .no-double-border > *:not(:first-child) {
-    border-top: 0; /* removes stacked lines */
-  }
-
-  .seam-grid {
-    /* local tokens */
-    --line: var(--line-color, var(--color-azure-ink, #010b21));
-    --thick: 1px;
-    --item-bg: var(--surface, #fff);
-
-    display: grid;
-    background-color: var(--line); /* rails live here */
-  }
-  /* Only paint panel children white; keep nested seam grids dark to draw their own rails */
-  .seam-grid > :not(.seam-grid) {
-    background-color: var(--item-bg);
-  }
-
-  /* rails + spacing */
-  .seam-rail {
-    padding: var(--thick);
-  }
-  .seam-gap {
-    gap: var(--thick);
-  }
-
-  /* oriented seams for splits */
-  .seam-x {
-    column-gap: var(--thick);
-    padding-left: var(--thick);
-    padding-right: var(--thick);
-  }
-  .seam-y {
-    row-gap: var(--thick);
-    padding-top: var(--thick);
-    padding-bottom: var(--thick);
-  }
-
-  /* helpers */
-  .seam-inset {
-    padding: 0;
-  }
-  .seam-inherit {
-    --thick: inherit;
-    --line: inherit;
-    --item-bg: inherit;
-  }
-  .seam-cols-2 {
-    grid-template-columns: 1fr 1fr;
-  }
-  .seam-cols-auto-2 {
-    grid-template-columns: auto 1fr;
-  }
-
-  /* standalone outline (don’t use inside seam splits) */
-  .keyline {
-    box-shadow: 0 0 0 1px var(--line);
-  }
-  .no-chrome {
-    border: 0 !important;
-    box-shadow: none !important;
-  }
-  /* Blocky shadow utilities */
+  /* SHADOW & ACCENT */
   .shadow-blocky {
     box-shadow: var(--shadow-blocky) var(--color-shadow, var(--color-black));
   }
@@ -170,53 +37,35 @@
     box-shadow: var(--shadow-blocky-lg) var(--color-shadow, var(--color-black));
   }
 
-  .subheading {
-    @apply font-mono font-semibold mb-2;
-    font-size: clamp(1.5rem, 3.5vw, 2rem);
-    color: var(--color-aqua-ink);
-  }
-
-  /* Brutalist border */
-  .brutal-border {
-    @apply border-2 border-black;
-  }
-
-  /* Brutalist card */
-  .brutal-card {
-    @apply border-2 border-black bg-white shadow-blocky;
-  }
-
-  /* Brutalist button */
-  .brutal-btn {
-    @apply border-2 border-black -translate-[6px] font-mono font-bold uppercase shadow-blocky px-4 py-2 cursor-pointer;
-  }
-  .brutal-btn:active {
-    box-shadow: 6px 6px 0 0 transparent;
-    transform: translate(6px, 6px);
-  }
-
-  .link-underline {
-    @apply underline decoration-1 hover:decoration-transparent transition-all duration-100;
-  }
-
-  /* Brutalist nav item */
-  .brutal-nav-item {
-    @apply border-2 border-black shadow-blocky relative z-30 flex items-center justify-center flex-1 cursor-pointer bg-white isolate;
-  }
-  .brutal-nav-item > a {
-    @apply inline w-full px-2 py-4 xs:py-5 md:py-6 font-bold text-center align-baseline;
-  }
-  .brutal-nav-item > span {
-    @apply absolute left-0 right-0 bottom-0 h-2 transition-all duration-300 ease-in-out;
-  }
-  .brutal-nav-item:hover > span,
-  .brutal-nav-item:focus-within > span {
-    @apply h-full;
+  .text-shadow {
+    text-shadow: 3px 2px var(--color-azure-ink),
+      -2px -2px var(--color-azure-ink), 3px -2px var(--color-azure-ink),
+      -2px 3px var(--color-azure-ink), 5px 5px 0px var(--color-tang-300);
   }
 
   .accent-spine {
     --accent: var(--color-tang-500);
     background-color: var(--accent);
     @apply pointer-events-none absolute inset-y-0 left-0 w-1 opacity-80 transition-opacity duration-200 group-hover:opacity-100;
+  }
+
+  /* TEXT */
+  .subheading {
+    @apply font-mono font-semibold mb-2;
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
+    color: var(--color-aqua-ink);
+  }
+
+  /* COMPONENTS */
+  .link-underline {
+    @apply underline decoration-1 hover:decoration-transparent transition-all duration-100;
+  }
+
+  .brutal-btn {
+    @apply border-2 border-black -translate-[6px] font-mono font-bold uppercase shadow-blocky px-4 py-2 cursor-pointer;
+  }
+  .brutal-btn:active {
+    box-shadow: 6px 6px 0 0 transparent;
+    transform: translate(6px, 6px);
   }
 }
