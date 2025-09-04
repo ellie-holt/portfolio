@@ -312,7 +312,7 @@
     </section>
 
     <!-- At a glance -->
-    <aside
+    <section
       class="sm:col-span-full lg:col-span-4 2xl:col-start-2 2xl:row-start-2 px-6 py-6"
       aria-labelledby="aside-heading"
     >
@@ -328,7 +328,7 @@
           </div>
         {/each}
       </div>
-    </aside>
+    </section>
 
     <!-- Learning -->
     <section class="md:col-span-4 xl:col-span-2 px-6 py-6">
@@ -349,14 +349,14 @@
     </section>
 
     <!-- Link -->
-    <aside
+    <section
       class="flex justify-end items-end md:col-span-2 2xl:col-span-3 3xl:col-span-2 px-6 py-6"
       aria-label="Contact Ellie Holt"
     >
       <LinkButton href={content.ctaHref} class="bg-white text-xl"
         >{content.ctaText}
       </LinkButton>
-    </aside>
+    </section>
   </div>
 </section>
 
