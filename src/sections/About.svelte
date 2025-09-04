@@ -191,13 +191,15 @@
           <source srcset={me1080} media="(min-width: 1024px)" />
           <source srcset={me640} media="(min-width: 320px)" />
           <source srcset={me320} media="(min-width: 160px)" />
-          <img
-            src={me640}
-            alt={content.story.photoAlt}
-            class="w-full h-full object-cover object-top-right"
-            loading="lazy"
-            decoding="async"
-          />
+          <div class="mask-t-from-90%">
+            <img
+              src={me640}
+              alt={content.story.photoAlt}
+              class="w-full h-full object-cover object-top-right"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
         </picture>
       </div>
     </figure>
